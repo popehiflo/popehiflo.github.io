@@ -1,10 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Black+Han+Sans:regular);
 
 :root {
+  --color-blue: #3279bd; /* --green:#27ae60; */
+  --color-black: #1b3954; /* --black:#444; */
+  --color-white: #fff;
+  --color-text-dark: #777; /* --light-color:#777; */
+  --color-bg-light: #e6e6e6; /* --bg-color:#e6e6e6; */
+  --color-bg-dark: #242338; /* --bg-color:#222; */
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  --box-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
   /* --space-cadet: hsl(243, 23%, 18%); */
   --color-bg-hero: #4e54c8;
-  --color-bg-dark: #242338;
-  --color-bg-light: #eee;
 }
 
 * {
@@ -18,20 +25,68 @@
   transition: 0.2s linear;
 }
 
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--color-bg-dark);
+  background: var(--color-bg-light);
+  padding-left: 30rem;
+}
+
+body.active {
+  --color-black: var(--color-white);
+  --color-bg-light: var(--color-bg-dark);
 }
 
 section {
-  max-width: 1200px;
-  margin: 0 auto;
+  /* padding: 2rem 9%; */
+  min-height: 100vh;
   padding: 2rem;
 }
 
+/* HEADER */
 .header {
-  background: #4e54c8;
-  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: var(--color-bg-light);
+  width: 30rem;
+  border-right: var(--border);
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
 }
+
+.header .header__user .user__image {
+  height: 20rem;
+  width: 20rem;
+  margin: 1rem 0;
+  border: 1rem solid transparent;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+}
+
+.header .header__user .user__text {
+  color: var(--color-blue);
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.header .header__user .user__name {
+  font-family: 'Black Han Sans', sans-serif;
+  color: var(--color-black);
+  font-size: 2.2rem;
+}
+
+
+
+
+
+
 
 .content {
   position: absolute;
