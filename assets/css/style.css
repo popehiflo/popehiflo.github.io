@@ -73,7 +73,7 @@ section {
   width: 20px;
   height: 20px;
   /* background: rgba(255, 255, 255, 0.2); */
-  background-image: url(./favicon.svg);
+  background-image: url(../../favicon.svg);
   background-size: cover;
   animation: animate 25s linear infinite;
   bottom: -150px;
