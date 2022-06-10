@@ -64,6 +64,16 @@ section {
   color: var(--color-blue);
 }
 
+.heading {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--color-black);
+  padding-bottom: 2rem;
+}
+
+.heading span {
+  color: var(--color-blue);
+}
 
 /* HEADER */
 .header {
@@ -226,6 +236,12 @@ section {
 .home .home__social-media a:hover {
   box-shadow: var(--box-shadow-inset);
   color: var(--color-blue);
+}
+
+/* ABOUT */
+.about .about__row {
+  display: flex;
+  align-items: center;
 }
 
 
