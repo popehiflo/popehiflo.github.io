@@ -48,6 +48,23 @@ section {
   padding: 2rem;
 }
 
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  background: none;
+  color: var(--color-black);
+  box-shadow: var(--box-shadow);
+}
+
+.btn-primary:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--color-blue);
+}
+
+
 /* HEADER */
 .header {
   position: fixed;
@@ -60,6 +77,8 @@ section {
   height: 100%;
   padding: 2rem;
   text-align: center;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
 }
 
 .header .header__user .user__image {
@@ -157,8 +176,24 @@ section {
   text-align: center;
 }
 
+.home .home__popehiflo img {
+  height: 30rem;
+  width: 30rem;
+  margin: 1rem 0;
+  border: 1rem solid transparent;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+}
+
+.home .home__popehiflo h2 {
+  font-size: 5rem;
+  color: var(--color-blue);
+  line-height: 1.1;
+}
+
 .home .home__popehiflo h3 {
-  font-size: 7rem;
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 4rem;
   color: var(--color-black);
   line-height: 1.1;
 }
@@ -166,9 +201,13 @@ section {
 .home .home__popehiflo p {
   font-size: 2rem;
   color: var(--color-blue);
+  margin: 1rem 0;
 }
 
 .home .home__social-media {
+  position: relative;
+  top: 10rem;
+  border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   padding: 1rem;
 }
