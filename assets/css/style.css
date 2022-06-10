@@ -10,6 +10,7 @@
   --color-bg-dark: #242338; /* --bg-color:#222; */
   --border: 0.1rem solid rgba(0, 0, 0, 0.2);
   --box-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
+  --box-shadow-inset: 0.4rem 0.4rem 1rem #ccc inset, -0.4rem -0.4rem 1rem #fff inset;
   /* --space-cadet: hsl(243, 23%, 18%); */
   --color-bg-hero: #4e54c8;
 }
@@ -80,6 +81,71 @@ section {
   font-family: 'Black Han Sans', sans-serif;
   color: var(--color-black);
   font-size: 2.2rem;
+}
+
+
+.header .header__menu {
+  padding-top: 1rem;
+}
+
+.header .header__menu a {
+  display: block;
+  margin: 1.5rem 0;
+  padding: 0.7rem;
+  font-size: 2rem;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  color: var(--color-black);
+}
+
+.header .header__menu a:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--color-blue);
+}
+
+#btn-menu {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 1000;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  color: var(--color-black);
+  background: var(--color-bg-light);
+  display: none;
+}
+
+#btn-menu:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--color-blue);
+}
+
+#btn-theme-toggler {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1000;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  color: var(--color-black);
+  background: var(--color-bg-light);
+}
+
+#btn-theme-toggler:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--color-blue);
 }
 
 
@@ -234,4 +300,39 @@ section {
       border-radius: 0;
   }
 
+}
+
+
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  body {
+    padding-left: 0;
+  }
+  .header {
+    left: -110%;
+  }
+  .header.active {
+    left: 0%;
+    transition: 0.4s linear;
+  }
+  #btn-menu {
+    display: initial;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    padding-left: 0;
+  }
+  .header {
+    width: 100%;
+    border-right: 0;
+  }
 }
