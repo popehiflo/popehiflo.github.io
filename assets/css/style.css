@@ -34,7 +34,7 @@ html {
 
 body {
   background: var(--color-bg-light);
-  padding-left: 30rem;
+  padding-left: 32rem;
 }
 
 body.active {
@@ -84,11 +84,12 @@ section {
   position: fixed;
   top: 1%;
   left: 1%;
+  bottom: 2%;
   z-index: 999;
   background: var(--color-bg-light);
   width: 30rem;
-  border-right: var(--border);
-  height: 100%;
+  border: var(--border);
+  height: 98vh;
   padding: 2rem;
   text-align: center;
   box-shadow: var(--box-shadow);
@@ -508,8 +509,8 @@ section {
   body {
     padding-left: 0;
   }
-  .header {
-    width: 100%;
-    border-right: 0;
+  .sidebar {
+    width: 97%;
+    margin: auto;
   }
 }
