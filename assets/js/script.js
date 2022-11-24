@@ -7,6 +7,11 @@ btnMenu.onclick = () => {
   barSide.classList.toggle('active');
 }
 
+window.onscroll = () => {
+  btnMenu.classList.remove('fa-times');
+  barSide.classList.remove('active');
+}
+
 // Button theme
 let btnTheme = document.querySelector('#btn-theme-toggler');
 btnTheme.onclick = () => {
