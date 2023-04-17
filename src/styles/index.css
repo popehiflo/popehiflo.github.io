@@ -202,4 +202,44 @@ section:nth-child(2n) {
 
 
 /* media queries */
+@media (max-width: 1199px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  body {
+    padding-left: 0;
+  }
+  /* .sidebar {
+    left: -110%;
+  } */
+  .sidebar.active {
+    left: 1%;
+    transition: 0.4s linear;
+  }
+
+}
+
+@media (max-width: 575px) {
+  html {
+    font-size: 53%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .sidebar {
+    width: 97%;
+    margin: auto;
+  }
+}
+
+
 
