@@ -1,3 +1,5 @@
+import { greetingHandler, clockHandler } from './utils/about-section.js';
+
 // Buttons sidebar menu and theme toggler
 function menuToogleHandler() {
   // button menu and div sidebar
@@ -26,4 +28,7 @@ function menuToogleHandler() {
   });
 };
 
+
 menuToogleHandler();
+greetingHandler();
+clockHandler();
