@@ -187,12 +187,20 @@ section:nth-child(2n) {
   /* display: none; */
 }
 
+#btn-menu i.fa-times {
+  transform: rotate(360deg);
+}
+
 #btn-theme-toggler {
   position: fixed;
   top: 1.5rem;
   right: 2rem;
   z-index: 1000;
   border-radius: 50%;
+}
+
+#btn-theme-toggler i.fa-moon {
+  transform: rotate(360deg);
 }
 
 /* --- HOME --- */
