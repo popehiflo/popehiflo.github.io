@@ -386,6 +386,39 @@ section:nth-child(2n) {
 }
 
 /* PROJECTS */
+.projects .projects__filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.projects .projects__filter input[type="radio"] {
+  visibility: hidden;
+  display: none;
+}
+
+.projects .projects__filter input[type="radio"]:checked + label {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--color-primary);
+  border: var(--border-none);
+}
+
+.projects .projects__filter input[type="radio"]:checked + label > .project-amount {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.projects .projects__filter label .project-amount {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 /* EXPERIENCE */
