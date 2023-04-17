@@ -31,10 +31,97 @@
 }
 
 /* --- BASE --- */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  scroll-padding-top: 1rem;
+}
 
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg-dark);
+  padding-left: 32rem;
+}
+
+body.active {
+  --color-bg-dark: var(--color-bg-light);
+  --color-text-main-darktheme: var(--color-text-main-lighttheme);
+  --color-text-dark: var(--color-text-light);
+  --border-dark: var(--border-light);
+  --border-dark-light: var(--border-light-light);
+  --box-shadow-card: 0.4rem 0.4rem 1rem #888, -0.4rem -0.4rem 1rem #ccc;
+  --box-shadow-inset: 0.4rem 0.4rem 1rem #888 inset, -0.4rem -0.4rem 1rem #ccc inset;
+}
 
 /* --- REUSABLE CSS CLASSES --- */
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  color: var(--color-text-main-darktheme);
+  text-transform: uppercase;
+  border: var(--border-dark);
+}
 
+.btn-primary-icon {
+  display: block;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  margin: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-text-main-darktheme);
+  background: var(--color-bg-dark);
+  border: var(--border-dark);
+  border-radius: 0.5rem;
+}
+
+.btn-primary.active,
+.btn-primary:hover,
+.btn-primary-icon.active,
+.btn-primary-icon:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--color-primary);
+  border: var(--border-none);
+}
+
+section {
+  padding: 2rem;
+  margin: 1rem 1rem 5rem 1rem;
+}
+
+section:nth-child(2n) {
+  border: var(--border-dark);
+  border-radius: 1rem;
+}
+
+.heading {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--color-text-main-darktheme);
+  padding-bottom: 2rem;
+}
+
+.heading span {
+  color: var(--color-primary);
+}
 
 /* --- HEADER --- */
 
