@@ -136,6 +136,7 @@ section:nth-child(2n) {
   padding: 2rem;
   text-align: center;
   border-radius: 1rem;
+  background: var(--color-bg-dark);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -174,6 +175,24 @@ section:nth-child(2n) {
 .sidebar .sidebar___social-media {
   display: flex;
   justify-content: space-between;
+}
+
+/* --- Buttons TOP */
+#btn-menu {
+  position: fixed;
+  top: 1.5rem;
+  left: 2rem;
+  z-index: 1000;
+  border-radius: 50%;
+  /* display: none; */
+}
+
+#btn-theme-toggler {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1000;
+  border-radius: 50%;
 }
 
 /* --- HOME --- */
@@ -215,9 +234,9 @@ section:nth-child(2n) {
   body {
     padding-left: 0;
   }
-  /* .sidebar {
+  .sidebar {
     left: -110%;
-  } */
+  }
   .sidebar.active {
     left: 1%;
     transition: 0.4s linear;
