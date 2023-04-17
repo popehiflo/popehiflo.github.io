@@ -184,7 +184,7 @@ section:nth-child(2n) {
   left: 2rem;
   z-index: 1000;
   border-radius: 50%;
-  /* display: none; */
+  display: none;
 }
 
 #btn-menu i.fa-times {
@@ -204,7 +204,54 @@ section:nth-child(2n) {
 }
 
 /* --- HOME --- */
+.home {
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  text-align: center;
+}
 
+.home h3 {
+  font-size: 5rem;
+  color: var(--color-text-main-darktheme);
+}
+
+.home p {
+  font-size: 3rem;
+  color: var(--color-text-main-darktheme);
+}
+
+.home h1 {
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 15rem;
+  color: rgba(225, 225, 225, 0.1);
+  background-image: url("../../public/assets/imgs/abstract-background-canvas-code.jpg");
+  background-repeat: repeat-x;
+  background-position: center center;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.5rem var(--color-primary);
+  animation: animate 15s linear infinite;
+  margin: 0 -1rem;
+}
+
+@keyframes animate {
+  0% {
+    background-position: left 0rem top 1rem;
+  }
+  40% {
+    background-position: left 50rem top 1rem;
+  }
+}
+
+.home .home__social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* ABOUT */
 
@@ -233,6 +280,10 @@ section:nth-child(2n) {
   html {
     font-size: 58%;
   }
+  .home h1 {
+    font-size: 12rem;
+    -webkit-text-stroke: 0.4rem var(--color-primary);
+  }
 }
 
 @media (max-width: 991px) {
@@ -249,12 +300,22 @@ section:nth-child(2n) {
     left: 1%;
     transition: 0.4s linear;
   }
-
+  #btn-menu {
+    display: initial;
+  }
+  .home h1 {
+    font-size: 10rem;
+    -webkit-text-stroke: 0.3rem var(--color-primary);
+  }
 }
 
 @media (max-width: 575px) {
   html {
     font-size: 53%;
+  }
+  .home h1 {
+    font-size: 8rem;
+    -webkit-text-stroke: 0.2rem var(--color-primary);
   }
 }
 
@@ -265,6 +326,10 @@ section:nth-child(2n) {
   .sidebar {
     width: 97%;
     margin: auto;
+  }
+  home h1 {
+    font-size: 7rem;
+    -webkit-text-stroke: 0.1rem var(--color-primary);
   }
 }
 
