@@ -778,6 +778,9 @@ section:nth-child(2n) {
     font-size: 8rem;
     -webkit-text-stroke: 0.2rem var(--color-primary);
   }
+  .projects .projects__filter .btn-primary {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 450px) {
