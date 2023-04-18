@@ -640,9 +640,20 @@ section:nth-child(2n) {
   margin: 1rem 0;
 }
 
-
 /* FOOTER */
+.footer {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--color-text-main-darktheme);
+  border-top: var(--border-dark);
+  padding: 0.5rem;
+  margin: 0 1rem;
+}
 
+.footer span {
+  font-family: 'Black Han Sans', sans-serif;
+  color: var(--color-primary);
+}
 
 
 /* LOADER */
