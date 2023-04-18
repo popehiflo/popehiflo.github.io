@@ -499,7 +499,54 @@ section:nth-child(2n) {
 }
 
 /* EXPERIENCE */
+.experience .experiences__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
+.experience .experiences__container .experience__box {
+  position: relative;
+  flex: 1 1 40rem;
+  border-left: 0.1rem solid var(--color-primary);
+  padding: 2rem 1rem 0 1rem;
+}
+
+.experience .experiences__container .experience__box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.experience .experiences__container .experience__box .box-content {
+  padding: 2rem;
+  border: var(--border-dark-light);
+  border-radius: 0.5rem;
+}
+
+.experience .experiences__container .experience__box .box-content span {
+  color: var(--color-text-main-darktheme);
+  font-size: 1.7rem;
+  border: 0.1rem solid var(--color-primary);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.experience .experiences__container .experience__box .box-content h3 {
+  font-size: 2rem;
+  padding: 1rem 0;
+  color: var(--color-text-main-darktheme);
+}
+
+.experience .experiences__container .experience__box .box-content p {
+  font-size: 1.5rem;
+  color: var(--color-text-dark);
+}
 
 /* CONTACT ME*/
 
