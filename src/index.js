@@ -27,11 +27,20 @@ function menuToogleHandler() {
   let iconBtnMenu = btnMenu.getElementsByTagName('i')[0];
   let barSide = document.querySelector('.sidebar');
 
+  // sections and navlinks
+  let sections = document.querySelectorAll('section');
+  let navlinks = document.querySelectorAll('.sidebar .sidebar__menu a');
+
   btnMenu.addEventListener('click', () => {
     iconBtnMenu.classList.toggle('fa-times');
     barSide.classList.toggle('active');
   });
 
+  window.onscroll = () => {
+    // icon for sidebar
+    iconBtnMenu.classList.remove('fa-times');
+    barSide.classList.remove('active');
+  };
 
   // Button Theme
   let btnTheme = document.querySelector('#btn-theme-toggler');
