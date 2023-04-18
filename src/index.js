@@ -1,6 +1,25 @@
 import { greetingHandler, clockHandler } from './utils/about-section.js';
 import { projectsHandler } from './utils/projects-section.js';
 
+// Loader
+function removeLoader(loader) {
+  setTimeout(() => {
+    loader.classList.add('loader-hidden');
+  }, 3000);
+};
+
+function loaderHandler() {
+  // DOM loaded
+  window.addEventListener('DOMContentLoaded', () => {
+    let loader = document.querySelector('.loader__container');
+    removeLoader(loader);
+    setTimeout(() => {
+      // waiting transition
+      loader.style.display = 'none';
+    }, 5000);
+  });
+};
+
 // Buttons sidebar menu and theme toggler
 function menuToogleHandler() {
   // button menu and div sidebar
@@ -38,6 +57,7 @@ function footerHandler() {
   `;
 };
 
+loaderHandler();
 menuToogleHandler();
 greetingHandler();
 clockHandler();
