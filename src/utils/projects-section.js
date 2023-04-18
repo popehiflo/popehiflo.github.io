@@ -59,7 +59,27 @@ function populateProjects(projectList) {
 };
 
 function projectsHandler() {
-  populateProjects(myProjects)
+
+  let frontProjects = myProjects.filter(project => project.category.id === "frontend");
+  let backProjects = myProjects.filter(project => project.category.id === "backend");
+
+  populateProjects(myProjects);
+
+  document.querySelector('.projects__filter label[for=all] span.project-amount').textContent = myProjects.length;
+  document.querySelector('.projects__filter label[for=front] span.project-amount').textContent = frontProjects.length;
+  document.querySelector('.projects__filter label[for=back] span.project-amount').textContent = backProjects.length;
+
+  let projectsFilter = document.querySelector('.projects__filter');
+
+  projectsFilter.addEventListener('click', (e) => {
+    if (e.target.id === "all") {
+      populateProjects(myProjects);
+    } else if (e.target.id === "front") {
+      populateProjects(frontProjects);
+    } else if (e.target.id === "back") {
+      populateProjects(backProjects);
+    }
+  });
 };
 
 export { projectsHandler };
