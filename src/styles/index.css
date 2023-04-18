@@ -549,7 +549,25 @@ section:nth-child(2n) {
 }
 
 /* CONTACT ME*/
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
 
+.contact p {
+  font-size: 2.5rem;
+  color: var(--color-text-main-darktheme);
+}
+
+.contact .contact__social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* #BLOG */
 
