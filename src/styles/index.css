@@ -667,6 +667,12 @@ section:nth-child(2n) {
   justify-content: center;
 }
 
+.loader__container.loader-hidden {
+  opacity: 0;
+  transform: scale(10);
+  transition: all 3s ease;
+}
+
 .loader__container .loader {
   font-family: 'Black Han Sans', sans-serif;
   height: 50px;
