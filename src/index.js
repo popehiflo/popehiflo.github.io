@@ -29,7 +29,7 @@ function menuToogleHandler() {
 
   // sections and navlinks
   let sections = document.querySelectorAll('section');
-  let navlinks = document.querySelectorAll('.sidebar .sidebar__menu a');
+  let navLinks = document.querySelectorAll('.sidebar .sidebar__menu a');
 
   btnMenu.addEventListener('click', () => {
     iconBtnMenu.classList.toggle('fa-times');
@@ -40,6 +40,20 @@ function menuToogleHandler() {
     // icon for sidebar
     iconBtnMenu.classList.remove('fa-times');
     barSide.classList.remove('active');
+    // scrollspy for sidebar
+    sections.forEach(section => {
+      let top = window.scrollY;
+      let offset = section.offsetTop - 50;
+      let height = section.offsetHeight;
+      let id = section.getAttribute('id');
+
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach(navlink => {
+          navlink.classList.remove('active');
+          document.querySelector('.sidebar .sidebar__menu a[href*=' + id +']').classList.add('active');
+        });
+      }
+    });
   };
 
   // Button Theme
