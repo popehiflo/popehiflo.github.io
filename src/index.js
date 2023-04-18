@@ -1,4 +1,5 @@
 import { greetingHandler, clockHandler } from './utils/about-section.js';
+import { projectsHandler } from './utils/projects-section.js';
 
 // Buttons sidebar menu and theme toggler
 function menuToogleHandler() {
@@ -32,3 +33,4 @@ function menuToogleHandler() {
 menuToogleHandler();
 greetingHandler();
 clockHandler();
+projectsHandler();

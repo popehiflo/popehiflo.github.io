@@ -1,0 +1,65 @@
+import { allProjects as myProjects } from '../data/MOCKDATA.js';
+
+// Projects Section
+function populateProjects(projectList) {
+  let projectsContainer = document.querySelector('.projects__container');
+  projectsContainer.textContent = "";
+
+  // Run a loop througgh the projects and create an HTML element ("project__box") for each project
+  projectList.forEach((project, index) => {
+    // create the HTML element for each project
+    let projectBox = document.createElement("div");
+    projectBox.classList.add("project__box");
+    // create the project image wrapper
+    let projectImage = document.createElement("div");
+    projectImage.classList.add("project__box-image");
+    // create the project image
+    let image = document.createElement("img");
+    image.src = project.image;
+    image.alt = project.title;
+
+    // create the project box details
+    let projectBoxDetails = document.createElement("div");
+    projectBoxDetails.classList.add("project__box-details");
+    // create the project box description
+    let detailsDescription = document.createElement("p");
+    detailsDescription.classList.add("description");
+    detailsDescription.textContent = project.description.substring(0, 70) + "...";
+    // create the project box title
+    let projectTitle = document.createElement("h3");
+    projectTitle.classList.add("title");
+    projectTitle.textContent = project.title;
+
+    // create the project box buttons
+    let projectBoxButtons = document.createElement("div");
+    projectBoxButtons.classList.add("project__box-buttons");
+    // create a link foreach prop in object links
+    for (let prop in project.links) {
+      let projectButton = document.createElement("a");
+      projectButton.href = project.links[prop];
+      let iconFA = `fa-${prop}`;
+      projectButton.classList.add("fab", iconFA, "btn-primary-icon");
+      projectButton.target = "_blank";
+      projectBoxButtons.append(projectButton);
+    }
+
+
+    projectImage.append(image);
+    // append elements to the project box details
+    projectBoxDetails.append(detailsDescription);
+    // append elements to the project box
+    projectBox.append(projectImage);
+    projectBox.append(projectBoxDetails);
+    projectBox.append(projectTitle);
+    projectBox.append(projectBoxButtons);
+
+    // Add complete individual project box to the project section
+    projectsContainer.append(projectBox);
+  });
+};
+
+function projectsHandler() {
+  populateProjects(myProjects)
+};
+
+export { projectsHandler };
