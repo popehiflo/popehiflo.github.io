@@ -48,6 +48,16 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 1.5rem;
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 0.2rem;
+}
 
 body {
   background: var(--color-bg-dark);
