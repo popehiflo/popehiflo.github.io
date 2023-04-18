@@ -30,7 +30,16 @@ function menuToogleHandler() {
 };
 
 
+// Footer
+function footerHandler() {
+  let currentYear = new Date().getFullYear();
+  document.querySelector('.footer').innerHTML = `
+    © Copyright <span>popehiflo</span>, ${currentYear}. All rights reserved.
+  `;
+};
+
 menuToogleHandler();
 greetingHandler();
 clockHandler();
 projectsHandler();
+footerHandler();
