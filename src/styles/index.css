@@ -41,6 +41,7 @@
   text-decoration: none;
   transition: 0.2s linear;
   scroll-padding-top: 1rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -794,6 +795,15 @@ section:nth-child(2n) {
   home h1 {
     font-size: 7rem;
     -webkit-text-stroke: 0.1rem var(--color-primary);
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 48%;
+  }
+  home h1 {
+    font-size: 6rem;
   }
 }
 
