@@ -452,22 +452,24 @@ section:nth-child(2n) {
 .projects .projects__container .project__box .project__box-image {
   height: 25rem;
   overflow: hidden;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin: -1rem -1rem 0 -1rem;
 }
 
 .projects .projects__container .project__box .project__box-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  align-self: center;
 }
 
 .projects .projects__container .project__box .project__box-details {
   position: absolute;
-  top: 1;
+  top: 0;
   left: 0;
   height: 25rem;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
   background: var(--color-bg-dark);
   opacity: 0.9;
   display: flex;
@@ -500,7 +502,22 @@ section:nth-child(2n) {
 .projects .projects__container .project__box .title {
   font-size: 1.8rem;
   color: var(--color-text-main-darktheme);
-  padding: 2rem 0 1rem 0;
+  padding: 0.5rem 0 1rem 0;
+}
+
+.projects .projects__container .project__box .project__box-tags {
+  /* background: red; */
+  margin: 1rem 0;
+}
+
+.projects .projects__container .project__box .project__box-tags span {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  border: var(--border-dark-light);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+  margin-right: 0.25rem;
 }
 
 .projects .projects__container .project__box .project__box-buttons {
