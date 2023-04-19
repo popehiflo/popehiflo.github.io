@@ -25,6 +25,15 @@ function populateProjects(projectList) {
     let detailsDescription = document.createElement("p");
     detailsDescription.classList.add("description");
     detailsDescription.textContent = project.description.substring(0, 70) + "...";
+    // loop for tags of project if exists
+    let projectTags = document.createElement("div");
+    projectTags.classList.add("project__box-tags");
+    // create the project tags
+    for (let prop in project.tags) {
+      let tag = document.createElement("span");
+      tag.textContent = project.tags[prop];
+      projectTags.append(tag);
+    };
     // create the project box title
     let projectTitle = document.createElement("h3");
     projectTitle.classList.add("title");
@@ -50,6 +59,7 @@ function populateProjects(projectList) {
     // append elements to the project box
     projectBox.append(projectImage);
     projectBox.append(projectBoxDetails);
+    projectBox.append(projectTags);
     projectBox.append(projectTitle);
     projectBox.append(projectBoxButtons);
 
