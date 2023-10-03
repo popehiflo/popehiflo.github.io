@@ -123,6 +123,18 @@ section:nth-child(2n) {
   border-radius: 1rem;
 }
 
+/* animation section - showSection */
+section {
+  view-timeline-name: --sections;
+  view-timeline-axis: block;
+
+  animation-timeline: --sections;
+  animation-name: showSection;
+
+  animation-range: entry 10% cover 30%;
+  animation-fill-mode: both;
+}
+
 .heading {
   text-align: center;
   font-size: 5rem;
@@ -750,6 +762,18 @@ section:nth-child(2n) {
   }
   50% {
     transform: translateY(15px);
+  }
+}
+
+/* animation sections */
+@keyframes showSection {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
   }
 }
 
