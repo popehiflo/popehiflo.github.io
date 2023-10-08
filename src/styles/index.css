@@ -445,7 +445,7 @@ section {
 
 .projects .projects__container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(32rem, 2fr));
   gap: 2rem;
 }
 
@@ -462,15 +462,15 @@ section {
 }
 
 .projects .projects__container .project__box .project__box-image {
-  height: 25rem;
+  /*height: 25rem;*/
   overflow: hidden;
   border-radius: 0.5rem 0.5rem 0 0;
   margin: -1rem -1rem 0 -1rem;
 }
 
 .projects .projects__container .project__box .project__box-image img {
-  height: 100%;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   align-self: center;
 }
@@ -643,14 +643,14 @@ section {
 }
 
 .blogs .blogs__container .blog__box .box-image {
-  height: 20rem;
+  /*height: 20rem;*/
   overflow: hidden;
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .blogs .blogs__container .blog__box .box-image img {
-  height: 100%;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 

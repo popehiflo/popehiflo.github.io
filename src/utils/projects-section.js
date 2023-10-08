@@ -18,6 +18,17 @@ function populateProjects(projectList) {
     image.src = project.image;
     image.alt = project.title;
 
+    // calculate the appropriate image size based on screen width
+    let screenWidth = window.innerWidth;
+    //let imageSizes = `(max-width: 575px) 100vw, (max-width: 991px) 50vw, 25vw`;
+    //image.sizes = imageSizes;
+
+    // Create the srcset attribute for different image resolutions
+    let imageSrcset = `${project.image} 1280w, 
+      ${project.image.replace('.png', '-medium.png')} 992w, 
+      ${project.image.replace('.png', '-small.png')} 576w`;
+    image.srcset = imageSrcset;
+
     // create the project box details
     let projectBoxDetails = document.createElement("div");
     projectBoxDetails.classList.add("project__box-details");
