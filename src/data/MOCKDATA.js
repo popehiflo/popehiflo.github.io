@@ -40,7 +40,7 @@ const allProjects = [
   {
     id: "03",
     title: "Proyecto Frontend 03",
-    image: "./public/assets/imgs/img-frontend-0.jpg",
+    image: "./public/assets/imgs/img-frontend-0.png",
     description: "3- Proyecto de sitio web estático en HTML + CSS. Este es un proyecto frontend.",
     tags: {
       vite: "vite",
@@ -78,7 +78,7 @@ const allProjects = [
   {
     id: "05",
     title: "Proyecto Frontend 05",
-    image: "./public/assets/imgs/img-frontend-0.jpg",
+    image: "./public/assets/imgs/img-frontend-0.png",
     description: "5 - Proyecto de sitio web estático en HTML + CSS. Este es un proyecto frontend.",
     tags: {
       angular: "angular",
