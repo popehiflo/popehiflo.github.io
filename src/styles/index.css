@@ -123,6 +123,18 @@ section:nth-child(2n) {
   border-radius: 1rem;
 }
 
+/* animation section - showSection */
+section {
+  view-timeline-name: --sections;
+  view-timeline-axis: block;
+
+  animation-timeline: --sections;
+  animation-name: showSection;
+
+  animation-range: entry 10% cover 30%;
+  animation-fill-mode: both;
+}
+
 .heading {
   text-align: center;
   font-size: 5rem;
@@ -526,6 +538,21 @@ section:nth-child(2n) {
   margin: 0.5rem auto;
 }
 
+.fade-in {
+  animation: fadeInAnimation 0.6s ease-in-out;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(1.2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* EXPERIENCE */
 .experience .experiences__container {
   display: flex;
@@ -750,6 +777,18 @@ section:nth-child(2n) {
   }
   50% {
     transform: translateY(15px);
+  }
+}
+
+/* animation sections */
+@keyframes showSection {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
   }
 }
 

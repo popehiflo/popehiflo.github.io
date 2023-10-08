@@ -9,7 +9,7 @@ function populateProjects(projectList) {
   projectList.forEach((project, index) => {
     // create the HTML element for each project
     let projectBox = document.createElement("div");
-    projectBox.classList.add("project__box");
+    projectBox.classList.add("project__box", "fade-in");
     // create the project image wrapper
     let projectImage = document.createElement("div");
     projectImage.classList.add("project__box-image");
