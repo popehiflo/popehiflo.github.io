@@ -1,20 +1,37 @@
-#  Mi portafolio 💼 - popehiflo.github.io
-**Proyecto Web Responsive** 🛠️  
-`HTML`, `CSS`, `Javascript`  
-## visita [mi portafolio](https://popehiflo.github.io/) 👈
-## Ve el video de mi [portafolio](https://www.youtube.com/@popehiflo/videos) 🎥   
+#  Mi portafolio Web - Pool Hijuela (popehiflo)
 
+## 🚀 Descripción del Proyecto
+🎥 **Video de Implementación:** [YouTube](https://www.youtube.com/watch?v=tjAcXTpIou8)  
+🌎 **Visita mi Portafolio:** [GitHub Pages](https://popehiflo.github.io/)  
 
-## Se ve asi 📷
-![Portafolio popehiflo](./public/assets/imgs/img-portfolio.png)
+![Portafolio popehiflo](./public/assets/imgs/img-portfolio.png)   
 
-## Running locally 🚀  
+Este proyecto es un mi portafolio personal que muestra mis habilidades y proyectos como desarrollador web. Está construido con tecnologias modernas para presentar de manera profesional y atractiva mi trabajo y trayectoria profesional.
+
+## 🛠️ Tecnologías Utilizadas   
+`HTML5`, `CSS3`, `Javascript(ES6+)`, `Responsive Design`, `BEM Notation`
+
+## 📦 Características
+- Diseño completamente responsivo
+- Secciones de:
+  - Información personal
+  - Proyectos
+  - Habilidades
+  - Experiencia
+  - Contacto
+  - Apuntes
+- Animaciones y transiciones suaves
+- Optimizado para diferentes dispositivos
+
+## 🔧 Instalación Local
+1. Clona el repositorio
+```bash
+git clone https://github.com/popehiflo/popehiflo.github.io.git
 ```
-Go live con Live server
-``` 
+2. Abre `index.html` en tu navegador
 
-## Licencia 📄
-¿Qué es eso? 😆     
+## 📄 Licencia
+Este proyecto está bajo la licencia MIT. Consulta el archivo [MIT License](LICENSE) para más detalles.
 
          
-⌨️ con ❤️ por [popehiflo](https://github.com/popehiflo) 😊
+⌨️ con ❤️ por [popehiflo](https://github.com/popehiflo)
