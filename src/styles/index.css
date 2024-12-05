@@ -250,23 +250,23 @@ section {
   font-family: 'Black Han Sans', sans-serif;
   font-size: 15rem;
   color: rgba(225, 225, 225, 0.1);
-  background-image: url("../../public/assets/imgs/abstract-background-canvas-code.jpg");
+  background-image: url("../../public/assets/imgs/abstract-background-canvas-code.webp");
   background-repeat: repeat-x;
   background-position: center center;
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-stroke: 0.5rem var(--color-primary);
-  animation: animate 15s linear infinite;
+  animation: backgroundScroll 15s linear infinite;
   margin: 0 -1rem;
 }
 
-@keyframes animate {
+@keyframes backgroundScroll {
   0% {
     background-position: left 0rem top 1rem;
   }
-  40% {
-    background-position: left 50rem top 1rem;
+  100% {
+    background-position: left 1100px top 1rem;
   }
 }
 
