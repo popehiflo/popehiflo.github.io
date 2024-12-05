@@ -3,80 +3,127 @@ import { allProjects as myProjects } from '../data/MOCKDATA.js';
 // Projects Section
 function populateProjects(projectList) {
   let projectsContainer = document.querySelector('.projects__container');
-  projectsContainer.textContent = "";
+  projectsContainer.innerHTML = '';
 
   // Run a loop througgh the projects and create an HTML element ("project__box") for each project
   projectList.forEach((project, index) => {
-    // create the HTML element for each project
-    let projectBox = document.createElement("div");
-    projectBox.classList.add("project__box", "fade-in");
-    // create the project image wrapper
-    let projectImage = document.createElement("div");
-    projectImage.classList.add("project__box-image");
-    // create the project image
-    let image = document.createElement("img");
-    image.src = project.image;
-    image.alt = project.title;
-
-    // calculate the appropriate image size based on screen width
-    let screenWidth = window.innerWidth;
-    //let imageSizes = `(max-width: 575px) 100vw, (max-width: 991px) 50vw, 25vw`;
-    //image.sizes = imageSizes;
-
-    // Create the srcset attribute for different image resolutions
-    let imageSrcset = `${project.image} 1280w, 
-      ${project.image.replace('.png', '-medium.png')} 992w, 
-      ${project.image.replace('.png', '-small.png')} 576w`;
-    image.srcset = imageSrcset;
-
-    // create the project box details
-    let projectBoxDetails = document.createElement("div");
-    projectBoxDetails.classList.add("project__box-details");
-    // create the project box description
-    let detailsDescription = document.createElement("p");
-    detailsDescription.classList.add("description");
-    detailsDescription.textContent = project.description.substring(0, 70) + "...";
-    // loop for tags of project if exists
-    let projectTags = document.createElement("div");
-    projectTags.classList.add("project__box-tags");
-    // create the project tags
-    for (let prop in project.tags) {
-      let tag = document.createElement("span");
-      tag.textContent = project.tags[prop];
-      projectTags.append(tag);
-    };
-    // create the project box title
-    let projectTitle = document.createElement("h3");
-    projectTitle.classList.add("title");
-    projectTitle.textContent = project.title;
-
-    // create the project box buttons
-    let projectBoxButtons = document.createElement("div");
-    projectBoxButtons.classList.add("project__box-buttons");
-    // create a link foreach prop in object links
-    for (let prop in project.links) {
-      let projectButton = document.createElement("a");
-      projectButton.href = project.links[prop];
-      let iconFA = `fa-${prop}`;
-      projectButton.classList.add("fab", iconFA, "btn-primary-icon");
-      projectButton.target = "_blank";
-      projectBoxButtons.append(projectButton);
-    }
-
-
-    projectImage.append(image);
-    // append elements to the project box details
-    projectBoxDetails.append(detailsDescription);
-    // append elements to the project box
-    projectBox.append(projectImage);
-    projectBox.append(projectBoxDetails);
-    projectBox.append(projectTags);
-    projectBox.append(projectTitle);
-    projectBox.append(projectBoxButtons);
-
+    const projectBox = createProjectElement(project);
     // Add complete individual project box to the project section
-    projectsContainer.append(projectBox);
+    projectsContainer.appendChild(projectBox);
   });
+};
+
+function createProjectElement(project) {
+  // create the HTML element for each project
+  const projectBox = document.createElement('div');
+  projectBox.classList.add('project__box', 'fade-in');
+
+  // Imagen con multiples resoluciones
+  const projectImage = createProjectImage(project);
+
+  // Detalles del proyecto
+  const projectDetails = createProjectDetails(project);
+
+   // Tags
+  const projectTags = createProjectTags(project);
+  
+  // Título
+  const projectTitle = createProjectTitle(project);
+  
+  // Botones
+  const projectButtons = createProjectButtons(project);
+
+  projectBox.append(projectImage, projectDetails, projectTags, projectTitle, projectButtons);
+  
+  return projectBox;
+};
+
+// Funciones auxiliares para crear cada parte del proyecto
+function createProjectImage(project) {
+  // create the project image wrapper
+  const projectImage = document.createElement('div');
+  projectImage.classList.add('project__box-image');
+  // create the project image
+  const image = document.createElement('img');
+  image.src = project.image;
+  image.alt = project.title;
+  image.loading = 'lazy';
+  
+  // TODO: Configuración de imágenes responsivas 1280w, 992w, 576w
+  // Eliminar srcset y sizes para usar solo la imagen original
+  image.removeAttribute('srcset');
+  image.removeAttribute('sizes');
+
+  projectImage.appendChild(image);
+  return projectImage;
+};
+
+function createProjectDetails(project) {
+  // create the project box details
+  const projectDetails = document.createElement('div');
+  projectDetails.classList.add('project__box-details');
+  // create the project box description
+  const description = document.createElement('p');
+  description.classList.add('description');
+  description.textContent = project.description.substring(0, 150) + '...';
+  
+  projectDetails.appendChild(description);
+  return projectDetails;
+};
+
+function createProjectTags(project) {
+  const projectTags = document.createElement('div');
+  projectTags.classList.add('project__box-tags');
+
+  // Verificar si hay tags antes de crear elementos
+  if (project.tags && Object.keys(project.tags).length > 0) {
+    Object.values(project.tags).forEach(tagName => {
+      const tag = document.createElement('span');
+      tag.textContent = tagName;
+      projectTags.appendChild(tag);
+    });
+  }
+
+  return projectTags;
+};
+
+function createProjectTitle(project) {
+  const projectTitle = document.createElement('h3');
+  projectTitle.classList.add('title');
+  projectTitle.textContent = project.title;
+  return projectTitle;
+};
+
+function createProjectButtons(project) {
+  const projectBoxButtons = document.createElement('div');
+  projectBoxButtons.classList.add('project__box-buttons');
+
+  // Verificar si hay links antes de crear botones
+  if (project.links && Object.keys(project.links).length > 0) {
+    Object.entries(project.links).forEach(([key, url]) => {
+      const projectButton = document.createElement('a');
+      projectButton.href = url;
+      
+      // Mapeo de iconos
+      const iconMap = {
+        'github': 'fa-github',
+        'google': 'fa-google',
+        'youtube': 'fa-youtube',
+        'linkedin': 'fa-linkedin'
+      };
+
+      const iconClass = iconMap[key] || 'fa-link';
+      projectButton.classList.add('fab', iconClass, 'btn-primary-icon');
+      projectButton.target = '_blank';
+      
+      // Añadir aria-label para accesibilidad
+      projectButton.setAttribute('aria-label', `Ver ${key}`);
+
+      projectBoxButtons.appendChild(projectButton);
+    });
+  }
+
+  return projectBoxButtons;
 };
 
 function projectsHandler() {
