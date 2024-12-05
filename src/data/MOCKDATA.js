@@ -1,13 +1,14 @@
 const allProjects = [
   {
     id: "01",
-    title: "Portafolio popehiflo.",
-    image: "./public/assets/imgs/img-portfolio.png",
-    description: "Portafolio construido con HTML, CSS y Javascript",
+    title: "Mi Portafolio Web",
+    image: "./public/assets/imgs/img-portfolio.webp",
+    description: "Portafolio personal que muestra mis habilidades y proyectos como desarrollador web. Esta construido con HTML, CSS, Javascript, BEM Notation, etc. En el cual puedo presentar de manera profesional y atractiva mi trabajo y trayectoria profesional.",
     tags: {
       html: "html",
       css: "css",
-      js: "js"
+      js: "js",
+      bem: "bem"
     },
     category: {
       id: "frontend",
@@ -16,7 +17,7 @@ const allProjects = [
     links: {
       github: "https://github.com/popehiflo/popehiflo.github.io",
       google: "https://popehiflo.github.io/",
-      youtube: "https://www.youtube.com/@popehiflo/videos"
+      youtube: "https://www.youtube.com/watch?v=tjAcXTpIou8"
     }
   },
   {
