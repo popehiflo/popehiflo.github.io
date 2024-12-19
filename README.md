@@ -4,7 +4,7 @@
 🎥 **Video de Implementación:** [YouTube](https://www.youtube.com/watch?v=tjAcXTpIou8)  
 🌎 **Visita mi Portafolio:** [GitHub Pages](https://popehiflo.github.io/)  
 
-![Portafolio popehiflo](./public/assets/imgs/img-portfolio.png)   
+![Portafolio popehiflo](./public/assets/imgs/img-portfolio.webp)   
 
 Este proyecto es un mi portafolio personal que muestra mis habilidades y proyectos como desarrollador web. Está construido con tecnologias modernas para presentar de manera profesional y atractiva mi trabajo y trayectoria profesional.
 
