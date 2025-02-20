@@ -248,9 +248,10 @@ section {
 
 .home h1 {
   font-family: 'Black Han Sans', sans-serif;
-  font-size: clamp(6rem, 15vw, 15rem); /* Responsive */
+  font-display: swap;
+  font-size: clamp(4rem, 12vw, 10rem); /* Responsive */
   color: rgba(225, 225, 225, 0.1);
-  background-image: url("../../public/assets/imgs/abstract-background-canvas-code.webp");
+  background-image: url("../../public/assets/imgs/abstract-background-canvas-code-mobile.webp");
   background-repeat: repeat-x;
   background-position: center center;
   background-size: cover;
@@ -259,14 +260,15 @@ section {
   -webkit-text-stroke: 0.5rem var(--color-primary);
   animation: backgroundScroll 15s linear infinite;
   margin: 0 -1rem;
+  will-change: background-position;
 }
 
 @keyframes backgroundScroll {
   0% {
-    background-position: left 0rem top 0rem;
+    background-position: left 0 top 0;
   }
   100% {
-    background-position: left 1100px top 0rem;
+    background-position: left 600px top 0;
   }
 }
 
@@ -956,6 +958,21 @@ section {
   }
 }
 
+@media (min-width: 992px) {
+  .home h1 {
+    background-image: url("../../public/assets/imgs/abstract-background-canvas-code.webp");
+    font-size: clamp(6rem, 15vw, 15rem);
+  }
+  @keyframes backgroundScroll {
+    0% {
+      background-position: left 0 top 0;
+    }
+    100% {
+      background-position: left 1100px top 0; /* Original para desktop */
+    }
+  }
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -986,6 +1003,7 @@ section {
   .home h1 {
     font-size: 8rem;
     -webkit-text-stroke: 0.2rem var(--color-primary);
+    animation: backgroundScroll 10s linear infinite;
   }
   .projects .projects__filter .btn-primary {
     padding: 1rem;
