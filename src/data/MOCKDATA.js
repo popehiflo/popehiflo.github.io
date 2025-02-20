@@ -3,7 +3,7 @@ const allProjects = [
   {
     id: "01",
     title: "Mi Portafolio Web",
-    image: "./public/assets/imgs/img-portfolio.webp",
+    image: "./public/assets/imgs/projects/frontend_portfolio-popehiflo.webp",
     description: "Portafolio personal que muestra mis habilidades y proyectos como desarrollador web. Esta construido con HTML, CSS, Javascript, BEM Notation, etc. En el cual puedo presentar de manera profesional y atractiva mi trabajo y trayectoria profesional.",
     tags: {
       html: "html",
@@ -24,7 +24,7 @@ const allProjects = [
   {
     id: "02",
     title: "Proyecto Backend 02",
-    image: "./public/assets/imgs/img-backend-0.png",
+    image: "./public/assets/imgs/projects/backend_swagger.png",
     description: "2 - Proyecto de una API con Node y Express. Este es un proyecto backend.",
     tags: {
       java: "java"
@@ -42,7 +42,7 @@ const allProjects = [
   {
     id: "03",
     title: "Proyecto Frontend 03",
-    image: "./public/assets/imgs/img-frontend-0.png",
+    image: "./public/assets/imgs/projects/img-frontend-0.png",
     description: "3- Proyecto de sitio web estático en HTML + CSS. Este es un proyecto frontend.",
     tags: {
       vite: "vite",
@@ -62,7 +62,7 @@ const allProjects = [
   {
     id: "04",
     title: "Proyecto Backend 04 con un nombre un poco mas largo",
-    image: "./public/assets/imgs/img-backend-1.png",
+    image: "./public/assets/imgs/projects/img-backend-1.png",
     description: "4 - Proyecto de una API con Node y Express. Este es un proyecto backend.",
     tags: {
       nodejs: "nodejs"
@@ -80,7 +80,7 @@ const allProjects = [
   {
     id: "05",
     title: "Proyecto Frontend 05",
-    image: "./public/assets/imgs/img-frontend-0.png",
+    image: "./public/assets/imgs/projects/img-frontend-0.png",
     description: "5 - Proyecto de sitio web estático en HTML + CSS. Este es un proyecto frontend.",
     tags: {
       angular: "angular",
@@ -99,7 +99,7 @@ const allProjects = [
   {
     id: "06",
     title: "Proyecto Backend 06",
-    image: "./public/assets/imgs/img-backend-2.png",
+    image: "./public/assets/imgs/projects/img-backend-2.png",
     description: "6 - Proyecto de una API con Spring Boot y MongoDB. Este es un proyecto backend.",
     tags: {
       java: "java",
@@ -123,7 +123,7 @@ const allBlogs = [
   {
     id: "01",
     title: "Instalar nvm en Windows",
-    image: "./public/assets/imgs/img-blog-nvm.jpg",
+    image: "./public/assets/imgs/blogs/blog_nvm.webp",
     date: "20 de febrero 2025",
     author: "popehiflo",
     summary: "En este artículo se muestra paso a paso cómo instalar nvm en Windows 10.",
@@ -147,7 +147,7 @@ const allBlogs = [
   {
     id: "02",
     title: "Introducción a Spring Boot",
-    image: "./public/assets/imgs/img-blog-spring.jpg",
+    image: "./public/assets/imgs/blogs/blog_spring-boot.webp",
     date: "25 de febrero 2025",
     author: "popehiflo",
     summary: "Una guía básica para empezar con Spring Boot y crear tu primera API REST.",

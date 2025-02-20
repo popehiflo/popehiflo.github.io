@@ -4,8 +4,9 @@
 /* --- CSS VARIABLES --- */
 :root {
   /* CSS variables for colors */
-  --color-primary: #3279BD;
-  --color-primary-rgb: 50, 121, 189;
+  --color-primary: #E6F0FA;
+  --color-primary-dark: #3279BD;
+  --color-primary-dark-rgb: 50, 121, 189;
   
   /* Colors for Dark Theme */
   --color-text-main-darktheme: #fff;
@@ -67,6 +68,7 @@ body {
 }
 
 body.active {
+  --color-primary: var(--color-primary-dark);
   --color-bg-dark: var(--color-bg-light);
   --color-text-main-darktheme: var(--color-text-main-lighttheme);
   --color-text-dark: var(--color-text-light);
@@ -429,8 +431,8 @@ section {
 }
 
 .projects .projects__filter input[type="radio"]:checked + label > .project-amount {
-  background: var(--color-primary);
-  color: #fff;
+  background: rgb(var(--color-primary-dark-rgb));
+  color: #E6F0FA;
 }
 
 .projects .projects__filter label .project-amount {
@@ -526,7 +528,7 @@ section {
 }
 
 .projects .projects__container .project__box .project__box-tags span {
-  background-color: var(--color-primary);
+  background-color: rgba(var(--color-primary-dark-rgb), 0.8);
   color: white;
   font-size: 1.2rem;
   padding: 0.25rem 0.5rem;
@@ -544,7 +546,7 @@ section {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  background-color: rgba(var(--color-primary-rgb), 0.8);
+  background-color: rgba(var(--color-primary-dark-rgb), 0.8);
   color: white;
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;
@@ -579,7 +581,7 @@ section {
 .experience .experiences__container .experience__box {
   position: relative;
   flex: 1 1 40rem;
-  border-left: 0.1rem solid var(--color-primary);
+  border-left: 0.1rem solid rgb(var(--color-primary-dark-rgb));
   padding: 2rem 1rem 0 1rem;
 }
 
@@ -591,7 +593,7 @@ section {
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
-  background: var(--color-primary);
+  background: rgb(var(--color-primary-dark-rgb));
 }
 
 .experience .experiences__container .experience__box .box-content {
@@ -791,7 +793,7 @@ section {
 }
 
 .modal-text code {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .modal-text ul {
