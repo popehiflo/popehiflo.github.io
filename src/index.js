@@ -1,4 +1,5 @@
 import { greetingHandler, clockHandler } from './utils/about-section.js';
+import { blogsHandler } from './utils/blogs-section.js';
 import { projectsHandler } from './utils/projects-section.js';
 
 // Loader
@@ -85,4 +86,5 @@ menuToogleHandler();
 greetingHandler();
 clockHandler();
 projectsHandler();
+blogsHandler();
 footerHandler();
