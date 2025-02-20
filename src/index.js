@@ -3,23 +3,7 @@ import { blogsHandler } from './utils/blogs-section.js';
 import { projectsHandler } from './utils/projects-section.js';
 
 // Loader
-function removeLoader(loader) {
-  setTimeout(() => {
-    loader.classList.add('loader-hidden');
-  }, 3000);
-};
-
-function loaderHandler() {
-  // DOM loaded
-  window.addEventListener('DOMContentLoaded', () => {
-    let loader = document.querySelector('.loader__container');
-    removeLoader(loader);
-    setTimeout(() => {
-      // waiting transition
-      loader.style.display = 'none';
-    }, 5000);
-  });
-};
+/* Se mueve logica de loader a un script inline en head de index.html */
 
 // Buttons sidebar menu and theme toggler
 function menuToogleHandler() {
@@ -81,7 +65,6 @@ function footerHandler() {
   `;
 };
 
-loaderHandler();
 menuToogleHandler();
 greetingHandler();
 clockHandler();
