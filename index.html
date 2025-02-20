@@ -1,16 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Pool Petter Hijuela Florian - popehiflo - FullStack Web Developer">
+  <meta name="description" content="Portafolio de Pool Petter Hijuela (popehiflo), desarrollador Fullstack con experiencia en Java, Spring Boot, JavaScript y más.">
+  <meta name="keywords" content="desarrollador, fullstack, portafolio, popehiflo, Java, Spring Boot, JavaScript, ReactJS">
+  <meta name="author" content="Pool Petter Hijuela Florian - popehiflo">
+
   <link rel="shorcut icon" href="./logo.svg" type="image/svg+xml">
   <!-- Font Awesome cdn link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./src/styles/index.css">
   <title>Pool Hijuela (popehiflo) - Software Developer</title>
+
+  <!-- Loader -->
+  <script>
+    function removeLoader(loader) {
+      setTimeout(() => {
+        loader.classList.add('loader-hidden');
+      }, 3000);
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      let loader = document.querySelector('.loader__container');
+      removeLoader(loader);
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+  <!-- MAIN SCRIPT JS -->
+  <script type="module" src="./src/index.js" defer></script>
 </head>
 <body>
   <!-- SIDEBAR/HEADER - STARTS -->
@@ -50,7 +71,7 @@
     <i class="fas fa-bars"></i>
   </button>
   <!-- button theme toggler -->
-  <button type="button" id="btn-theme-toggler" class="btn-primary-icon" aria-label="Cambiar tema">
+  <button type="button" id="btn-theme-toggler" class="btn-primary-icon" aria-label="Cambiar entre tema claro y oscuro">
     <i class="fas fa-sun"></i>
   </button>
   <!-- BUTTONS ENDS -->
@@ -256,55 +277,10 @@
     <h1 class="heading">Mis<span> blogs </span>(apuntes)</h1>
 
     <div class="blogs__container">
-
-      <div class="blog__box">
-        <div class="box-image">
-          <img src="./public/assets/imgs/img-blog-nvm.jpg" alt="blog about install nvm"
-            srcset="./public/assets/imgs/img-blog-nvm.jpg 1280w,
-            .public/assets/imgs/img-blog-nvm-medium.jpg 992w,
-            .public/assets/imgs/img-blog-nvm-small.jpg 576w,"
-          />
-        </div>
-        <div class="box-content">
-          <div class="content-icons">
-            <a href="#">
-              <i class="fas fa-calendar"></i> 19 de abril 2023
-            </a>
-            <a href="#">
-              <i class="fas fa-user"></i> popehiflo
-            </a>
-          </div>
-          <h3>Instalar nvm en Windows</h3>
-          <p>En este articulo se muestra paso a paso como instalar nvm en windows 10.</p>
-          <a href="#" class="btn-primary">Ver articulo</a>
-        </div>
-      </div>
-
-      <div class="blog__box">
-        <div class="box-image">
-          <img src="./public/assets/imgs/img-blog-nvm.jpg" alt="blog about install nvm"
-            srcset="./public/assets/imgs/img-blog-nvm.jpg 1280w,
-              .public/assets/imgs/img-blog-nvm-medium.jpg 992w,
-              .public/assets/imgs/img-blog-nvm-small.jpg 576w,"
-          />
-        </div>
-        <div class="box-content">
-          <div class="content-icons">
-            <a href="#">
-              <i class="fas fa-calendar"></i> 19 de abril 2023
-            </a>
-            <a href="#">
-              <i class="fas fa-user"></i> popehiflo
-            </a>
-          </div>
-          <h3>Instalar nvm en Windows</h3>
-          <p>En este articulo se muestra paso a paso como instalar nvm en windows 10.</p>
-          <a href="#" class="btn-primary">Ver articulo</a>
-        </div>
-      </div>
-
+      <!-- BlogBox (cards se generarán dinámicamente con JS) -->
     </div>
   </section>
+  <!-- Modal para BlogBox (se generará dinámicamente con JS) -->
   <!-- #BLOG - ENDS -->
 
   <!-- FOOTER - STARTS -->
@@ -328,8 +304,5 @@
     </div>
   </div>
   <!-- LOADER - ENDS -->
-
-  <!-- MAIN SCRIPT JS -->
-  <script src="./src/index.js" type="module"></script>
 </body>
 </html>
