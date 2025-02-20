@@ -137,7 +137,7 @@ section {
 
 .heading {
   text-align: center;
-  font-size: 5rem;
+  font-size: clamp(3rem, 5vw, 5rem); /* Mínimo 30px, máximo 50px, ajustado según viewport */
   color: var(--color-text-main-darktheme);
   padding-bottom: 2rem;
 }
