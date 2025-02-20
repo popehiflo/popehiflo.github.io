@@ -10,7 +10,11 @@
 
   <link rel="shorcut icon" href="./logo.svg" type="image/svg+xml">
   <!-- Font Awesome cdn link  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900|Black+Han+Sans&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./src/styles/index.css">
   <title>Pool Hijuela (popehiflo) - Software Developer</title>
@@ -179,27 +183,7 @@
       <label for="back" class="btn-primary">Backend<span class="project-amount">0</span></label>
     </div>
 
-    <div class="projects__container">
-
-      <div class="project__box">
-        <div class="project__box-image">
-          <img src="./public/assets/imgs/img-portfolio.png" alt=""
-            srcset=""
-            sizes=""
-          />
-        </div>
-        <div class="project__box-details">
-          <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit neque doloremque, commodi impedit nulla sint modi quibusdam autem accusamus eum.</p>
-        </div>
-        <h3 class="title">proyecto X</h3>
-        <div class="project__box-buttons">
-          <a href="https://github.com/popehiflo" class="btn-primary-icon fab fa-github" target="_blank"></a>
-          <a href="https://linkedin.com/in/popehiflo/" class="btn-primary-icon fab fa-linkedin" target="_blank"></a>
-          <a href="https://www.youtube.com/@popehiflo/videos" class="btn-primary-icon fab fa-youtube" target="_blank"></a>
-        </div>
-      </div>
-
-      </div>
+      <div class="projects__container"></div>
 
     </div>
   </section>
