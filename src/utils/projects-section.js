@@ -18,8 +18,14 @@ function createProjectElement(project) {
   const projectBox = document.createElement('div');
   projectBox.classList.add('project__box', 'fade-in');
 
+  // Badge de categoria
+  const categoryBadge = document.createElement('div');
+  categoryBadge.classList.add('project-category');
+  categoryBadge.textContent = (project.category.name).toLowerCase();
+
   // Imagen con multiples resoluciones
   const projectImage = createProjectImage(project);
+  projectImage.prepend(categoryBadge);
 
   // Detalles del proyecto
   const projectDetails = createProjectDetails(project);
