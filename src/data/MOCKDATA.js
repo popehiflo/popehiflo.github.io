@@ -37,7 +37,7 @@ const allProjects = [
   {
     id: "02",
     title: "API REST para E-commerce",
-    image: "./public/assets/imgs/projects/backend_swagger.png",
+    image: "./public/assets/imgs/projects/backend_swagger.webp",
     summary: "Una API RESTful robusta para una tienda online, con gestión de productos, usuarios y pedidos.",
     description: "Desarrollo de una API RESTful completa para una plataforma de e-commerce. Incluye gestión de productos, inventario, usuarios, autenticación con JWT y procesamiento de pedidos. La API está documentada con Swagger/OpenAPI para facilitar la integración con cualquier cliente frontend.",
     tags: {
@@ -60,7 +60,7 @@ const allProjects = [
   {
     id: "03",
     title: "Dashboard de Administración",
-    image: "./public/assets/imgs/projects/img-frontend-0.png",
+    image: "./public/assets/imgs/projects/img-frontend-0.webp",
     summary: "Panel de control interactivo construido con React y TypeScript para la administración de un CMS.",
     description: "Panel de control interactivo para la administración de un CMS. Permite a los usuarios crear, editar y eliminar publicaciones, gestionar usuarios y ver estadísticas de visitas en tiempo real. Construido con React y TypeScript, utilizando Vite para un desarrollo rápido. El estado global se gestiona con Redux Toolkit y las visualizaciones de datos con Chart.js.",
     tags: {
@@ -82,7 +82,7 @@ const allProjects = [
   {
     id: "04",
     title: "Microservicio de Notificaciones",
-    image: "./public/assets/imgs/projects/img-backend-1.png",
+    image: "./public/assets/imgs/projects/img-backend-1.webp",
     summary: "Microservicio escalable con Node.js y Express para gestionar notificaciones por email, SMS y push.",
     description: "Creación de un microservicio independiente para gestionar el envío de notificaciones (email, SMS y push) a los usuarios. Construido con Node.js, Express y TypeScript. Se comunica con otros servicios de forma asíncrona a través de RabbitMQ para garantizar la escalabilidad y resiliencia del sistema.",
     tags: {
@@ -125,7 +125,7 @@ const allProjects = [
   {
     id: "06",
     title: "Sistema de Reservas de Hotel",
-    image: "./public/assets/imgs/projects/img-backend-2.png",
+    image: "./public/assets/imgs/projects/img-backend-2.webp",
     summary: "Backend con Spring Boot y Spring Security para gestionar reservas, habitaciones y facturación de un hotel.",
     description: "Backend para una aplicación de reservas de hotel. Permite gestionar la disponibilidad de habitaciones, procesar reservas y manejar la facturación. La API está securizada con Spring Security y los datos se persisten en una base de datos PostgreSQL usando JPA/Hibernate.",
     tags: {
