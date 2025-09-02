@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://popehiflo.github.io/sitemap.xml
