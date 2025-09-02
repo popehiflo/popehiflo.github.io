@@ -27,7 +27,7 @@ function createProjectElement(project) {
   const projectImage = createProjectImage(project);
   projectImage.prepend(categoryBadge);
 
-  // Detalles del proyecto
+  // Detalles del proyecto (para el hover)
   const projectDetails = createProjectDetails(project);
 
    // Tags
@@ -36,8 +36,19 @@ function createProjectElement(project) {
   // Título
   const projectTitle = createProjectTitle(project);
   
-  // Botones
+  // Botones de links
   const projectButtons = createProjectButtons(project);
+
+  // Botón para abrir el modal
+  const modalButton = document.createElement('a');
+  modalButton.classList.add('btn-primary', 'btn-details');
+  modalButton.textContent = 'Detalles';
+  modalButton.style.marginLeft = 'auto'; // Aligns this button to the right
+  modalButton.addEventListener('click', () => {
+    showProjectModal(project);
+  });
+
+  projectButtons.appendChild(modalButton);
 
   projectBox.append(projectImage, projectDetails, projectTags, projectTitle, projectButtons);
   
@@ -55,8 +66,6 @@ function createProjectImage(project) {
   image.alt = project.title;
   image.loading = 'lazy';
   
-  // TODO: Configuración de imágenes responsivas 1280w, 992w, 576w
-  // Eliminar srcset y sizes para usar solo la imagen original
   image.removeAttribute('srcset');
   image.removeAttribute('sizes');
 
@@ -71,7 +80,8 @@ function createProjectDetails(project) {
   // create the project box description
   const description = document.createElement('p');
   description.classList.add('description');
-  description.textContent = project.description.substring(0, 150) + '...';
+  // Use summary field for hover
+  description.textContent = project.summary;
   
   projectDetails.appendChild(description);
   return projectDetails;
@@ -110,7 +120,6 @@ function createProjectButtons(project) {
       const projectButton = document.createElement('a');
       projectButton.href = url;
       
-      // Mapeo de iconos
       const iconMap = {
         'github': 'fa-github',
         'google': 'fa-google',
@@ -122,7 +131,6 @@ function createProjectButtons(project) {
       projectButton.classList.add('fab', iconClass, 'btn-primary-icon');
       projectButton.target = '_blank';
       
-      // Añadir aria-label para accesibilidad
       projectButton.setAttribute('aria-label', `Ver ${key}`);
 
       projectBoxButtons.appendChild(projectButton);
@@ -131,6 +139,65 @@ function createProjectButtons(project) {
 
   return projectBoxButtons;
 };
+
+function showProjectModal(project) {
+  const existingModal = document.querySelector('.project-detail-modal');
+  if (existingModal) {
+    existingModal.remove();
+  }
+
+  const modal = document.createElement('div');
+  modal.className = 'project-detail-modal';
+
+  let tagsHTML = '';
+  if (project.tags && Object.keys(project.tags).length > 0) {
+    tagsHTML = Object.values(project.tags).map(tag => `<span>${tag}</span>`).join('');
+  }
+
+  let buttonsHTML = '';
+  if (project.links && Object.keys(project.links).length > 0) {
+    const iconMap = {
+      'github': 'fa-github',
+      'google': 'fa-google',
+      'youtube': 'fa-youtube',
+      'linkedin': 'fa-linkedin'
+    };
+    buttonsHTML = Object.entries(project.links).map(([key, url]) => {
+      const iconClass = iconMap[key] || 'fa-link';
+      return `<a href="${url}" target="_blank" class="btn-primary-icon fab ${iconClass}" aria-label="Visitar ${key}"></a>`;
+    }).join('');
+  }
+
+  modal.innerHTML = `
+    <div class="project-modal-content">
+      <div class="project-modal-header">
+        <h2>${project.title}</h2>
+        <i class="fas fa-times project-modal-close"></i>
+      </div>
+      <div class="project-modal-body">
+        <img src="${project.image}" alt="${project.title}">
+        <div class="project-modal-tags">${tagsHTML}</div>
+        <div class="project-modal-description">${project.description}</div>
+        <div class="project-modal-buttons">${buttonsHTML}</div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+  document.body.style.overflow = 'hidden';
+
+  const closeModal = () => {
+    modal.remove();
+    document.body.style.overflow = 'auto';
+  };
+
+  modal.querySelector('.project-modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+}
 
 function projectsHandler() {
 

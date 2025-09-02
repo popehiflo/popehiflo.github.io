@@ -2,14 +2,27 @@
 const allProjects = [
   {
     id: "01",
-    title: "Mi Portafolio Web",
+    title: "Portafolio Profesional de Desarrollo",
     image: "./public/assets/imgs/projects/frontend_portfolio-popehiflo.webp",
-    description: "Portafolio personal que muestra mis habilidades y proyectos como desarrollador web. Esta construido con HTML, CSS, Javascript, BEM Notation, etc. En el cual puedo presentar de manera profesional y atractiva mi trabajo y trayectoria profesional.",
+    summary: "Mi portafolio personal construido con Vanilla JS, HTML5 y CSS3, enfocado en la velocidad y el diseño responsivo.",
+    description: `
+      <p>Este portafolio es una Single Page Application (SPA) construida desde cero para mostrar mis habilidades y proyectos como desarrollador. El objetivo era crear un sitio web rápido, responsive y mantenible sin depender de frameworks de JavaScript.</p>
+      <strong>Características principales:</strong>
+      <ul>
+        <li><strong>Diseño responsivo:</strong> Adaptado para móviles, tablets y desktops.</li>
+        <li><strong>Cambio de tema:</strong> Modo oscuro (predeterminado) y claro.</li>
+        <li><strong>Secciones dinámicas:</strong> Proyectos y blogs generados desde un único archivo de datos.</li>
+        <li><strong>Componentes Modulares:</strong> Lógica de JavaScript separada en módulos para mantenibilidad.</li>
+        <li><strong>Optimización:</strong> Carga rápida con lazy loading de imágenes y CSS optimizado.</li>
+      </ul>
+    `,
     tags: {
-      html: "html",
-      css: "css",
-      js: "js",
-      bem: "bem"
+      html: "html5",
+      css: "css3",
+      js: "javascript",
+      bem: "bem",
+      responsive: "responsive",
+      darkmode: "dark-mode"
     },
     category: {
       id: "frontend",
@@ -23,97 +36,111 @@ const allProjects = [
   },
   {
     id: "02",
-    title: "Proyecto Backend 02",
+    title: "API REST para E-commerce",
     image: "./public/assets/imgs/projects/backend_swagger.png",
-    description: "2 - Proyecto de una API con Node y Express. Este es un proyecto backend.",
+    summary: "Una API RESTful robusta para una tienda online, con gestión de productos, usuarios y pedidos.",
+    description: "Desarrollo de una API RESTful completa para una plataforma de e-commerce. Incluye gestión de productos, inventario, usuarios, autenticación con JWT y procesamiento de pedidos. La API está documentada con Swagger/OpenAPI para facilitar la integración con cualquier cliente frontend.",
     tags: {
-      java: "java"
+      java: "java",
+      springboot: "spring boot",
+      jwt: "jwt",
+      mysql: "mysql",
+      restapi: "rest api",
+      swagger: "swagger"
     },
     category: {
       id: "backend",
       name: "Backend"
     },
     links: {
-      github: "https://github.com/popehiflo/popehiflo.github.io",
-      google: "https://popehiflo.github.io/",
-      youtube: "https://www.youtube.com/@popehiflo/videos"
+      github: "https://github.com/popehiflo",
+      google: "https://popehiflo.github.io/"
     }
   },
   {
     id: "03",
-    title: "Proyecto Frontend 03",
+    title: "Dashboard de Administración",
     image: "./public/assets/imgs/projects/img-frontend-0.png",
-    description: "3- Proyecto de sitio web estático en HTML + CSS. Este es un proyecto frontend.",
+    summary: "Panel de control interactivo construido con React y TypeScript para la administración de un CMS.",
+    description: "Panel de control interactivo para la administración de un CMS. Permite a los usuarios crear, editar y eliminar publicaciones, gestionar usuarios y ver estadísticas de visitas en tiempo real. Construido con React y TypeScript, utilizando Vite para un desarrollo rápido. El estado global se gestiona con Redux Toolkit y las visualizaciones de datos con Chart.js.",
     tags: {
+      react: "react",
+      ts: "typescript",
       vite: "vite",
-      reactjs: "reactjs",
-      ts: "ts"
+      redux: "redux",
+      mui: "material-ui"
     },
     category: {
       id: "frontend",
       name: "Frontend"
     },
     links: {
-      github: "https://github.com/popehiflo/popehiflo.github.io",
-      google: "https://popehiflo.github.io/",
-      youtube: "https://www.youtube.com/@popehiflo/videos"
+      github: "https://github.com/popehiflo",
+      google: "https://popehiflo.github.io/"
     }
   },
   {
     id: "04",
-    title: "Proyecto Backend 04 con un nombre un poco mas largo",
+    title: "Microservicio de Notificaciones",
     image: "./public/assets/imgs/projects/img-backend-1.png",
-    description: "4 - Proyecto de una API con Node y Express. Este es un proyecto backend.",
+    summary: "Microservicio escalable con Node.js y Express para gestionar notificaciones por email, SMS y push.",
+    description: "Creación de un microservicio independiente para gestionar el envío de notificaciones (email, SMS y push) a los usuarios. Construido con Node.js, Express y TypeScript. Se comunica con otros servicios de forma asíncrona a través de RabbitMQ para garantizar la escalabilidad y resiliencia del sistema.",
     tags: {
-      nodejs: "nodejs"
+      nodejs: "node.js",
+      express: "express",
+      typescript: "typescript",
+      rabbitmq: "rabbitmq",
+      docker: "docker"
     },
     category: {
       id: "backend",
       name: "Backend"
     },
     links: {
-      github: "https://github.com/popehiflo/popehiflo.github.io",
-      google: "https://popehiflo.github.io/",
-      youtube: "https://www.youtube.com/@popehiflo/videos"
+      github: "https://github.com/popehiflo",
+      google: "https://popehiflo.github.io/"
     }
   },
   {
     id: "05",
-    title: "Proyecto Frontend 05",
-    image: "./public/assets/imgs/projects/img-frontend-0.png",
-    description: "5 - Proyecto de sitio web estático en HTML + CSS. Este es un proyecto frontend.",
+    title: "Aplicación de Clima",
+    image: "./public/assets/imgs/projects/img-frontend-0-small.jpg",
+    summary: "Una SPA con Angular y RxJS que muestra datos meteorológicos en tiempo real usando una API externa.",
+    description: "Single Page Application (SPA) que muestra datos meteorológicos en tiempo real, consumiendo la API de OpenWeatherMap. Incluye geolocalización para detectar la ubicación del usuario y un buscador de ciudades. Desarrollada con Angular y RxJS para manejar los flujos de datos asíncronos de forma reactiva.",
     tags: {
       angular: "angular",
-      rxjs: "rxjs"
+      rxjs: "rxjs",
+      typescript: "typescript",
+      spa: "spa"
     },
     category: {
       id: "frontend",
       name: "Frontend"
     },
     links: {
-      github: "https://github.com/popehiflo/popehiflo.github.io",
-      google: "https://popehiflo.github.io/",
-      youtube: "https://www.youtube.com/@popehiflo/videos"
+      github: "https://github.com/popehiflo",
+      google: "https://popehiflo.github.io/"
     }
   },
   {
     id: "06",
-    title: "Proyecto Backend 06",
+    title: "Sistema de Reservas de Hotel",
     image: "./public/assets/imgs/projects/img-backend-2.png",
-    description: "6 - Proyecto de una API con Spring Boot y MongoDB. Este es un proyecto backend.",
+    summary: "Backend con Spring Boot y Spring Security para gestionar reservas, habitaciones y facturación de un hotel.",
+    description: "Backend para una aplicación de reservas de hotel. Permite gestionar la disponibilidad de habitaciones, procesar reservas y manejar la facturación. La API está securizada con Spring Security y los datos se persisten en una base de datos PostgreSQL usando JPA/Hibernate.",
     tags: {
       java: "java",
-      springboot: "springboot",
-      jpa: "jpa",
-      mysql: "mysql"
+      springboot: "spring boot",
+      security: "spring security",
+      postgresql: "postgresql",
+      jpa: "jpa"
     },
     category: {
       id: "backend",
       name: "Backend"
     },
     links: {
-      github: "https://github.com/popehiflo/popehiflo.github.io",
-      google: "https://popehiflo.github.io/",
+      github: "https://github.com/popehiflo"
     }
   }
 ];
