@@ -39,33 +39,42 @@ function showBlogModal(blog) {
   modal.setAttribute('role', 'dialog');
   modal.setAttribute('aria-labelledby', 'modal-title');
   modal.innerHTML = `
-    <div class="modal-content">
-      <button class="modal-close btn-primary-icon" aria-label="Cerrar modal">
-        <i class="fas fa-times"></i>
-      </button>
-      <img src="${blog.image}" alt="${blog.title}" class="modal-image" loading="lazy">
-      <div class="modal-body">
+    <div class="blog-modal-content">
+      <div class="blog-modal-header">
         <h2 id="modal-title">${blog.title}</h2>
-        <div class="modal-meta">
+        <i class="fas fa-times blog-modal-close"></i>
+      </div>
+      <img src="${blog.image}" alt="${blog.title}" class="blog-modal-image" loading="lazy">
+      <div class="blog-modal-body">
+        <div class="blog-modal-meta">
           <span><i class="fas fa-calendar"></i> ${blog.date}</span>
           <span><i class="fas fa-user"></i> ${blog.author}</span>
         </div>
-        <div class="modal-text">${blog.content}</div>
+        <div class="blog-modal-text">${blog.content}</div>
       </div>
     </div>
   `;
 
   document.body.appendChild(modal);
-  modal.focus();
+  document.body.style.overflow = 'hidden'; // Prevent background scrolling
 
   // Cerrar modal
-  const closeBtn = modal.querySelector('.modal-close');
-  closeBtn.addEventListener('click', () => modal.remove());
+  const closeModal = () => {
+    modal.remove();
+    document.body.style.overflow = 'auto';
+  };
+
+  const closeBtn = modal.querySelector('.blog-modal-close');
+  closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', (e) => {
-    if (e.target === modal) modal.remove();
+    if (e.target === modal) {
+      closeModal();
+    }
   });
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') modal.remove();
+    if (e.key === 'Escape') {
+      closeModal();
+    }
   });
 }
 
