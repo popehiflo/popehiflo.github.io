@@ -40,7 +40,8 @@ function createProjectElement(project) {
   const projectButtons = createProjectButtons(project);
 
   // Botón para abrir el modal
-  const modalButton = document.createElement('a');
+  const modalButton = document.createElement('button');
+  modalButton.type = 'button';
   modalButton.classList.add('btn-primary', 'btn-details');
   modalButton.textContent = 'Detalles';
   modalButton.style.marginLeft = 'auto'; // Aligns this button to the right
@@ -62,7 +63,7 @@ function createProjectImage(project) {
   projectImage.classList.add('project__box-image');
   // create the project image
   const image = document.createElement('img');
-  image.src = project.image;
+  image.src = project.imageSmall || project.image;
   image.alt = project.title;
   image.loading = 'lazy';
   
