@@ -46,6 +46,29 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+:focus-visible {
+  outline: 0.2rem solid var(--color-primary-dark);
+  outline-offset: 0.3rem;
+}
+
+.skip-link {
+  position: fixed;
+  top: -10rem;
+  left: 2rem;
+  z-index: 10001;
+  padding: 1rem 2rem;
+  background-color: var(--color-primary-dark);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  top: 2rem;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -65,6 +88,11 @@ html {
 body {
   background: var(--color-bg-dark);
   padding-left: 32rem;
+}
+
+body.transition-theme,
+body.transition-theme * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 body.active {
@@ -117,28 +145,21 @@ body.active {
   border: var(--border-none);
 }
 
+main#main-content {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
 section {
   padding: 2rem;
   margin: 1rem 1rem 5rem 1rem;
 }
 
-section:nth-child(2n) {
+main section:nth-child(odd) {
   border: var(--border-dark);
   border-radius: 1rem;
 }
-
-/* animation section - showSection */
-/*
-section {
-  view-timeline-name: --sections;
-  view-timeline-axis: block;
-
-  animation-timeline: --sections;
-  animation-name: showSection;
-
-  animation-range: entry 10% cover 30%;
-  animation-fill-mode: both;
-}*/
 
 .heading {
   text-align: center;
@@ -1080,6 +1101,7 @@ section {
 .loader__container.loader-hidden {
   opacity: 0;
   transform: scale(10);
+  pointer-events: none;
   transition: all 3s ease;
 }
 
@@ -1245,6 +1267,15 @@ section {
   }
   .home h1 {
     font-size: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

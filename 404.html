@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Página no encontrada | popehiflo</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Black+Han+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/index.css">
+  <style>
+    body.error-page {
+      padding-left: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .error-card {
+      max-width: 52rem;
+      width: 100%;
+      padding: 4rem 3rem;
+      text-align: center;
+      border: var(--border-dark);
+      border-radius: 1rem;
+      box-shadow: var(--box-shadow-card);
+      background: var(--color-bg-dark);
+    }
+    .error-card__code {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: clamp(6rem, 15vw, 10rem);
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+    .error-card__title {
+      font-size: 2.4rem;
+      color: var(--color-text-main-darktheme);
+      margin-bottom: 1rem;
+    }
+    .error-card__text {
+      font-size: 1.6rem;
+      color: var(--color-text-dark);
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+<body class="error-page">
+  <main class="error-card">
+    <h1 class="error-card__code">404</h1>
+    <h2 class="error-card__title">Página no encontrada</h2>
+    <p class="error-card__text">La ruta que estás buscando no existe o fue movida.</p>
+    <a href="./" class="btn-primary">Volver al inicio</a>
+  </main>
+</body>
+</html>
+

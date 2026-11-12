@@ -1,0 +1,16 @@
+{
+  "name": "Pool Hijuela (popehiflo) - Portafolio",
+  "short_name": "popehiflo",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#3d3d3d",
+  "theme_color": "#3d3d3d",
+  "icons": [
+    {
+      "src": "./logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
+
