@@ -65,10 +65,9 @@ function createProjectImage(project) {
   const image = document.createElement('img');
   image.src = project.imageSmall || project.image;
   image.alt = project.title;
+  image.width = 600;
+  image.height = 375;
   image.loading = 'lazy';
-  
-  image.removeAttribute('srcset');
-  image.removeAttribute('sizes');
 
   projectImage.appendChild(image);
   return projectImage;
@@ -131,6 +130,7 @@ function createProjectButtons(project) {
       const iconClass = iconMap[key] || 'fa-link';
       projectButton.classList.add('fab', iconClass, 'btn-primary-icon');
       projectButton.target = '_blank';
+      projectButton.rel = 'noopener noreferrer';
       
       projectButton.setAttribute('aria-label', `Ver ${key}`);
 
@@ -149,6 +149,9 @@ function showProjectModal(project) {
 
   const modal = document.createElement('div');
   modal.className = 'project-detail-modal';
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-labelledby', 'project-modal-title');
 
   let tagsHTML = '';
   if (project.tags && Object.keys(project.tags).length > 0) {
@@ -165,18 +168,20 @@ function showProjectModal(project) {
     };
     buttonsHTML = Object.entries(project.links).map(([key, url]) => {
       const iconClass = iconMap[key] || 'fa-link';
-      return `<a href="${url}" target="_blank" class="btn-primary-icon fab ${iconClass}" aria-label="Visitar ${key}"></a>`;
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="btn-primary-icon fab ${iconClass}" aria-label="Visitar ${key}"></a>`;
     }).join('');
   }
 
   modal.innerHTML = `
     <div class="project-modal-content">
       <div class="project-modal-header">
-        <h2>${project.title}</h2>
-        <i class="fas fa-times project-modal-close"></i>
+        <h2 id="project-modal-title">${project.title}</h2>
+        <button type="button" class="project-modal-close" aria-label="Cerrar detalles del proyecto">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
       </div>
       <div class="project-modal-body">
-        <img src="${project.image}" alt="${project.title}">
+        <img src="${project.image}" alt="${project.title}" width="800" height="500" loading="lazy">
         <div class="project-modal-tags">${tagsHTML}</div>
         <div class="project-modal-description">${project.description}</div>
         <div class="project-modal-buttons">${buttonsHTML}</div>
@@ -187,11 +192,19 @@ function showProjectModal(project) {
   document.body.appendChild(modal);
   document.body.style.overflow = 'hidden';
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  };
+
   const closeModal = () => {
     modal.remove();
     document.body.style.overflow = 'auto';
+    document.removeEventListener('keydown', handleKeyDown);
   };
 
+  document.addEventListener('keydown', handleKeyDown);
   modal.querySelector('.project-modal-close').addEventListener('click', closeModal);
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {

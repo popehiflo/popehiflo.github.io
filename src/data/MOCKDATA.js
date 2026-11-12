@@ -1,34 +1,44 @@
+/**
+ * Guía de Imágenes y Assets para Proyectos y Blogs:
+ * - Card de Proyecto (`imageSmall`): 600 x 375 px (Relación 16:10) | Formato: .webp | Peso ideal: 15-35 KB | Nombre: [categoria]_[slug]-small.webp
+ * - Cabecera de Modal (`image`): 800 x 500 px (Relación 16:10) | Formato: .webp | Peso ideal: 35-70 KB | Nombre: [categoria]_[slug].webp
+ * - Captura Secundaria en Modal (`<figure class="project-modal-secondary-img">`): 800 x 500 px (ancho 800px, alto adaptable) | Formato: .webp | Peso ideal: 35-80 KB | Nombre: [slug]-ficha.webp
+ * - Card/Modal de Blog (`image`): 600 x 375 px (Relación 16:10) | Formato: .webp | Peso ideal: 10-30 KB | Nombre: blog_[slug].webp
+ * - Open Graph Social (`og-image.jpg`): 1200 x 630 px (Relación 1.91:1) | Formato: .jpg | Peso ideal: < 100 KB
+ */
+
 /* PROJECTS */
 const allProjects = [
   {
-    id: "02",
-    title: "Repuestos Rojas: catálogo en línea y sistema de gestión",
+    id: "01",
+    title: "Repuestos Rojas: E-commerce, ERP & Punto de Venta (POS)",
     image: "./public/assets/imgs/projects/fullstack_repuestos-rojas.webp",
     imageSmall: "./public/assets/imgs/projects/fullstack_repuestos-rojas-small.webp",
-    summary: "Catálogo en línea y sistema de gestión para una distribuidora de autopartes en Cusco: cotizaciones por WhatsApp, ventas, inventario y empleados.",
+    summary: "Plataforma All-in-One (Catálogo online SEO + ERP Administrativo + POS ultrarrápido y Kardex atómico) para el sector automotriz.",
     description: `
-    <p>Plataforma para Repuestos Rojas, distribuidora de cajas de cambio, diferenciales, embragues y coronas en Cusco. Incluye una web pública para que los clientes encuentren el repuesto exacto y un panel privado para que el negocio controle sus ventas e inventario.</p>
-    <strong>Sitio público:</strong>
-    <ul>
-      <li><strong>Catálogo con búsqueda y filtros</strong> por marca, modelo y categoría, y ficha técnica de cada repuesto con códigos OEM y compatibilidad.</li>
-      <li><strong>Cotización por WhatsApp:</strong> cada consulta genera un código único y abre WhatsApp con el mensaje listo para enviar.</li>
-      <li><strong>Pensado para Google:</strong> direcciones legibles y metadatos por producto.</li>
-    </ul>
-    <strong>Panel interno (privado):</strong>
-    <ul>
-      <li><strong>Punto de venta</strong> para ventas rápidas en mostrador, con lectura de códigos de barras y tickets térmicos.</li>
-      <li><strong>Inventario y Kardex:</strong> cada entrada, salida, ajuste o devolución queda registrada con fecha, motivo y responsable.</li>
-      <li><strong>Cotizaciones, historial de ventas y analíticas</strong> de los últimos 30 días.</li>
-      <li><strong>Empleados con roles y permisos</strong>, con suspensión inmediata de accesos sin borrar su historial.</li>
-    </ul>
-    <img src="./public/assets/imgs/projects/repuestos-rojas-ficha.webp" alt="Ficha técnica de un repuesto con su compatibilidad y el botón para cotizar por WhatsApp" loading="lazy">
-  `,
+      <p><strong>El Desafío:</strong> Digitalizar las operaciones de mostrador y abrir un canal de ventas en línea para una tienda de repuestos automotrices en Cusco sin depender de costosas suscripciones mensuales, manejando compatibilidades por vehículo y control contable de stock.</p>
+      <p><strong>La Solución:</strong> Plataforma "All-in-One" (E-commerce público + Sistema de Gestión ERP/POS) construida con <strong>Next.js 16</strong> y <strong>Supabase (PostgreSQL)</strong> bajo una arquitectura Serverless de alta eficiencia operativa.</p>
+      <strong>Módulos del Sistema:</strong>
+      <ul>
+        <li><strong>Catálogo en Línea y Cotizaciones por WhatsApp:</strong> Sitio público optimizado para SEO (SSR, Sitemap automático y Rich Cards Open Graph) con buscador por marca/modelo y generación directa de cotizaciones hacia WhatsApp.</li>
+        <li><strong>Punto de Venta (POS) e Historial de Ventas:</strong> Interfaz rápida de mostrador con búsqueda instantánea por SKU o compatibilidad vehicular, registro de ventas, gestión de cotizaciones e historial detallado de transacciones.</li>
+        <li><strong>Control de Inventario y Kardex Contable:</strong> Motor transaccional con Triggers y RPCs en PostgreSQL que descuenta stock y registra cada entrada/salida en el Kardex de forma atómica, evitando quiebres o descuadres.</li>
+        <li><strong>Analíticas Financieras (Dashboard):</strong> Reportes visuales con Recharts para monitorear ingresos brutos, margen neto de ganancia (restando COGS) y detección automática de stock sin rotación ("stock muerto").</li>
+        <li><strong>Catálogo Interno y Control de Usuarios:</strong> Panel administrativo para publicar/editar repuestos con carga segura de imágenes a Cloudinary, protegido con políticas RLS y control de accesos por rol.</li>
+      </ul>
+      <figure class="project-modal-secondary-img">
+        <img src="./public/assets/imgs/projects/repuestos-rojas-ficha.webp" alt="Ficha técnica y panel del sistema Repuestos Rojas" width="800" height="500" loading="lazy">
+      </figure>
+    `,
     tags: {
-      nextjs: "Next.js",
-      react: "React",
-      ts: "TypeScript",
-      supabase: "Supabase",
-      tailwind: "Tailwind CSS"
+      nextjs: "next.js 16",
+      react: "react 19",
+      ts: "typescript",
+      supabase: "supabase",
+      postgres: "postgresql",
+      tailwind: "tailwind v4",
+      shadcn: "shadcn-ui",
+      recharts: "recharts"
     },
     category: {
       id: "fullstack",
@@ -39,29 +49,31 @@ const allProjects = [
     }
   },
   {
-    id: "01",
-    title: "Portafolio Profesional de Desarrollo",
+    id: "02",
+    title: "Portafolio Profesional & Marca Personal (popehiflo)",
     image: "./public/assets/imgs/projects/frontend_portfolio-popehiflo.webp",
     imageSmall: "./public/assets/imgs/projects/frontend_portfolio-popehiflo-small.webp",
-    summary: "Mi portafolio personal construido con Vanilla JS, HTML5 y CSS3, enfocado en la velocidad y el diseño responsivo.",
+    summary: "Aplicación web estática ultrarrápida en Vanilla JS, HTML5 y CSS3, optimizada para SEO técnico, accesibilidad y diseño responsivo desde 360px.",
     description: `
-      <p>Este portafolio es una Single Page Application (SPA) construida desde cero para mostrar mis habilidades y proyectos como desarrollador. El objetivo era crear un sitio web rápido, responsive y mantenible sin depender de frameworks de JavaScript.</p>
-      <strong>Características principales:</strong>
+      <p><strong>El Objetivo:</strong> Construir una plataforma de marca personal y portafolio de proyectos con velocidad instantánea y control total del DOM, prescindiendo de frameworks pesados.</p>
+      <strong>Características técnicas implementadas:</strong>
       <ul>
-        <li><strong>Diseño responsivo:</strong> Adaptado para móviles, tablets y desktops.</li>
-        <li><strong>Cambio de tema:</strong> Modo oscuro (predeterminado) y claro.</li>
-        <li><strong>Secciones dinámicas:</strong> Proyectos y blogs generados desde un único archivo de datos.</li>
-        <li><strong>Componentes Modulares:</strong> Lógica de JavaScript separada en módulos para mantenibilidad.</li>
-        <li><strong>Optimización:</strong> Carga rápida con lazy loading de imágenes y CSS optimizado.</li>
+        <li><strong>Arquitectura Modular en Vanilla JS:</strong> Separación limpia de responsabilidades mediante ES6 Modules nativos y renderizado dinámico desde capa de datos centralizada.</li>
+        <li><strong>SEO Técnico y Semántica Web:</strong> Implementación de datos estructurados JSON-LD (Schema.org <code>ProfilePage</code> y <code>Person</code>), protocolo Open Graph, Twitter Cards, URL canónica y sitemap XML.</li>
+        <li><strong>Diseño Responsivo Milimétrico:</strong> Maquetación fluida con CSS Grid, Flexbox y Custom Properties adaptada desde pantallas móviles de 360px hasta monitores de escritorio, con soporte persistente de tema oscuro/claro.</li>
+        <li><strong>Optimización de Rendimiento:</strong> Carga no bloqueante de iconografía, activos gráficos en formato WebP de doble resolución y lazy loading estratégico.</li>
       </ul>
+      <figure class="project-modal-secondary-img">
+        <img src="./public/assets/imgs/projects/img-frontend-0.webp" alt="Vista adicional de arquitectura responsiva y componentes del portafolio" width="800" height="500" loading="lazy">
+      </figure>
     `,
     tags: {
       html: "html5",
       css: "css3",
-      js: "javascript",
-      bem: "bem",
-      responsive: "responsive",
-      darkmode: "dark-mode"
+      js: "es6-modules",
+      seo: "technical-seo",
+      schema: "json-ld",
+      responsive: "responsive-ui"
     },
     category: {
       id: "frontend",
@@ -75,102 +87,214 @@ const allProjects = [
   },
   {
     id: "03",
-    title: "DEMO · Dashboard de Administración",
+    title: "Sistema de Gestión Bibliográfica y Préstamos",
     image: "./public/assets/imgs/projects/img-frontend-0.webp",
     imageSmall: "./public/assets/imgs/projects/img-frontend-0-small.webp",
-    summary: "Proyecto de prueba para ver el filtro Frontend con tres enlaces.",
+    summary: "Plataforma académica integral para catalogación de ejemplares, control de préstamos estudiantiles, devoluciones y moras en tiempo real.",
     description: `
-    <p>Proyecto inventado para probar el filtro de proyectos.</p>
-    <ul>
-      <li>Panel con gráficos y tablas.</li>
-      <li>Tema claro y oscuro.</li>
-    </ul>
-  `,
-    tags: { react: "React", ts: "TypeScript", vite: "Vite", redux: "Redux", mui: "MUI" },
-    category: { id: "frontend", name: "Frontend" },
-    links: { github: "https://github.com/popehiflo", google: "https://popehiflo.github.io/", youtube: "https://www.youtube.com/@popehiflo" }
+      <p><strong>El Desafío:</strong> Reemplazar los registros manuales en hojas de cálculo de una institución educativa por un sistema centralizado capaz de controlar el estado de cada ejemplar, evitar duplicidad de préstamos y generar reportes rápidos para bibliotecarios y dirección.</p>
+      <p><strong>La Solución:</strong> Desarrollé una aplicación full stack desacoplada con backend REST en <strong>Spring Boot</strong>, base de datos relacional en <strong>PostgreSQL</strong> y una SPA administrativa en <strong>Angular</strong>.</p>
+      <strong>Características principales:</strong>
+      <ul>
+        <li><strong>Catálogo e Inventario por Ejemplar:</strong> Gestión de títulos, autores, editoriales, ISBN y código único de inventario por copia física.</li>
+        <li><strong>Flujo de Préstamos y Devoluciones:</strong> Validación automática de disponibilidad, límites por estudiante y cálculo de fechas de vencimiento.</li>
+        <li><strong>Búsqueda y Filtros Instantáneos:</strong> Consulta por título, autor, categoría temática o código de alumno en segundos.</li>
+        <li><strong>Seguridad por Roles:</strong> Control de acceso diferenciado para administradores y personal de biblioteca con trazabilidad de movimientos.</li>
+      </ul>
+      <figure class="project-modal-secondary-img">
+        <img src="./public/assets/imgs/projects/img-frontend-1.webp" alt="Vista adicional de préstamos y catálogo del sistema bibliográfico" width="800" height="500" loading="lazy">
+      </figure>
+    `,
+    tags: {
+      java: "java",
+      springboot: "spring boot",
+      angular: "angular",
+      ts: "typescript",
+      postgres: "postgresql",
+      rest: "rest api"
+    },
+    category: {
+      id: "fullstack",
+      name: "Full Stack"
+    },
+    links: {
+      github: "https://github.com/popehiflo"
+    }
   },
   {
     id: "04",
-    title: "DEMO · Aplicación de Clima",
-    image: "./public/assets/imgs/projects/img-frontend-1.webp",
-    imageSmall: "./public/assets/imgs/projects/img-frontend-1-small.webp",
-    summary: "Proyecto de prueba para ver el filtro Frontend con dos enlaces.",
+    title: "Sistema de Gestión Clínica y Facturación (Odoo ERP)",
+    image: "./public/assets/imgs/projects/img-backend-2.webp",
+    imageSmall: "./public/assets/imgs/projects/img-backend-2-small.webp",
+    summary: "Módulo integral en Python 3 y Odoo ERP para gestión de pacientes, historia ginecológica, citas por sede, laboratorio clínico y facturación con pagos parciales.",
     description: `
-    <p>Proyecto inventado para probar el filtro de proyectos.</p>
-  `,
-    tags: { angular: "Angular", rxjs: "RxJS", ts: "TypeScript", spa: "SPA" },
-    category: { id: "frontend", name: "Frontend" },
-    links: { github: "https://github.com/popehiflo", google: "https://popehiflo.github.io/" }
+      <p><strong>El Desafío:</strong> Centralizar la atención médica, el laboratorio clínico y el control de caja/facturación de la clínica CerviCusco en un único sistema ERP adaptado a sus flujos médicos y administrativos.</p>
+      <p><strong>La Solución:</strong> Desarrollo de un módulo (addon) a medida en <strong>Python 3</strong> y <strong>PostgreSQL</strong> sobre <strong>Odoo ERP</strong>, conectado nativamente con los módulos de Inventario, Ventas y Facturación.</p>
+      <strong>Funcionalidades implementadas en el sistema:</strong>
+      <ul>
+        <li><strong>Gestión de Pacientes e Historia Ginecológica Dinámica:</strong> Registro con cálculo automático de edad, validación de campos obligatorios, pestaña ginecológica reactiva según género del paciente e impresión de Tarjeta de Paciente en PDF y exportación a Excel.</li>
+        <li><strong>Control de Citas, Sedes y Calendario Multivista:</strong> Agendamiento por médico especialista, horario y sede (ej. San Blas / Larapa), diferenciación visual por colores según estado de facturación, impresión de ticket de cita y calendario interactivo por día, semana y mes.</li>
+        <li><strong>Solicitudes y Resultados de Laboratorio Clínico:</strong> Flujo completo desde la orden médica hasta la carga de resultados por patólogo con rangos normales y unidades de medida, bloqueo contra doble facturación y emisión del Reporte de Laboratorio en PDF.</li>
+        <li><strong>Facturación Integrada y Pagos Parciales (Señas):</strong> Generación de facturas directamente desde la cita o examen de laboratorio, control de estados (Borrador, Abierto, Pagado), registro de adelantos/señas con cálculo automático de saldo pendiente y facturas rectificativas.</li>
+      </ul>
+      <figure class="project-modal-secondary-img">
+        <img src="./public/assets/imgs/projects/backend_swagger.webp" alt="Vista adicional del módulo clínico en Odoo" width="800" height="500" loading="lazy">
+      </figure>
+    `,
+    tags: {
+      python: "python 3",
+      odoo: "odoo-erp",
+      postgres: "postgresql",
+      xml: "xml-qweb",
+      billing: "facturacion",
+      reporting: "pdf-reports"
+    },
+    category: {
+      id: "fullstack",
+      name: "Full Stack"
+    },
+    links: {
+      github: "https://github.com/popehiflo",
+      youtube: "https://www.youtube.com/watch?v=6Wx7BKUuhqM"
+    }
   },
   {
     id: "05",
-    title: "DEMO · API REST para E-commerce",
-    image: "./public/assets/imgs/projects/backend_swagger.webp",
-    imageSmall: "./public/assets/imgs/projects/backend_swagger-small.webp",
-    summary: "Proyecto de prueba para ver el filtro Backend con dos enlaces.",
+    title: "ERP Turístico: Cotizador de Paquetes, Reservas y Caja",
+    image: "./public/assets/imgs/projects/img-frontend-1.webp",
+    imageSmall: "./public/assets/imgs/projects/img-frontend-1-small.webp",
+    summary: "Sistema ERP multiusuario para operadores turísticos en Cusco: armado dinámico de itinerarios, tarifas por temporada, reservas y control de caja.",
     description: `
-    <p>Proyecto inventado para probar el filtro de proyectos.</p>
-    <ul>
-      <li>Autenticación con JWT.</li>
-      <li>Documentación con Swagger.</li>
-    </ul>
-  `,
-    tags: { java: "Java", springboot: "Spring Boot", jwt: "JWT", mysql: "MySQL", restapi: "REST API", swagger: "Swagger" },
-    category: { id: "backend", name: "Backend" },
-    links: { github: "https://github.com/popehiflo", google: "https://popehiflo.github.io/" }
+      <p><strong>El Desafío:</strong> Gestionar cotizaciones complejas a medida (hoteles, trenes, guías, entradas y traslados) con múltiples proveedores, tipos de cambio y fechas de confirmación para agencias de viajes receptivas.</p>
+      <p><strong>La Solución:</strong> Participé en el diseño y construcción de un ERP web corporativo sobre <strong>Java EE</strong>, <strong>JPA</strong> y <strong>MySQL</strong>, con una interfaz de escritorio en navegador basada en <strong>GWT / SmartGWT</strong> bajo metodología <strong>Scrum</strong>.</p>
+      <strong>Características principales:</strong>
+      <ul>
+        <li><strong>Cotizador Dinámico de Paquetes:</strong> Cálculo automático de costos por pasajero, márgenes de ganancia, temporadas y servicios opcionales.</li>
+        <li><strong>Gestión de Reservas y File Operativo:</strong> Seguimiento de confirmaciones de proveedores, rooming lists y hojas de ruta diarias para operaciones.</li>
+        <li><strong>Módulo de Caja y Pagos:</strong> Control de adelantos, saldos pendientes, liquidaciones a proveedores y cuadre de caja multi-moneda.</li>
+        <li><strong>Arquitectura Modular Java EE:</strong> Persistencia transaccional con JPA y generación de reportes operativos exportables.</li>
+      </ul>
+      <figure class="project-modal-secondary-img">
+        <img src="./public/assets/imgs/projects/img-frontend-0.webp" alt="Vista adicional del cotizador y reservas del ERP turístico" width="800" height="500" loading="lazy">
+      </figure>
+    `,
+    tags: {
+      javaee: "java ee",
+      jpa: "jpa",
+      gwt: "gwt / smartgwt",
+      mysql: "mysql",
+      scrum: "scrum"
+    },
+    category: {
+      id: "fullstack",
+      name: "Full Stack"
+    },
+    links: {
+      github: "https://github.com/popehiflo"
+    }
   },
   {
     id: "06",
-    title: "DEMO · Microservicio de Notificaciones",
-    image: "./public/assets/imgs/projects/img-backend-1.webp",
-    imageSmall: "./public/assets/imgs/projects/img-backend-1-small.webp",
-    summary: "Proyecto de prueba para ver el filtro Backend con un solo enlace.",
+    title: "API RESTful de Control de Almacén y Herramientas en Obra",
+    image: "./public/assets/imgs/projects/backend_swagger.webp",
+    imageSmall: "./public/assets/imgs/projects/backend_swagger-small.webp",
+    summary: "Servicio backend seguro y documentado para trazabilidad de entregas, devoluciones y mantenimiento de equipos y herramientas en frentes de obra.",
     description: `
-    <p>Proyecto inventado para probar el filtro de proyectos.</p>
-  `,
-    tags: { nodejs: "Node.js", express: "Express", ts: "TypeScript", rabbitmq: "RabbitMQ", docker: "Docker" },
-    category: { id: "backend", name: "Backend" },
-    links: { github: "https://github.com/popehiflo" }
+      <p><strong>El Desafío:</strong> Reducir las pérdidas de herramientas menores y materiales entre almacén central y múltiples frentes de obra, garantizando responsabilidad individual y auditoría de cada movimiento.</p>
+      <p><strong>La Solución:</strong> Diseñé una API RESTful robusta en <strong>Java</strong> y <strong>Spring Boot</strong>, protegida con <strong>Spring Security + JWT</strong>, respaldada por <strong>MySQL</strong> y documentada interactivamente con <strong>Swagger / OpenAPI</strong>.</p>
+      <strong>Características principales:</strong>
+      <ul>
+        <li><strong>Autenticación Stateless con JWT:</strong> Emisión y validación de tokens con control granular de permisos por perfil (almacenero, residente, supervisor).</li>
+        <li><strong>Trazabilidad de Asignaciones:</strong> Registro de salida, transferencia entre obras, estado de conservación y devolución por trabajador.</li>
+        <li><strong>Documentación OpenAPI / Swagger:</strong> Contratos de endpoints estandarizados, esquemas de error uniformes y entorno de pruebas integrado.</li>
+        <li><strong>Validación e Integridad Transaccional:</strong> Reglas de negocio estrictas para impedir devoluciones inconsistentes o saldos negativos en almacén.</li>
+      </ul>
+      <figure class="project-modal-secondary-img">
+        <img src="./public/assets/imgs/projects/img-backend-1.webp" alt="Vista adicional de trazabilidad e inventario de la API de almacén" width="800" height="500" loading="lazy">
+      </figure>
+    `,
+    tags: {
+      java: "java",
+      springboot: "spring boot",
+      jwt: "spring security jwt",
+      mysql: "mysql",
+      swagger: "swagger / openapi"
+    },
+    category: {
+      id: "backend",
+      name: "Backend"
+    },
+    links: {
+      github: "https://github.com/popehiflo"
+    }
   },
   {
     id: "07",
-    title: "DEMO · Sistema de Reservas de Hotel con Panel de Administración y Pasarela de Pagos Integrada",
-    image: "./public/assets/imgs/projects/img-backend-2.webp",
-    imageSmall: "./public/assets/imgs/projects/img-backend-2-small.webp",
-    summary: "Proyecto de prueba con título largo, resumen largo y muchas etiquetas para ver cómo se comportan las tarjetas, las etiquetas y el modal en pantallas pequeñas y grandes.",
+    title: "Dashboard Comercial de KPIs y Control de Operaciones",
+    image: "./public/assets/imgs/projects/img-frontend-0.webp",
+    imageSmall: "./public/assets/imgs/projects/img-frontend-0-small.webp",
+    summary: "Panel administrativo interactivo en React y TypeScript para monitoreo de ventas, métricas operativas, filtros dinámicos y exportación de datos.",
     description: `
-    <p>Proyecto inventado para probar descripciones largas dentro del modal de detalles.</p>
-    <p>Sistema de reservas con gestión de habitaciones, tarifas por temporada, disponibilidad en tiempo real y panel administrativo para el personal de recepción.</p>
-    <strong>Funciones:</strong>
-    <ul>
-      <li>Reserva en línea con calendario de disponibilidad.</li>
-      <li>Panel de administración con roles y permisos.</li>
-      <li>Notificaciones por correo al confirmar o cancelar.</li>
-      <li>Reportes de ocupación por mes.</li>
-      <li>Historial de cambios por reserva.</li>
-      <li>Integración con una pasarela de pagos de prueba.</li>
-      <li>Exportación de reportes a hojas de cálculo.</li>
-      <li>Registro de auditoría de acciones del personal.</li>
-    </ul>
-    <p>Este texto existe solo para comprobar el desplazamiento vertical del modal.</p>
-  `,
-    tags: { java: "Java", springboot: "Spring Boot", security: "Spring Security", postgresql: "PostgreSQL", jpa: "JPA", docker: "Docker", redis: "Redis", kafka: "Kafka" },
-    category: { id: "backend", name: "Backend" },
-    links: { github: "https://github.com/popehiflo" }
+      <p><strong>El Desafío:</strong> Brindar a gerencia y jefaturas comerciales una vista consolidada y ágil del rendimiento diario de sucursales, eliminando la demora de esperar reportes manuales al cierre de semana.</p>
+      <p><strong>La Solución:</strong> Construí una interfaz analítica responsiva con <strong>React</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong> y visualización interactiva mediante <strong>Recharts</strong>.</p>
+      <strong>Características principales:</strong>
+      <ul>
+        <li><strong>Visualización de KPIs en Tiempo Real:</strong> Tarjetas resumen de ticket promedio, volumen de ventas, cumplimiento de metas y comparativas intermensuales.</li>
+        <li><strong>Gráficos Interactivos Responsivos:</strong> Series temporales, distribución por categoría y tooltips detallados adaptados a desktop y móvil.</li>
+        <li><strong>Tablas con Filtrado y Ordenamiento:</strong> Búsqueda multicriterio por rango de fechas, sede y estado operativo sin recargar la página.</li>
+        <li><strong>Tipado Estricto con TypeScript:</strong> Modelos de datos seguros y componentes reutilizables orientados a mantenibilidad.</li>
+      </ul>
+      <figure class="project-modal-secondary-img">
+        <img src="./public/assets/imgs/projects/img-frontend-1.webp" alt="Vista adicional de reportes y métricas del dashboard comercial" width="800" height="500" loading="lazy">
+      </figure>
+    `,
+    tags: {
+      react: "react",
+      ts: "typescript",
+      tailwind: "tailwind css",
+      recharts: "recharts"
+    },
+    category: {
+      id: "frontend",
+      name: "Frontend"
+    },
+    links: {
+      github: "https://github.com/popehiflo"
+    }
   },
   {
     id: "08",
-    title: "DEMO · Plataforma de Reservas de Tours",
-    image: "./public/assets/imgs/projects/img-frontend-1.webp",
-    imageSmall: "./public/assets/imgs/projects/img-frontend-1-small.webp",
-    summary: "Proyecto de prueba para ver el filtro Full Stack con un segundo proyecto.",
+    title: "Servicio de Facturación y Despacho de Notificaciones",
+    image: "./public/assets/imgs/projects/img-backend-1.webp",
+    imageSmall: "./public/assets/imgs/projects/img-backend-1-small.webp",
+    summary: "Backend transaccional contenedorizado para generación de comprobantes, validación tributaria y despacho asíncrono de notificaciones a clientes.",
     description: `
-    <p>Proyecto inventado para probar el filtro de proyectos.</p>
-  `,
-    tags: { nextjs: "Next.js", react: "React", ts: "TypeScript", supabase: "Supabase", tailwind: "Tailwind CSS" },
-    category: { id: "fullstack", name: "Full Stack" },
-    links: { google: "https://popehiflo.github.io/" }
+      <p><strong>El Desafío:</strong> Garantizar que la emisión de comprobantes electrónicos y el envío de correos o alertas de confirmación no bloqueen las transacciones críticas de venta ante picos de demanda o latencia de servicios externos.</p>
+      <p><strong>La Solución:</strong> Implementé un servicio backend desacoplado con <strong>Java</strong>, <strong>Spring Boot</strong> y <strong>PostgreSQL</strong>, empaquetado en <strong>Docker</strong> para despliegues consistentes entre entornos.</p>
+      <strong>Características principales:</strong>
+      <ul>
+        <li><strong>Procesamiento Transaccional Seguro:</strong> Idempotencia en endpoints de emisión para evitar duplicidad de comprobantes ante reintentos de red.</li>
+        <li><strong>Despacho Asíncrono con Reintentos:</strong> Cola persistente de notificaciones con políticas de backoff ante fallos temporales de proveedores SMTP/API.</li>
+        <li><strong>Auditoría y Trazabilidad de Eventos:</strong> Registro detallado de estados por comprobante (emitido, aceptado, observado, notificado).</li>
+        <li><strong>Contenerización con Docker:</strong> Configuración reproducible mediante Dockerfile y variables de entorno para despliegues ágiles.</li>
+      </ul>
+      <figure class="project-modal-secondary-img">
+        <img src="./public/assets/imgs/projects/backend_swagger.webp" alt="Vista adicional de endpoints y monitoreo del servicio de facturación" width="800" height="500" loading="lazy">
+      </figure>
+    `,
+    tags: {
+      java: "java",
+      springboot: "spring boot",
+      docker: "docker",
+      postgres: "postgresql"
+    },
+    category: {
+      id: "backend",
+      name: "Backend"
+    },
+    links: {
+      github: "https://github.com/popehiflo"
+    }
   }
 ];
 

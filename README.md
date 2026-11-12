@@ -54,6 +54,13 @@ popehiflo.github.io/
 - **Modificar contenido:** Edita `src/data/MOCKDATA.js` para añadir proyectos o blogs.
 - **Estilos:** Personaliza `src/styles/index.css` según tus necesidades.
 
+## Guía de Imágenes y Assets
+- **Card de Proyecto (`imageSmall`):** 600 x 375 px (Relación 16:10) | Formato: `.webp` | Peso ideal: 15-35 KB | Nombre: `[categoria]_[slug]-small.webp`
+- **Cabecera de Modal (`image`):** 800 x 500 px (Relación 16:10) | Formato: `.webp` | Peso ideal: 35-70 KB | Nombre: `[categoria]_[slug].webp`
+- **Captura Secundaria en Modal (`<figure class="project-modal-secondary-img">`):** 800 x 500 px (ancho 800px, alto adaptable) | Formato: `.webp` | Peso ideal: 35-80 KB | Nombre: `[slug]-ficha.webp`
+- **Card/Modal de Blog (`image`):** 600 x 375 px (Relación 16:10) | Formato: `.webp` | Peso ideal: 10-30 KB | Nombre: `blog_[slug].webp`
+- **Open Graph Social (`og-image.jpg`):** 1200 x 630 px (Relación 1.91:1) | Formato: `.jpg` | Peso ideal: < 100 KB
+
 ## 📄 Licencia
 Este proyecto está bajo la [Licencia MIT](LICENSE).
 
