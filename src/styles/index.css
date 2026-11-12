@@ -267,6 +267,23 @@ main section:nth-child(odd) {
   color: var(--color-text-main-darktheme);
 }
 
+.home .wave-hand {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: waveHand 2.5s ease-in-out infinite;
+}
+
+@keyframes waveHand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
 .home p {
   font-size: 3rem;
   color: var(--color-text-main-darktheme);
@@ -1191,7 +1208,6 @@ body.active .loader__container .loader span {
     font-size: 58%;
   }
   .home h1 {
-    font-size: 12rem;
     -webkit-text-stroke: 0.4rem var(--color-primary);
   }
 }
@@ -1199,7 +1215,8 @@ body.active .loader__container .loader span {
 @media (min-width: 992px) {
   .home h1 {
     background-image: url("../../public/assets/imgs/abstract-background-canvas-code.webp");
-    font-size: clamp(6rem, 15vw, 15rem);
+    font-size: clamp(7.5rem, calc((100vw - 38rem) * 0.135), 15rem);
+    max-width: 100%;
   }
   @keyframes backgroundScroll {
     0% {
