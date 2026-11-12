@@ -1092,10 +1092,14 @@ main section:nth-child(odd) {
   inset: 0;
   height: 100%;
   z-index: 10000;
-  background: #3d3d3d; /* Color fijo oscuro, igual a --color-bg-dark para evitar el flicker*/
+  background: var(--color-bg-dark);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+body.active .loader__container {
+  background: var(--color-bg-light);
 }
 
 .loader__container.loader-hidden {
@@ -1119,8 +1123,19 @@ main section:nth-child(odd) {
   align-items: center;
 }
 
+body.active .loader__container .loader {
+  color: var(--color-primary-dark);
+  filter: drop-shadow(0 0 10px rgba(50, 121, 189, 0.45));
+}
+
 .loader__container .loader span {
   animation: loadingwave 1.80s ease infinite;
+}
+
+body.active .loader__container .loader span {
+  color: var(--color-text-main-lighttheme);
+  text-shadow: 0 0 8px rgba(50, 121, 189, 0.35);
+  -webkit-text-stroke: 0.05rem var(--color-primary-dark);
 }
 
 .loader__container .loader span:nth-child(2) {

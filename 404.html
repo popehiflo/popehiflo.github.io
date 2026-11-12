@@ -2,9 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
   <title>404 - Página no encontrada | popehiflo</title>
   <link rel="icon" href="./logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Black+Han+Sans&display=swap" rel="stylesheet">
@@ -13,48 +16,114 @@
     body.error-page {
       padding-left: 0;
       min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem;
     }
+
     .error-card {
-      max-width: 52rem;
       width: 100%;
-      padding: 4rem 3rem;
+      max-width: 62rem;
+      padding: 4.5rem 3rem;
       text-align: center;
-      border: var(--border-dark);
+      background: var(--color-bg-dark);
+      border: var(--border-dark-light);
       border-radius: 1rem;
       box-shadow: var(--box-shadow-card);
-      background: var(--color-bg-dark);
     }
+
     .error-card__code {
       font-family: 'Black Han Sans', sans-serif;
-      font-size: clamp(6rem, 15vw, 10rem);
-      color: var(--color-primary);
+      font-size: clamp(7rem, 20vw, 14rem);
       line-height: 1;
+      letter-spacing: 0.4rem;
+      color: rgba(225, 225, 225, 0.1);
+      background-image: url("./public/assets/imgs/abstract-background-canvas-code-mobile.webp");
+      background-repeat: repeat-x;
+      background-position: center center;
+      background-size: cover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 0.35rem var(--color-primary);
+      animation: backgroundScroll 15s linear infinite;
       margin-bottom: 1.5rem;
     }
-    .error-card__title {
-      font-size: 2.4rem;
-      color: var(--color-text-main-darktheme);
-      margin-bottom: 1rem;
+
+    body.active .error-card__code {
+      color: rgba(50, 121, 189, 0.12);
     }
+
+    .error-card__title {
+      font-size: clamp(2.1rem, 4vw, 3rem);
+      color: var(--color-text-main-darktheme);
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+    }
+
+    .error-card__title span {
+      color: var(--color-primary);
+    }
+
     .error-card__text {
       font-size: 1.6rem;
       color: var(--color-text-dark);
-      line-height: 1.6;
-      margin-bottom: 2.5rem;
+      line-height: 1.7;
+      max-width: 46rem;
+      margin: 0 auto 3rem;
+    }
+
+    .error-card__actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 992px) {
+      .error-card__code {
+        background-image: url("./public/assets/imgs/abstract-background-canvas-code.webp");
+        -webkit-text-stroke: 0.45rem var(--color-primary);
+      }
+    }
+
+    @media (max-width: 450px) {
+      .error-card {
+        padding: 3.5rem 2rem;
+      }
+      .error-card__code {
+        -webkit-text-stroke: 0.25rem var(--color-primary);
+      }
+      .error-card__actions .btn-primary {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body class="error-page">
+  <script>if (localStorage.getItem('theme') === 'light') document.body.classList.add('active');</script>
+
+  <button type="button" id="btn-theme-toggler" class="btn-primary-icon" aria-label="Cambiar entre tema claro y oscuro">
+    <i class="fas fa-sun"></i>
+  </button>
+
   <main class="error-card">
     <h1 class="error-card__code">404</h1>
-    <h2 class="error-card__title">Página no encontrada</h2>
-    <p class="error-card__text">La ruta que estás buscando no existe o fue movida.</p>
-    <a href="./" class="btn-primary">Volver al inicio</a>
+    <h2 class="error-card__title">Parece que esta <span>ruta no existe</span> o fue movida</h2>
+    <p class="error-card__text">
+      El enlace puede estar desactualizado o tener un error tipográfico. Puedes regresar al inicio o explorar mis proyectos recientes.
+    </p>
+    <div class="error-card__actions">
+      <a href="./" class="btn-primary">Volver al Portafolio</a>
+      <a href="./#projects" class="btn-primary">Ver Proyectos</a>
+    </div>
   </main>
+
+  <script type="module">
+    import { themeHandler } from './src/utils/theme-handler.js';
+    themeHandler();
+  </script>
 </body>
 </html>
-
