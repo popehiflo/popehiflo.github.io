@@ -617,6 +617,26 @@ section {
   color: var(--color-text-dark);
 }
 
+.experience .experiences__container .experience__box .box-content .experience__company {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.experience .experiences__container .experience__box .box-content .experience__stack {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--color-primary);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: var(--border-dark-light);
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
 /* CONTACT ME*/
 .contact {
   display: flex;
