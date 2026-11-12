@@ -72,6 +72,105 @@ const allProjects = [
       google: "https://popehiflo.github.io/",
       youtube: "https://www.youtube.com/watch?v=tjAcXTpIou8"
     }
+  },
+  {
+    id: "03",
+    title: "DEMO · Dashboard de Administración",
+    image: "./public/assets/imgs/projects/img-frontend-0.webp",
+    imageSmall: "./public/assets/imgs/projects/img-frontend-0-small.webp",
+    summary: "Proyecto de prueba para ver el filtro Frontend con tres enlaces.",
+    description: `
+    <p>Proyecto inventado para probar el filtro de proyectos.</p>
+    <ul>
+      <li>Panel con gráficos y tablas.</li>
+      <li>Tema claro y oscuro.</li>
+    </ul>
+  `,
+    tags: { react: "React", ts: "TypeScript", vite: "Vite", redux: "Redux", mui: "MUI" },
+    category: { id: "frontend", name: "Frontend" },
+    links: { github: "https://github.com/popehiflo", google: "https://popehiflo.github.io/", youtube: "https://www.youtube.com/@popehiflo" }
+  },
+  {
+    id: "04",
+    title: "DEMO · Aplicación de Clima",
+    image: "./public/assets/imgs/projects/img-frontend-1.webp",
+    imageSmall: "./public/assets/imgs/projects/img-frontend-1-small.webp",
+    summary: "Proyecto de prueba para ver el filtro Frontend con dos enlaces.",
+    description: `
+    <p>Proyecto inventado para probar el filtro de proyectos.</p>
+  `,
+    tags: { angular: "Angular", rxjs: "RxJS", ts: "TypeScript", spa: "SPA" },
+    category: { id: "frontend", name: "Frontend" },
+    links: { github: "https://github.com/popehiflo", google: "https://popehiflo.github.io/" }
+  },
+  {
+    id: "05",
+    title: "DEMO · API REST para E-commerce",
+    image: "./public/assets/imgs/projects/backend_swagger.webp",
+    imageSmall: "./public/assets/imgs/projects/backend_swagger-small.webp",
+    summary: "Proyecto de prueba para ver el filtro Backend con dos enlaces.",
+    description: `
+    <p>Proyecto inventado para probar el filtro de proyectos.</p>
+    <ul>
+      <li>Autenticación con JWT.</li>
+      <li>Documentación con Swagger.</li>
+    </ul>
+  `,
+    tags: { java: "Java", springboot: "Spring Boot", jwt: "JWT", mysql: "MySQL", restapi: "REST API", swagger: "Swagger" },
+    category: { id: "backend", name: "Backend" },
+    links: { github: "https://github.com/popehiflo", google: "https://popehiflo.github.io/" }
+  },
+  {
+    id: "06",
+    title: "DEMO · Microservicio de Notificaciones",
+    image: "./public/assets/imgs/projects/img-backend-1.webp",
+    imageSmall: "./public/assets/imgs/projects/img-backend-1-small.webp",
+    summary: "Proyecto de prueba para ver el filtro Backend con un solo enlace.",
+    description: `
+    <p>Proyecto inventado para probar el filtro de proyectos.</p>
+  `,
+    tags: { nodejs: "Node.js", express: "Express", ts: "TypeScript", rabbitmq: "RabbitMQ", docker: "Docker" },
+    category: { id: "backend", name: "Backend" },
+    links: { github: "https://github.com/popehiflo" }
+  },
+  {
+    id: "07",
+    title: "DEMO · Sistema de Reservas de Hotel con Panel de Administración y Pasarela de Pagos Integrada",
+    image: "./public/assets/imgs/projects/img-backend-2.webp",
+    imageSmall: "./public/assets/imgs/projects/img-backend-2-small.webp",
+    summary: "Proyecto de prueba con título largo, resumen largo y muchas etiquetas para ver cómo se comportan las tarjetas, las etiquetas y el modal en pantallas pequeñas y grandes.",
+    description: `
+    <p>Proyecto inventado para probar descripciones largas dentro del modal de detalles.</p>
+    <p>Sistema de reservas con gestión de habitaciones, tarifas por temporada, disponibilidad en tiempo real y panel administrativo para el personal de recepción.</p>
+    <strong>Funciones:</strong>
+    <ul>
+      <li>Reserva en línea con calendario de disponibilidad.</li>
+      <li>Panel de administración con roles y permisos.</li>
+      <li>Notificaciones por correo al confirmar o cancelar.</li>
+      <li>Reportes de ocupación por mes.</li>
+      <li>Historial de cambios por reserva.</li>
+      <li>Integración con una pasarela de pagos de prueba.</li>
+      <li>Exportación de reportes a hojas de cálculo.</li>
+      <li>Registro de auditoría de acciones del personal.</li>
+    </ul>
+    <p>Este texto existe solo para comprobar el desplazamiento vertical del modal.</p>
+  `,
+    tags: { java: "Java", springboot: "Spring Boot", security: "Spring Security", postgresql: "PostgreSQL", jpa: "JPA", docker: "Docker", redis: "Redis", kafka: "Kafka" },
+    category: { id: "backend", name: "Backend" },
+    links: { github: "https://github.com/popehiflo" }
+  },
+  {
+    id: "08",
+    title: "DEMO · Plataforma de Reservas de Tours",
+    image: "./public/assets/imgs/projects/img-frontend-1.webp",
+    imageSmall: "./public/assets/imgs/projects/img-frontend-1-small.webp",
+    summary: "Proyecto de prueba para ver el filtro Full Stack con un segundo proyecto.",
+    description: `
+    <p>Proyecto inventado para probar el filtro de proyectos.</p>
+  `,
+    tags: { nextjs: "Next.js", react: "React", ts: "TypeScript", supabase: "Supabase", tailwind: "Tailwind CSS" },
+    category: { id: "fullstack", name: "Full Stack" },
+    links: { google: "https://popehiflo.github.io/" }
   }
 ];
 

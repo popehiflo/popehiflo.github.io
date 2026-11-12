@@ -202,12 +202,14 @@ function showProjectModal(project) {
 
 function projectsHandler() {
 
+  let fullStackProjects = myProjects.filter(project => project.category.id === "fullstack");
   let frontProjects = myProjects.filter(project => project.category.id === "frontend");
   let backProjects = myProjects.filter(project => project.category.id === "backend");
 
   populateProjects(myProjects);
 
   document.querySelector('.projects__filter label[for=all] span.project-amount').textContent = myProjects.length;
+  document.querySelector('.projects__filter label[for=fullstack] span.project-amount').textContent = fullStackProjects.length;
   document.querySelector('.projects__filter label[for=front] span.project-amount').textContent = frontProjects.length;
   document.querySelector('.projects__filter label[for=back] span.project-amount').textContent = backProjects.length;
 
@@ -216,6 +218,8 @@ function projectsHandler() {
   projectsFilter.addEventListener('click', (e) => {
     if (e.target.id === "all") {
       populateProjects(myProjects);
+    } else if (e.target.id === "fullstack") {
+      populateProjects(fullStackProjects);
     } else if (e.target.id === "front") {
       populateProjects(frontProjects);
     } else if (e.target.id === "back") {

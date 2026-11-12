@@ -396,14 +396,28 @@ section {
 /* PROJECTS */
 .projects .projects__filter {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  gap: 0.8rem;
+  padding-top: 0.8rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .projects .projects__filter input[type="radio"] {
   visibility: hidden;
   display: none;
+}
+
+.projects .projects__filter .btn-primary {
+  position: relative;
+  white-space: nowrap;
+  margin: 0;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projects .projects__filter input[type="radio"]:checked + label {
@@ -412,20 +426,33 @@ section {
   border: var(--border-none);
 }
 
-.projects .projects__filter input[type="radio"]:checked + label > .project-amount {
-  background: rgb(var(--color-primary-dark-rgb));
-  color: #E6F0FA;
-}
-
 .projects .projects__filter label .project-amount {
-  width: 2rem;
+  position: absolute;
+  top: -0.9rem;
+  right: -0.4rem;
+  margin-left: 0;
+  min-width: 2rem;
   height: 2rem;
-  font-size: 1.5rem;
-  border-radius: 0.25rem;
-  margin-left: 0.5rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-main-darktheme);
+  border: 0.1rem solid var(--border-dark-light);
+  transition: all 0.2s ease;
+}
+
+.projects .projects__filter input[type="radio"]:checked + label > .project-amount {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  border-color: var(--color-primary-dark);
 }
 
 .projects .projects__container {
@@ -565,11 +592,6 @@ section {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Filtros ocultos mientras haya pocos proyectos; se reactivan al superar los 4 */
-.projects .projects__filter {
-  display: none;
 }
 
 /* EXPERIENCE */
@@ -1154,8 +1176,15 @@ section {
     -webkit-text-stroke: 0.2rem var(--color-primary);
     animation: backgroundScroll 10s linear infinite;
   }
+  .projects .projects__filter {
+    gap: 0.6rem;
+    padding-top: 1rem;
+  }
   .projects .projects__filter .btn-primary {
-    padding: 1rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0.9rem 0.6rem;
+    font-size: clamp(1.15rem, 3.2vw, 1.35rem);
   }
 }
 
@@ -1170,6 +1199,13 @@ section {
   .home h1 {
     font-size: 7rem;
     -webkit-text-stroke: 0.1rem var(--color-primary);
+  }
+  .projects .projects__filter {
+    gap: 0.5rem;
+  }
+  .projects .projects__filter .btn-primary {
+    padding: 0.9rem 0.4rem;
+    font-size: 1.25rem;
   }
 }
 
