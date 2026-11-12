@@ -567,6 +567,11 @@ section {
   }
 }
 
+/* Filtros ocultos mientras haya pocos proyectos; se reactivan al superar los 4 */
+.projects .projects__filter {
+  display: none;
+}
+
 /* EXPERIENCE */
 .experience .experiences__container {
   display: flex;

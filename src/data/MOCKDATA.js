@@ -1,6 +1,44 @@
 /* PROJECTS */
 const allProjects = [
   {
+    id: "02",
+    title: "Repuestos Rojas: catálogo en línea y sistema de gestión",
+    image: "./public/assets/imgs/projects/fullstack_repuestos-rojas.webp",
+    imageSmall: "./public/assets/imgs/projects/fullstack_repuestos-rojas-small.webp",
+    summary: "Catálogo en línea y sistema de gestión para una distribuidora de autopartes en Cusco: cotizaciones por WhatsApp, ventas, inventario y empleados.",
+    description: `
+    <p>Plataforma para Repuestos Rojas, distribuidora de cajas de cambio, diferenciales, embragues y coronas en Cusco. Incluye una web pública para que los clientes encuentren el repuesto exacto y un panel privado para que el negocio controle sus ventas e inventario.</p>
+    <strong>Sitio público:</strong>
+    <ul>
+      <li><strong>Catálogo con búsqueda y filtros</strong> por marca, modelo y categoría, y ficha técnica de cada repuesto con códigos OEM y compatibilidad.</li>
+      <li><strong>Cotización por WhatsApp:</strong> cada consulta genera un código único y abre WhatsApp con el mensaje listo para enviar.</li>
+      <li><strong>Pensado para Google:</strong> direcciones legibles y metadatos por producto.</li>
+    </ul>
+    <strong>Panel interno (privado):</strong>
+    <ul>
+      <li><strong>Punto de venta</strong> para ventas rápidas en mostrador, con lectura de códigos de barras y tickets térmicos.</li>
+      <li><strong>Inventario y Kardex:</strong> cada entrada, salida, ajuste o devolución queda registrada con fecha, motivo y responsable.</li>
+      <li><strong>Cotizaciones, historial de ventas y analíticas</strong> de los últimos 30 días.</li>
+      <li><strong>Empleados con roles y permisos</strong>, con suspensión inmediata de accesos sin borrar su historial.</li>
+    </ul>
+    <img src="./public/assets/imgs/projects/repuestos-rojas-ficha.webp" alt="Ficha técnica de un repuesto con su compatibilidad y el botón para cotizar por WhatsApp" loading="lazy">
+  `,
+    tags: {
+      nextjs: "Next.js",
+      react: "React",
+      ts: "TypeScript",
+      supabase: "Supabase",
+      tailwind: "Tailwind CSS"
+    },
+    category: {
+      id: "fullstack",
+      name: "Full Stack"
+    },
+    links: {
+      google: "https://www.repuestosrojas.pe/"
+    }
+  },
+  {
     id: "01",
     title: "Portafolio Profesional de Desarrollo",
     image: "./public/assets/imgs/projects/frontend_portfolio-popehiflo.webp",
@@ -33,120 +71,6 @@ const allProjects = [
       github: "https://github.com/popehiflo/popehiflo.github.io",
       google: "https://popehiflo.github.io/",
       youtube: "https://www.youtube.com/watch?v=tjAcXTpIou8"
-    }
-  },
-  {
-    id: "02",
-    title: "API REST para E-commerce",
-    image: "./public/assets/imgs/projects/backend_swagger.webp",
-    imageSmall: "./public/assets/imgs/projects/backend_swagger-small.webp",
-    summary: "Una API RESTful robusta para una tienda online, con gestión de productos, usuarios y pedidos.",
-    description: "Desarrollo de una API RESTful completa para una plataforma de e-commerce. Incluye gestión de productos, inventario, usuarios, autenticación con JWT y procesamiento de pedidos. La API está documentada con Swagger/OpenAPI para facilitar la integración con cualquier cliente frontend.",
-    tags: {
-      java: "java",
-      springboot: "spring boot",
-      jwt: "jwt",
-      mysql: "mysql",
-      restapi: "rest api",
-      swagger: "swagger"
-    },
-    category: {
-      id: "backend",
-      name: "Backend"
-    },
-    links: {
-      github: "https://github.com/popehiflo",
-      google: "https://popehiflo.github.io/"
-    }
-  },
-  {
-    id: "03",
-    title: "Dashboard de Administración",
-    image: "./public/assets/imgs/projects/img-frontend-0.webp",
-    imageSmall: "./public/assets/imgs/projects/img-frontend-0-small.webp",
-    summary: "Panel de control interactivo construido con React y TypeScript para la administración de un CMS.",
-    description: "Panel de control interactivo para la administración de un CMS. Permite a los usuarios crear, editar y eliminar publicaciones, gestionar usuarios y ver estadísticas de visitas en tiempo real. Construido con React y TypeScript, utilizando Vite para un desarrollo rápido. El estado global se gestiona con Redux Toolkit y las visualizaciones de datos con Chart.js.",
-    tags: {
-      react: "react",
-      ts: "typescript",
-      vite: "vite",
-      redux: "redux",
-      mui: "material-ui"
-    },
-    category: {
-      id: "frontend",
-      name: "Frontend"
-    },
-    links: {
-      github: "https://github.com/popehiflo",
-      google: "https://popehiflo.github.io/"
-    }
-  },
-  {
-    id: "04",
-    title: "Microservicio de Notificaciones",
-    image: "./public/assets/imgs/projects/img-backend-1.webp",
-    imageSmall: "./public/assets/imgs/projects/img-backend-1-small.webp",
-    summary: "Microservicio escalable con Node.js y Express para gestionar notificaciones por email, SMS y push.",
-    description: "Creación de un microservicio independiente para gestionar el envío de notificaciones (email, SMS y push) a los usuarios. Construido con Node.js, Express y TypeScript. Se comunica con otros servicios de forma asíncrona a través de RabbitMQ para garantizar la escalabilidad y resiliencia del sistema.",
-    tags: {
-      nodejs: "node.js",
-      express: "express",
-      typescript: "typescript",
-      rabbitmq: "rabbitmq",
-      docker: "docker"
-    },
-    category: {
-      id: "backend",
-      name: "Backend"
-    },
-    links: {
-      github: "https://github.com/popehiflo",
-      google: "https://popehiflo.github.io/"
-    }
-  },
-  {
-    id: "05",
-    title: "Aplicación de Clima",
-    image: "./public/assets/imgs/projects/img-frontend-1.webp",
-    imageSmall: "./public/assets/imgs/projects/img-frontend-1-small.webp",
-    summary: "Una SPA con Angular y RxJS que muestra datos meteorológicos en tiempo real usando una API externa.",
-    description: "Single Page Application (SPA) que muestra datos meteorológicos en tiempo real, consumiendo la API de OpenWeatherMap. Incluye geolocalización para detectar la ubicación del usuario y un buscador de ciudades. Desarrollada con Angular y RxJS para manejar los flujos de datos asíncronos de forma reactiva.",
-    tags: {
-      angular: "angular",
-      rxjs: "rxjs",
-      typescript: "typescript",
-      spa: "spa"
-    },
-    category: {
-      id: "frontend",
-      name: "Frontend"
-    },
-    links: {
-      github: "https://github.com/popehiflo",
-      google: "https://popehiflo.github.io/"
-    }
-  },
-  {
-    id: "06",
-    title: "Sistema de Reservas de Hotel",
-    image: "./public/assets/imgs/projects/img-backend-2.webp",
-    imageSmall: "./public/assets/imgs/projects/img-backend-2-small.webp",
-    summary: "Backend con Spring Boot y Spring Security para gestionar reservas, habitaciones y facturación de un hotel.",
-    description: "Backend para una aplicación de reservas de hotel. Permite gestionar la disponibilidad de habitaciones, procesar reservas y manejar la facturación. La API está securizada con Spring Security y los datos se persisten en una base de datos PostgreSQL usando JPA/Hibernate.",
-    tags: {
-      java: "java",
-      springboot: "spring boot",
-      security: "spring security",
-      postgresql: "postgresql",
-      jpa: "jpa"
-    },
-    category: {
-      id: "backend",
-      name: "Backend"
-    },
-    links: {
-      github: "https://github.com/popehiflo"
     }
   }
 ];
