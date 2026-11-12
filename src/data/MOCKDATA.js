@@ -321,7 +321,7 @@ const allBlogs = [
       <p>Antes de instalar NVM, es crucial desinstalar cualquier versión previa de Node.js y npm para evitar conflictos. Puedes hacerlo desde "Agregar o quitar programas" en la configuración de Windows.</p>
 
       <h3>Paso 2: Descargar e Instalar NVM para Windows</h3>
-      <p>Dirígete al repositorio oficial de NVM para Windows en GitHub: <a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank">nvm-windows Releases</a>. Descarga el archivo <code>nvm-setup.zip</code> de la última versión estable. Una vez descargado, descomprímelo y ejecuta el instalador <code>nvm-setup.exe</code>.</p>
+      <p>Dirígete al repositorio oficial de NVM para Windows en GitHub: <a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank" rel="noopener noreferrer">nvm-windows Releases</a>. Descarga el archivo <code>nvm-setup.zip</code> de la última versión estable. Una vez descargado, descomprímelo y ejecuta el instalador <code>nvm-setup.exe</code>.</p>
       <p>Sigue las instrucciones del instalador. Se te pedirá elegir la ruta de instalación de NVM y la ruta donde se instalarán las versiones de Node.js. Se recomienda dejar las opciones por defecto.</p>
 
       <h3>Paso 3: Verificar la Instalación</h3>
@@ -372,7 +372,7 @@ const allBlogs = [
       </ul>
 
       <h3>Paso 1: Generar el Proyecto con Spring Initializr</h3>
-      <p>La forma más sencilla de empezar es usando <a href="https://start.spring.io/" target="_blank">Spring Initializr</a>, una herramienta web que genera la estructura básica de tu proyecto. Configúralo así:</p>
+      <p>La forma más sencilla de empezar es usando <a href="https://start.spring.io/" target="_blank" rel="noopener noreferrer">Spring Initializr</a>, una herramienta web que genera la estructura básica de tu proyecto. Configúralo así:</p>
       <ul>
         <li>**Project:** Maven Project</li>
         <li>**Language:** Java</li>
@@ -441,7 +441,7 @@ mvn spring-boot:run
       </ul>
 
       <h3>Paso 1: Instalar Docker</h3>
-      <p>Descarga e instala Docker Desktop desde el sitio oficial de Docker (<a href="https://www.docker.com/products/docker-desktop" target="_blank">docker.com</a>). Está disponible para Windows, macOS y Linux.</p>
+      <p>Descarga e instala Docker Desktop desde el sitio oficial de Docker (<a href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener noreferrer">docker.com</a>). Está disponible para Windows, macOS y Linux.</p>
 
       <h3>Paso 2: Crear un Dockerfile</h3>
       <p>Un Dockerfile es un script que contiene una serie de instrucciones para construir una imagen Docker. Aquí tienes un ejemplo básico para una aplicación Node.js:</p>

@@ -48,7 +48,7 @@ function sidebarHandler() {
 function footerHandler() {
   let currentYear = new Date().getFullYear();
   document.querySelector('.footer').innerHTML = `
-    © Copyright <span>popehiflo</span>, ${currentYear}. All rights reserved.
+    © Copyright <span>popehiflo</span>, ${currentYear}. Todos los derechos reservados.
   `;
 };
 
