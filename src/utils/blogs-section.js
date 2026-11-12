@@ -16,12 +16,12 @@ function createBlogElement(blog) {
 
   blogBox.innerHTML = `
     <div class="box-image">
-      <img src="${blog.image}" alt="${blog.title}" loading="lazy">
+      <img src="${blog.image}" alt="${blog.title}" width="600" height="375" loading="lazy">
     </div>
     <div class="box-content">
       <div class="content-icons">
-        <a href="#"><i class="fas fa-calendar"></i> ${blog.date}</a>
-        <a href="#"><i class="fas fa-user"></i> ${blog.author}</a>
+        <span><i class="fas fa-calendar"></i> ${blog.date}</span>
+        <span><i class="fas fa-user"></i> ${blog.author}</span>
       </div>
       <h3>${blog.title}</h3>
       <p>${blog.summary}</p>
@@ -37,14 +37,17 @@ function showBlogModal(blog) {
   const modal = document.createElement('div');
   modal.classList.add('blog-modal');
   modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
   modal.setAttribute('aria-labelledby', 'modal-title');
   modal.innerHTML = `
     <div class="blog-modal-content">
       <div class="blog-modal-header">
         <h2 id="modal-title">${blog.title}</h2>
-        <i class="fas fa-times blog-modal-close"></i>
+        <button type="button" class="blog-modal-close" aria-label="Cerrar artículo">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
       </div>
-      <img src="${blog.image}" alt="${blog.title}" class="blog-modal-image" loading="lazy">
+      <img src="${blog.image}" alt="${blog.title}" class="blog-modal-image" width="800" height="500" loading="lazy">
       <div class="blog-modal-body">
         <div class="blog-modal-meta">
           <span><i class="fas fa-calendar"></i> ${blog.date}</span>
@@ -59,9 +62,16 @@ function showBlogModal(blog) {
   document.body.style.overflow = 'hidden'; // Prevent background scrolling
 
   // Cerrar modal
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  };
+
   const closeModal = () => {
     modal.remove();
     document.body.style.overflow = 'auto';
+    document.removeEventListener('keydown', handleKeyDown);
   };
 
   const closeBtn = modal.querySelector('.blog-modal-close');
@@ -71,11 +81,7 @@ function showBlogModal(blog) {
       closeModal();
     }
   });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeModal();
-    }
-  });
+  document.addEventListener('keydown', handleKeyDown);
 }
 
 function blogsHandler() {

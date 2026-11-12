@@ -1,19 +1,19 @@
 // About Section
 function greetingHandler() {
-  let grettingText;
+  let greetingText;
   let currentHour = new Date().getHours();
 
   if (currentHour < 12) {
-    grettingText = "¡Buenos diás!"
+    greetingText = "¡Buenos días!"
   } else if (currentHour < 18) {
-    grettingText = "¡Buenas tardes!"
+    greetingText = "¡Buenas tardes!"
   } else if (currentHour < 24) {
-    grettingText = "¡Buenas noches!"
+    greetingText = "¡Buenas noches!"
   } else {
-    grettingText = "¡Bienvenido!"
+    greetingText = "¡Bienvenido!"
   }
 
-  document.querySelector('#greeting').innerHTML = grettingText;
+  document.querySelector('#greeting').innerHTML = greetingText;
 }
 
 function clockHandler() {

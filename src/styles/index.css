@@ -730,7 +730,8 @@ section {
   justify-content: space-between;
 }
 
-.blogs .blogs__container .blog__box .box-content .content-icons a {
+.blogs .blogs__container .blog__box .box-content .content-icons a,
+.blogs .blogs__container .blog__box .box-content .content-icons span {
   font-size: 1.4rem;
   color: var(--color-text-main-darktheme);
 }
@@ -739,7 +740,8 @@ section {
   color: var(--color-primary);
 }
 
-.blogs .blogs__container .blog__box .box-content .content-icons a i {
+.blogs .blogs__container .blog__box .box-content .content-icons a i,
+.blogs .blogs__container .blog__box .box-content .content-icons span i {
   padding-right: 0.5rem;
   color: var(--color-primary);
 }
@@ -804,6 +806,8 @@ section {
 .blog-modal-close {
   font-size: 3rem;
   color: var(--color-text-main-darktheme);
+  background: transparent;
+  border: none;
   cursor: pointer;
   transition: transform 0.2s ease;
 }
@@ -817,8 +821,11 @@ section {
   line-height: 1.8;
 }
 
-.blog-modal-body img {
+.blog-modal-body img,
+.blog-modal-image {
   width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
 }
@@ -907,6 +914,7 @@ section {
     border-radius: 0;
   }
   .blog-modal-body img,
+  .blog-modal-image,
   .project-modal-body img {
     max-height: 40vh;
   }
