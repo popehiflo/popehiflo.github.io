@@ -14,17 +14,17 @@
 const allProjects = [
   {
     id: "01",
-    title: "Repuestos Rojas: E-commerce, ERP & Punto de Venta (POS)",
+    title: "Repuestos Rojas: Catálogo Web, Inventario, Kardex y Punto de Venta (POS)",
     image: "./public/assets/imgs/projects/fullstack_repuestos-rojas.webp",
     imageSmall: "./public/assets/imgs/projects/fullstack_repuestos-rojas-small.webp",
     summary: "Plataforma All-in-One (Catálogo online SEO + ERP Administrativo + POS ultrarrápido y Kardex atómico) para el sector automotriz.",
     description: `
-      <p><strong>El Desafío:</strong> Digitalizar las operaciones de mostrador y abrir un canal de ventas en línea para una tienda de repuestos automotrices en Cusco sin depender de costosas suscripciones mensuales, manejando compatibilidades por vehículo y control contable de stock.</p>
-      <p><strong>La Solución:</strong> Plataforma "All-in-One" (E-commerce público + Sistema de Gestión ERP/POS) construida con <strong>Next.js 16</strong> y <strong>Supabase (PostgreSQL)</strong> bajo una arquitectura Serverless de alta eficiencia operativa.</p>
+      <p>Para la tienda de repuestos automotrices Repuestos Rojas en Cusco, construí una plataforma con <strong>Next.js 16</strong> y <strong>Supabase (PostgreSQL)</strong>. El objetivo principal fue resolver el desorden de inventario de mostrador y abrir un canal de pedidos digitales directos a WhatsApp sin obligar al cliente a pagar licencias mensuales recurrentes.</p>
+      <p>Diseñé un catálogo web público con filtrado instantáneo por categoría del repuesto, marca, modelo y año del vehículo, junto con un panel administrativo interno de Punto de Venta (POS) y control estricto de kardex con triggers transaccionales que evitan descuadres de stock en cada venta.</p>
       <strong>Módulos del Sistema:</strong>
       <ul>
-        <li><strong>Catálogo en Línea y Cotizaciones por WhatsApp:</strong> Sitio público optimizado para SEO (SSR, Sitemap automático y Rich Cards Open Graph) con buscador por marca/modelo y generación directa de cotizaciones hacia WhatsApp.</li>
-        <li><strong>Punto de Venta (POS) e Historial de Ventas:</strong> Interfaz rápida de mostrador con búsqueda instantánea por SKU o compatibilidad vehicular, registro de ventas, gestión de cotizaciones e historial detallado de transacciones.</li>
+        <li><strong>Catálogo en Línea y Cotizaciones por WhatsApp:</strong> Sitio público optimizado para SEO (SSR, Sitemap automático y Rich Cards Open Graph) con buscador por categoría, marca/modelo y generación directa de cotizaciones hacia WhatsApp.</li>
+        <li><strong>Punto de Venta (POS) e Historial de Ventas:</strong> Interfaz rápida de mostrador con búsqueda instantánea por nombre, SKU o compatibilidad vehicular, registro de ventas, gestión de cotizaciones e historial detallado de transacciones.</li>
         <li><strong>Control de Inventario y Kardex Contable:</strong> Motor transaccional con Triggers y RPCs en PostgreSQL que descuenta stock y registra cada entrada/salida en el Kardex de forma atómica, evitando quiebres o descuadres.</li>
         <li><strong>Analíticas Financieras (Dashboard):</strong> Reportes visuales con Recharts para monitorear ingresos brutos, margen neto de ganancia (restando COGS) y detección automática de stock sin rotación ("stock muerto").</li>
         <li><strong>Catálogo Interno y Control de Usuarios:</strong> Panel administrativo para publicar/editar repuestos con carga segura de imágenes a Cloudinary, protegido con políticas RLS y control de accesos por rol.</li>
@@ -53,12 +53,13 @@ const allProjects = [
   },
   {
     id: "02",
-    title: "Portafolio Profesional & Marca Personal (popehiflo)",
+    title: "Portafolio Profesional y Marca Personal (popehiflo)",
     image: "./public/assets/imgs/projects/frontend_portfolio-popehiflo.webp",
     imageSmall: "./public/assets/imgs/projects/frontend_portfolio-popehiflo-small.webp",
     summary: "Aplicación web estática ultrarrápida en Vanilla JS, HTML5 y CSS3, optimizada para SEO técnico, accesibilidad y diseño responsivo desde 360px.",
     description: `
-      <p><strong>El Objetivo:</strong> Construir una plataforma de marca personal y portafolio de proyectos con velocidad instantánea y control total del DOM, prescindiendo de frameworks pesados.</p>
+      <p>Diseñé y programé este portafolio desde cero en <strong>JavaScript Vanilla (ES6 Modules)</strong>, <strong>HTML5 semántico</strong> y <strong>CSS3 puro</strong>. Buscaba una plataforma de presentación profesional con máxima velocidad de carga (100/100 en Core Web Vitals) y control absoluto del DOM sin dependencias pesadas de frameworks.</p>
+      <p>Implementé una arquitectura modular desacoplada, datos estructurados Schema.org para SEO técnico y optimización avanzada de fuentes e imágenes WebP para ofrecer una experiencia interactiva instantánea en cualquier dispositivo.</p>
       <strong>Características técnicas implementadas:</strong>
       <ul>
         <li><strong>Arquitectura Modular en Vanilla JS:</strong> Separación limpia de responsabilidades mediante ES6 Modules nativos y renderizado dinámico desde capa de datos centralizada.</li>
@@ -90,13 +91,13 @@ const allProjects = [
   },
   {
     id: "03",
-    title: "Sistema de Gestión Bibliográfica y Préstamos",
+    title: "Sistema de Gestión Bibliográfica y Préstamos (I.E. Montessori)",
     image: "./public/assets/imgs/projects/img-frontend-0.webp",
     imageSmall: "./public/assets/imgs/projects/img-frontend-0-small.webp",
     summary: "Plataforma académica integral para catalogación de ejemplares, control de préstamos estudiantiles, devoluciones y moras en tiempo real.",
     description: `
-      <p><strong>El Desafío:</strong> Reemplazar los registros manuales en hojas de cálculo de una institución educativa por un sistema centralizado capaz de controlar el estado de cada ejemplar, evitar duplicidad de préstamos y generar reportes rápidos para bibliotecarios y dirección.</p>
-      <p><strong>La Solución:</strong> Desarrollé una aplicación full stack desacoplada con backend REST en <strong>Spring Boot</strong>, base de datos relacional en <strong>PostgreSQL</strong> y una SPA administrativa en <strong>Angular</strong>.</p>
+      <p>Para la Institución Educativa Montessori en los Andes, desarrollé el sistema web integral de catalogación y control de préstamos de su biblioteca, reemplazando el registro manual en hojas de cálculo por una plataforma automatizada, auditable y segura.</p>
+      <p>Construí el servicio backend RESTful con <strong>Java</strong> y <strong>Spring Boot</strong> sobre <strong>PostgreSQL</strong>, y diseñé la interfaz de administración para bibliotecarios con <strong>Angular</strong> y <strong>TypeScript</strong>, agilizando el registro de ejemplares físicos, el seguimiento de devoluciones y las alertas de moras.</p>
       <strong>Características principales:</strong>
       <ul>
         <li><strong>Catálogo e Inventario por Ejemplar:</strong> Gestión de títulos, autores, editoriales, ISBN y código único de inventario por copia física.</li>
@@ -126,13 +127,13 @@ const allProjects = [
   },
   {
     id: "04",
-    title: "Sistema de Gestión Clínica y Facturación (Odoo ERP)",
+    title: "Sistema de Gestión Clínica y Facturación en Odoo ERP (CerviCusco)",
     image: "./public/assets/imgs/projects/img-backend-2.webp",
     imageSmall: "./public/assets/imgs/projects/img-backend-2-small.webp",
     summary: "Módulo integral en Python 3 y Odoo ERP para gestión de pacientes, historia ginecológica, citas por sede, laboratorio clínico y facturación con pagos parciales.",
     description: `
-      <p><strong>El Desafío:</strong> Centralizar la atención médica, el laboratorio clínico y el control de caja/facturación de la clínica CerviCusco en un único sistema ERP adaptado a sus flujos médicos y administrativos.</p>
-      <p><strong>La Solución:</strong> Desarrollo de un módulo (addon) a medida en <strong>Python 3</strong> y <strong>PostgreSQL</strong> sobre <strong>Odoo ERP</strong>, conectado nativamente con los módulos de Inventario, Ventas y Facturación.</p>
+      <p>Durante mi trabajo en la clínica CerviCusco, diseñé e implementé un módulo médico personalizado en <strong>Python 3</strong> y <strong>PostgreSQL</strong> sobre <strong>Odoo ERP</strong>, centralizando la historia ginecológica, citas de pacientes y órdenes de laboratorio clínico.</p>
+      <p>El sistema se integró de forma directa con los módulos de facturación e inventario de Odoo, permitiendo registrar pagos fraccionados, emitir comprobantes autorizados y generar reportes médicos y de laboratorio en PDF en tiempo real.</p>
       <strong>Funcionalidades implementadas en el sistema:</strong>
       <ul>
         <li><strong>Gestión de Pacientes e Historia Ginecológica Dinámica:</strong> Registro con cálculo automático de edad, validación de campos obligatorios, pestaña ginecológica reactiva según género del paciente e impresión de Tarjeta de Paciente en PDF y exportación a Excel.</li>
@@ -163,13 +164,13 @@ const allProjects = [
   },
   {
     id: "05",
-    title: "ERP Turístico: Cotizador de Paquetes, Reservas y Caja",
+    title: "ERP Turístico: Cotizador de Paquetes, Reservas y Caja (Tierras de los Andes)",
     image: "./public/assets/imgs/projects/img-frontend-1.webp",
     imageSmall: "./public/assets/imgs/projects/img-frontend-1-small.webp",
     summary: "Sistema ERP multiusuario para operadores turísticos en Cusco: armado dinámico de itinerarios, tarifas por temporada, reservas y control de caja.",
     description: `
-      <p><strong>El Desafío:</strong> Gestionar cotizaciones complejas a medida (hoteles, trenes, guías, entradas y traslados) con múltiples proveedores, tipos de cambio y fechas de confirmación para agencias de viajes receptivas.</p>
-      <p><strong>La Solución:</strong> Participé en el diseño y construcción de un ERP web corporativo sobre <strong>Java EE</strong>, <strong>JPA</strong> y <strong>MySQL</strong>, con una interfaz de escritorio en navegador basada en <strong>GWT / SmartGWT</strong> bajo metodología <strong>Scrum</strong>.</p>
+      <p>En la agencia de viajes y turismo receptivo Tierras de los Andes en Cusco, participé como analista y programador en el ERP corporativo de la empresa, enfocado en automatizar cotizaciones complejas de paquetes turísticos con múltiples proveedores (hoteles, trenes, guías y traslados).</p>
+      <p>Desarrollé funcionalidades clave en <strong>Java EE</strong> con <strong>JPA</strong> y <strong>MySQL</strong>, combinadas con interfaces de usuario en <strong>GWT / SmartGWT</strong> bajo metodología <strong>Scrum</strong>, facilitando el control de reservas, liquidación de servicios a proveedores y cuadre diario de caja multimoneda.</p>
       <strong>Características principales:</strong>
       <ul>
         <li><strong>Cotizador Dinámico de Paquetes:</strong> Cálculo automático de costos por pasajero, márgenes de ganancia, temporadas y servicios opcionales.</li>
@@ -203,8 +204,8 @@ const allProjects = [
     imageSmall: "./public/assets/imgs/projects/backend_swagger-small.webp",
     summary: "Servicio backend seguro y documentado para trazabilidad de entregas, devoluciones y mantenimiento de equipos y herramientas en frentes de obra.",
     description: `
-      <p><strong>El Desafío:</strong> Reducir las pérdidas de herramientas menores y materiales entre almacén central y múltiples frentes de obra, garantizando responsabilidad individual y auditoría de cada movimiento.</p>
-      <p><strong>La Solución:</strong> Diseñé una API RESTful robusta en <strong>Java</strong> y <strong>Spring Boot</strong>, protegida con <strong>Spring Security + JWT</strong>, respaldada por <strong>MySQL</strong> y documentada interactivamente con <strong>Swagger / OpenAPI</strong>.</p>
+      <p>Desarrollé esta API RESTful segura en <strong>Java</strong> y <strong>Spring Boot</strong> para resolver la trazabilidad y control de herramientas y materiales entre almacenes centrales y distintos frentes de trabajo en proyectos de infraestructura.</p>
+      <p>Implementé autenticación stateless con <strong>Spring Security</strong> y <strong>JWT</strong>, auditoría de asignaciones por trabajador y documentación viva de endpoints con <strong>Swagger / OpenAPI</strong>, garantizando transacciones seguras sobre <strong>MySQL</strong>.</p>
       <strong>Características principales:</strong>
       <ul>
         <li><strong>Autenticación Stateless con JWT:</strong> Emisión y validación de tokens con control granular de permisos por perfil (almacenero, residente, supervisor).</li>
@@ -238,8 +239,8 @@ const allProjects = [
     imageSmall: "./public/assets/imgs/projects/img-frontend-0-small.webp",
     summary: "Panel administrativo interactivo en React y TypeScript para monitoreo de ventas, métricas operativas, filtros dinámicos y exportación de datos.",
     description: `
-      <p><strong>El Desafío:</strong> Brindar a gerencia y jefaturas comerciales una vista consolidada y ágil del rendimiento diario de sucursales, eliminando la demora de esperar reportes manuales al cierre de semana.</p>
-      <p><strong>La Solución:</strong> Construí una interfaz analítica responsiva con <strong>React</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong> y visualización interactiva mediante <strong>Recharts</strong>.</p>
+      <p>Construí este panel de control interactivo con <strong>React</strong>, <strong>TypeScript</strong> y <strong>Tailwind CSS</strong> para facilitar la toma de decisiones gerenciales mediante la visualización consolidada del rendimiento de sucursales y ventas diarias.</p>
+      <p>Integré gráficos analíticos con <strong>Recharts</strong> y tablas con filtrado reactivo por fechas y categorías, permitiendo a la administración identificar tendencias y márgenes de ganancia sin depender de reportes manuales diferidos.</p>
       <strong>Características principales:</strong>
       <ul>
         <li><strong>Visualización de KPIs en Tiempo Real:</strong> Tarjetas resumen de ticket promedio, volumen de ventas, cumplimiento de metas y comparativas intermensuales.</li>
@@ -267,13 +268,13 @@ const allProjects = [
   },
   {
     id: "08",
-    title: "Servicio de Facturación y Despacho de Notificaciones",
+    title: "Servicio de Facturación y Emisión de Pasajes (SmartBus Perú)",
     image: "./public/assets/imgs/projects/img-backend-1.webp",
     imageSmall: "./public/assets/imgs/projects/img-backend-1-small.webp",
     summary: "Backend transaccional contenedorizado para generación de comprobantes, validación tributaria y despacho asíncrono de notificaciones a clientes.",
     description: `
-      <p><strong>El Desafío:</strong> Garantizar que la emisión de comprobantes electrónicos y el envío de correos o alertas de confirmación no bloqueen las transacciones críticas de venta ante picos de demanda o latencia de servicios externos.</p>
-      <p><strong>La Solución:</strong> Implementé un servicio backend desacoplado con <strong>Java</strong>, <strong>Spring Boot</strong> y <strong>PostgreSQL</strong>, empaquetado en <strong>Docker</strong> para despliegues consistentes entre entornos.</p>
+      <p>En SmartBus Perú, participé en el desarrollo y mantenimiento del sistema web transaccional para venta de pasajes interprovinciales y emisión de comprobantes de pago, asegurando alta disponibilidad durante temporadas altas de viaje.</p>
+      <p>Implementé servicios backend con <strong>Java</strong>, <strong>Spring Boot</strong> y <strong>PostgreSQL</strong>, empaquetados en contenedores <strong>Docker</strong> para garantizar consistencia entre entornos y despacho seguro de notificaciones a los pasajeros.</p>
       <strong>Características principales:</strong>
       <ul>
         <li><strong>Procesamiento Transaccional Seguro:</strong> Idempotencia en endpoints de emisión para evitar duplicidad de comprobantes ante reintentos de red.</li>

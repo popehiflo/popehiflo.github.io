@@ -15,20 +15,20 @@
   <meta property="og:site_name" content="popehiflo">
   <meta property="og:locale" content="es_PE">
   <meta property="og:url" content="https://popehiflo.github.io/">
-  <meta property="og:title" content="Pool Hijuela (popehiflo) – Desarrollador web en Cusco">
+  <meta property="og:title" content="Pool Hijuela (popehiflo) - Desarrollador web en Cusco">
   <meta property="og:description" content="Desarrollador full stack en Cusco con más de 10 años de experiencia. Creo sitios web, tiendas en línea y sistemas de gestión para negocios y turismo.">
   <meta property="og:image" content="https://popehiflo.github.io/public/assets/imgs/og-image.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="popehiflo, desarrollador web en Cusco: tiendas online, catálogos con WhatsApp, turismo e inventario">
+  <meta property="og:image:alt" content="popehiflo, desarrollador web en Cusco: tiendas online, sistemas ERP/POS, inventario y facturación">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pool Hijuela (popehiflo) – Desarrollador web en Cusco">
+  <meta name="twitter:title" content="Pool Hijuela (popehiflo) - Desarrollador web en Cusco">
   <meta name="twitter:description" content="Desarrollador full stack en Cusco con más de 10 años de experiencia. Creo sitios web, tiendas en línea y sistemas de gestión para negocios y turismo.">
   <meta name="twitter:image" content="https://popehiflo.github.io/public/assets/imgs/og-image.jpg">
-  <meta name="twitter:image:alt" content="popehiflo, desarrollador web en Cusco: tiendas online, catálogos con WhatsApp, turismo e inventario">
+  <meta name="twitter:image:alt" content="popehiflo, desarrollador web en Cusco: tiendas online, sistemas ERP/POS, inventario y facturación">
 
   <link rel="icon" href="./logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./logo.svg">
@@ -39,7 +39,7 @@
   <link rel="preload" href="./public/assets/fonts/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./src/styles/index.css">
-  <title>Pool Hijuela (popehiflo) – Desarrollador web en Cusco</title>
+  <title>Pool Hijuela (popehiflo) - Desarrollador web en Cusco</title>
 
   <!-- Loader -->
   <script>
@@ -74,32 +74,124 @@
     media="(max-width: 991px)"
     fetchpriority="high"
   >
-  <!-- Datos estructurados (JSON-LD) -->
+  <!-- Datos estructurados (JSON-LD con grafo @graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "mainEntity": {
-      "@type": "Person",
-      "name": "Pool Petter Hijuela Florian",
-      "alternateName": ["popehiflo", "Pool Hijuela"],
-      "jobTitle": "Desarrollador de software full stack",
-      "description": "Desarrollador full stack en Cusco con más de 10 años de experiencia. Creo sitios web, tiendas en línea y sistemas de gestión para negocios y turismo.",
-      "url": "https://popehiflo.github.io/",
-      "image": "https://popehiflo.github.io/public/assets/imgs/profile.jpeg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Cusco",
-        "addressCountry": "PE"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://popehiflo.github.io/#website",
+        "url": "https://popehiflo.github.io/",
+        "name": "Pool Hijuela (popehiflo) - Desarrollo de Software en Cusco",
+        "description": "Desarrollador de Software Full Stack en Cusco. Soluciones web a medida, tiendas online, sistemas ERP/POS, facturación electrónica y mas.",
+        "inLanguage": "es"
       },
-      "knowsAbout": ["Java", "Spring Boot", "Python", "Odoo", "React", "Next.js", "TypeScript", "PostgreSQL", "MySQL", "Supabase"],
-      "sameAs": [
-        "https://github.com/popehiflo",
-        "https://linkedin.com/in/popehiflo/",
-        "https://www.youtube.com/@popehiflo",
-        "https://twitter.com/popehiflo"
-      ]
-    }
+      {
+        "@type": "ProfilePage",
+        "@id": "https://popehiflo.github.io/#profilepage",
+        "url": "https://popehiflo.github.io/",
+        "name": "Portafolio de Pool Petter Hijuela Florian (popehiflo)",
+        "isPartOf": {
+          "@id": "https://popehiflo.github.io/#website"
+        },
+        "mainEntity": {
+          "@id": "https://popehiflo.github.io/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://popehiflo.github.io/#person",
+        "name": "Pool Petter Hijuela Florian",
+        "alternateName": ["popehiflo", "Pool Hijuela"],
+        "jobTitle": "Desarrollador de Software Full Stack",
+        "description": "Desarrollador de software full stack en Cusco con más de una década creando plataformas web, sistemas de gestión y soluciones a medida para turismo, salud, educación y comercio.",
+        "url": "https://popehiflo.github.io/",
+        "image": "https://popehiflo.github.io/public/assets/imgs/profile.jpeg",
+        "email": "mailto:popehiflo@gmail.com",
+        "telephone": "+51963293735",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cusco",
+          "addressRegion": "Cusco",
+          "addressCountry": "PE"
+        },
+        "knowsAbout": [
+          "Desarrollo Full Stack",
+          "Next.js",
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Odoo ERP",
+          "Java",
+          "Spring Boot",
+          "PostgreSQL",
+          "MySQL",
+          "Supabase",
+          "Docker",
+          "Tailwind CSS",
+          "Sistemas POS y Facturación Electrónica"
+        ],
+        "sameAs": [
+          "https://github.com/popehiflo",
+          "https://linkedin.com/in/popehiflo/",
+          "https://www.youtube.com/@popehiflo",
+          "https://twitter.com/popehiflo"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://popehiflo.github.io/#organization",
+        "name": "Pool Hijuela (popehiflo) - Desarrollo de Software en Cusco",
+        "founder": {
+          "@id": "https://popehiflo.github.io/#person"
+        },
+        "url": "https://popehiflo.github.io/",
+        "logo": "https://popehiflo.github.io/logo.svg",
+        "image": "https://popehiflo.github.io/public/assets/imgs/og-image.jpg",
+        "email": "popehiflo@gmail.com",
+        "telephone": "+51-963-293-735",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cusco",
+          "addressRegion": "Cusco",
+          "addressCountry": "PE"
+        },
+        "areaServed": ["Cusco", "Perú"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios de Desarrollo de Software",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Desarrollo de tiendas online y catálogos con WhatsApp",
+                "description": "Catálogos interactivos, carritos de compra conectados a WhatsApp y plataformas de comercio electrónico optimizadas para conversión."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sistemas ERP/POS e inventario a medida",
+                "description": "Puntos de venta, control de inventario/kardex, facturación y gestión operativa para comercio, clínicas y turismo."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Desarrollo Full Stack con Next.js, Java, Python y Odoo",
+                "description": "Arquitectura de software moderna, desarrollo frontend y backend escalable, APIs REST y módulos empresariales en Odoo."
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -195,11 +287,24 @@
           <p>proyectos reales</p>
           <h3>10+</h3>
         </div>
+        <div class="about__actions">
+          <a href="https://wa.me/51963293735?text=Hola%20Pool,%20vi%20tu%20portafolio%20web%20y%20me%20gustar%C3%ADa%20conversar%20contigo." target="_blank" rel="noopener noreferrer" class="btn-primary contact__btn about__btn" aria-label="Escribir por WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://t.me/popehiflo" target="_blank" rel="noopener noreferrer" class="btn-primary contact__btn about__btn" aria-label="Escribir por Telegram">
+            <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+            <span>Telegram</span>
+          </a>
+        </div>
       </div>
       <div class="row__content">
         <h3>Mi nombre es <span>Pool</span></h3>
         <p>
-          Soy desarrollador de software en Cusco, con más de 10 años creando sistemas web para empresas e instituciones. Hoy construyo sitios web, tiendas en línea y sistemas de gestión para negocios en general, de la base de datos a la pantalla que ven tus clientes. Vengo del backend con Java - Python pero ultimamente trabajo con Next.js y Supabase. Si quieres vender o gestionar mejor tu negocio en línea, o sumar a alguien a tu equipo, conversemos.
+          Desde 2013 desarrollo software en Cusco para empresas e instituciones locales y regionales. He construido módulos enteros para gestión médica en Python y Odoo para la clínica CerviCusco, plataformas operativas para agencias de turismo como Tierras de los Andes, sistemas de inventario y kardex para Constructoras como Mech, gestión académica para colegios como la I.E. Montessori.
+        </p>
+        <p>
+          Recientemente implementé para Repuestos Rojas su catálogo web público conectado a pedidos por WhatsApp junto con su sistema interno de punto de venta (POS), inventario y control de kardex en Next.js y PostgreSQL. Domino desde el modelado de bases de datos relacionales y APIs robustas hasta interfaces frontend rápidas. Si necesitas modernizar la operación de tu negocio o incorporar experiencia sólida a tu equipo, conversemos.
         </p>
       </div>
     </div>
@@ -254,7 +359,41 @@
       <label for="back" class="btn-primary">Backend<span class="project-amount">0</span></label>
     </div>
 
-      <div class="projects__container"></div>
+      <div class="projects__container">
+        <!-- Contenido semántico indexable para motores de búsqueda y rastreadores -->
+        <article class="project__summary-seo">
+          <h3>Repuestos Rojas: Catálogo Web, Inventario, Kardex y Punto de Venta (POS)</h3>
+          <p>Plataforma integral construida con Next.js y Supabase (PostgreSQL) para una tienda automotriz en Cusco. Incluye catálogo público conectado a WhatsApp, sistema de mostrador POS, control atómico de kardex y dashboard analítico.</p>
+        </article>
+        <article class="project__summary-seo">
+          <h3>Portafolio Profesional y Marca Personal (popehiflo)</h3>
+          <p>Aplicación web estática ultrarrápida desarrollada en Vanilla JS, HTML5 semántico y CSS3 moderno. Optimizada para Core Web Vitals (100/100), SEO técnico con Schema.org JSON-LD y diseño totalmente responsivo.</p>
+        </article>
+        <article class="project__summary-seo">
+          <h3>Sistema de Gestión Bibliográfica y Préstamos (I.E. Montessori)</h3>
+          <p>Plataforma full stack desarrollada con Java, Spring Boot, Angular y PostgreSQL para la Institución Educativa Montessori en los Andes, automatizando la catalogación y flujo de préstamos estudiantiles.</p>
+        </article>
+        <article class="project__summary-seo">
+          <h3>Sistema de Gestión Clínica y Facturación en Odoo ERP (CerviCusco)</h3>
+          <p>Módulo a medida desarrollado en Python 3 y PostgreSQL sobre Odoo ERP para la clínica CerviCusco, centralizando historias ginecológicas, citas por sede, laboratorio clínico y facturación integrada.</p>
+        </article>
+        <article class="project__summary-seo">
+          <h3>ERP Turístico: Cotizador de Paquetes, Reservas y Caja (Tierras de los Andes)</h3>
+          <p>ERP web corporativo en Java EE, JPA y MySQL con interfaz GWT/SmartGWT para la agencia de viajes Tierras de los Andes en Cusco, gestionando itinerarios multidestino, tarifas por temporada y cuadre de caja.</p>
+        </article>
+        <article class="project__summary-seo">
+          <h3>API RESTful de Control de Almacén y Herramientas en Obra</h3>
+          <p>Servicio backend robusto en Java y Spring Boot con seguridad stateless (JWT), validación transaccional sobre MySQL y contratos interactivos documentados mediante Swagger y OpenAPI.</p>
+        </article>
+        <article class="project__summary-seo">
+          <h3>Dashboard Comercial de KPIs y Control de Operaciones</h3>
+          <p>Panel analítico reactivo con React, TypeScript, Tailwind CSS y Recharts para visualización en tiempo real de ticket promedio, ingresos netos y filtros multicriterio de rendimiento por sede.</p>
+        </article>
+        <article class="project__summary-seo">
+          <h3>Servicio de Facturación y Emisión de Pasajes (SmartBus Perú)</h3>
+          <p>Arquitectura de microservicios transaccionales en Java, Spring Boot y PostgreSQL contenerizados en Docker para SmartBus Perú, soportando emisión masiva de pasajes y comprobantes electrónicos.</p>
+        </article>
+      </div>
   </section>
   <!-- #PROJECTS - ENDS -->
 
@@ -265,11 +404,11 @@
     <div class="experiences__container">
       <div class="experience__box">
         <div class="box-content">
-          <span>2026 - Actualidad</span>
-          <h3>Desarrollador FullStack independiente</h3>
-          <p class="experience__company">Freelance · Cusco</p>
-          <p>Creo sitios web y sistemas a la medida para negocios de Cusco. Implemente webs, paneles de ventas, POS, catalogos de productos/servicios, inventarios, kardex, gestión de empleados, e-commerce y otros.</p>
-          <p class="experience__stack">Next.js · React · TypeScript · Supabase · PostgreSQL · MySQL · Tailwind CSS · Shadcn/UI · Vercel</p>
+          <span>2025 - Actualidad</span>
+          <h3>Desarrollador Full Stack independiente</h3>
+          <p class="experience__company">Consultor independiente en Cusco</p>
+          <p>Desarrollo soluciones a medida para empresas y comercios en Cusco, como la tienda en linea con pedidos directos a WhatsApp, panel administrativo de punto de venta (POS) y control de kardex para Repuestos Rojas.</p>
+          <p class="experience__stack">Next.js, React, TypeScript, Supabase, PostgreSQL, MySQL, Tailwind CSS, Shadcn/UI</p>
         </div>
       </div>
       <div class="experience__box">
@@ -277,8 +416,8 @@
           <span>2024</span>
           <h3>Desarrollador de Aplicaciones Java</h3>
           <p class="experience__company">Institución Educativa Montessori en los Andes</p>
-          <p>Construí de punta a punta el módulo de gestión de biblioteca de la institución —base de datos, servicio backend e interfaz web— para administrar de forma eficiente su catálogo bibliográfico y estudiantes.</p>
-          <p class="experience__stack">Java · Spring Boot · TypeScript · Angular · Bootstrap · PostgreSQL</p>
+          <p>Construí de punta a punta el módulo de gestión de biblioteca de la institución —base de datos, servicio backend e interfaz web— para administrar de forma eficiente su catálogo bibliográfico, tambien implemente la gestión de estudiantes y la conecte al de biblioteca.</p>
+          <p class="experience__stack">Java, Spring Boot, TypeScript, Angular, Bootstrap, PostgreSQL, OCI</p>
         </div>
       </div>
       <div class="experience__box">
@@ -287,7 +426,7 @@
           <h3>Soporte Tecnológico</h3>
           <p class="experience__company">E.E.S.P.P. Santa Rosa</p>
           <p>Brindé soporte tecnológico dentro del proyecto «Servicio de Operador para el mejoramiento del Aprendizaje y Acceso a Educación Superior» en el área de influencia directa de Las Bambas.</p>
-          <p class="experience__stack">Soporte técnico · Proyecto educativo</p>
+          <p class="experience__stack">Soporte técnico, Proyecto educativo, Drive</p>
         </div>
       </div>
       <div class="experience__box">
@@ -296,7 +435,7 @@
           <h3>Desarrollador Java</h3>
           <p class="experience__company">SmartBus Perú</p>
           <p>Desarrollé y mantuve las aplicaciones web de la empresa: nuevos módulos, integraciones entre sistemas y mejoras de rendimiento. También administré sus bases de datos y servidores.</p>
-          <p class="experience__stack">Java · Spring Boot · Thymeleaf · GWT · PostgreSQL · SQL Server · MySQL · Tomcat</p>
+          <p class="experience__stack">Java, Spring Boot, Thymeleaf, GWT, PostgreSQL, SQL Server, MySQL, Tomcat</p>
         </div>
       </div>
       <div class="experience__box">
@@ -304,8 +443,8 @@
           <span>2018 - 2020</span>
           <h3>Programador Python Odoo</h3>
           <p class="experience__company">CerviCusco</p>
-          <p>Desarrollé un módulo completo de gestión clínica (pacientes, citas, recetas e historiales médicos), integrado con facturación e inventario, y mantuve los demás sistemas de la empresa.</p>
-          <p class="experience__stack">Python · Odoo · PostgreSQL</p>
+          <p>Desarrollé un módulo completo de gestión clínica (doctores, pacientes, citas, laboratorios, recetas e historiales médicos), integrado con facturación e inventario, y mantuve los demás sistemas de la empresa.</p>
+          <p class="experience__stack">Python, Odoo, PostgreSQL, GCP</p>
         </div>
       </div>
       <div class="experience__box">
@@ -313,8 +452,8 @@
           <span>2013 - 2017</span>
           <h3>Analista Programador Java</h3>
           <p class="experience__company">Tierras de los Andes</p>
-          <p>Empecé desarrollando módulos y llegué a analista del ERP de la empresa (reservas, caja, tours y paquetes) trabajando con SCRUM, además de crear sistemas para usuarios externos.</p>
-          <p class="experience__stack">Java EE · GWT · SmartGWT · MySQL · JPA · Tomcat · SCRUM · Laravel</p>
+          <p>Empecé desarrollando módulos y llegué a analista del ERP de la empresa (reservas, caja, operaciones, ventas, proveedores, tours y paquetes) trabajando con SCRUM, además de crear sistemas para usuarios externos.</p>
+          <p class="experience__stack">Java EE, GWT, SmartGWT, MySQL, JPA, Tomcat, SCRUM, Laravel</p>
         </div>
       </div>
     </div>
@@ -327,27 +466,28 @@
     
     <div class="contact__box">
       <h3 class="contact__title">¿Tienes un proyecto en mente o buscas sumarme a tu equipo?</h3>
-      <p class="contact__lead">Desarrollo soluciones web a medida para negocios, sector turístico y empresas, y estoy disponible para oportunidades como Desarrollador Full Stack.</p>
+      <p class="contact__lead">Desarrollo soluciones web a medida para negocios, distintos sectores y empresas. Estoy disponible para oportunidades como Desarrollador Full Stack.</p>
+      <p class="contact__direct-info">Estoy en Cusco, Perú</p>
 
       <div class="contact__services">
         <span class="contact__services-title">¿En qué puedo ayudarte?</span>
         <div class="contact__marquee" aria-label="Servicios de desarrollo de software">
           <div class="contact__marquee-track">
             <div class="contact__marquee-group">
-              <span class="contact__service-item">Desarrollo Web &amp; Landing Pages</span>
-              <span class="contact__service-item">Catálogos Online con WhatsApp</span>
-              <span class="contact__service-item">Sistemas de Gestión (ERP · POS · Inventario)</span>
-              <span class="contact__service-item">Software para Negocios, Turismo y Clínicas</span>
-              <span class="contact__service-item">Desarrollo Full Stack (Java · Python · Next.js)</span>
-              <span class="contact__service-item">APIs, Bases de Datos &amp; Consultoría</span>
+              <span class="contact__service-item">Desarrollo Web y Landing Pages</span>
+              <span class="contact__service-item">Catálogos y Tiendas en Línea</span>
+              <span class="contact__service-item">Sistemas de Ventas, Caja y Kardex (POS)</span>
+              <span class="contact__service-item">Software para Clínicas, Colegios y Turismo</span>
+              <span class="contact__service-item">Desarrollo Full Stack (Java, Python, ReactJS y Next.js)</span>
+              <span class="contact__service-item">APIs, Bases de Datos SQL y Consultoría</span>
             </div>
             <div class="contact__marquee-group" aria-hidden="true">
-              <span class="contact__service-item">Desarrollo Web &amp; Landing Pages</span>
-              <span class="contact__service-item">Catálogos Online con WhatsApp</span>
-              <span class="contact__service-item">Sistemas de Gestión (ERP · POS · Inventario)</span>
-              <span class="contact__service-item">Software para Negocios, Turismo y Clínicas</span>
-              <span class="contact__service-item">Desarrollo Full Stack (Java · Python · Next.js)</span>
-              <span class="contact__service-item">APIs, Bases de Datos &amp; Consultoría</span>
+              <span class="contact__service-item">Desarrollo Web y Landing Pages</span>
+              <span class="contact__service-item">Catálogos y Tiendas en Línea</span>
+              <span class="contact__service-item">Sistemas de Ventas, Caja y Kardex (POS)</span>
+              <span class="contact__service-item">Software para Clínicas, Colegios y Turismo</span>
+              <span class="contact__service-item">Desarrollo Full Stack (Java, Python, ReactJS y Next.js)</span>
+              <span class="contact__service-item">APIs, Bases de Datos SQL y Consultoría</span>
             </div>
           </div>
         </div>
@@ -393,7 +533,19 @@
     <h2 class="heading">Mis<span> blogs </span>(apuntes)</h2>
 
     <div class="blogs__container">
-      <!-- BlogBox (cards se generarán dinámicamente con JS) -->
+      <!-- Contenido semántico indexable para motores de búsqueda y rastreadores -->
+      <article class="blog__summary-seo">
+        <h3>Guía Completa: Instalar y Gestionar NVM en Windows</h3>
+        <p>Aprende a instalar y configurar Node Version Manager (NVM) en Windows 10/11 para alternar fácilmente entre múltiples versiones de Node.js en diferentes proyectos de desarrollo de software.</p>
+      </article>
+      <article class="blog__summary-seo">
+        <h3>Odoo 18 en Ubuntu 24.04: Instalación Rápida con Docker</h3>
+        <p>Guía paso a paso para desplegar Odoo 18 Community junto con PostgreSQL en Ubuntu 24.04 utilizando Docker y Docker Compose, facilitando entornos limpios de desarrollo y producción.</p>
+      </article>
+      <article class="blog__summary-seo">
+        <h3>Gestión de Múltiples Cuentas de GitHub con SSH en Windows</h3>
+        <p>Configura llaves SSH independientes y perfiles de Git en un mismo entorno de Windows para alternar entre cuentas personales y laborales de GitHub sin conflictos de autenticación.</p>
+      </article>
     </div>
   </section>
   <!-- Modal para BlogBox (se generará dinámicamente con JS) -->

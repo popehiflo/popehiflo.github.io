@@ -44,8 +44,14 @@ function sidebarHandler() {
 };
 
 
-// Contact section - Copy email interaction
+// Contact section - Marquee sync & Copy email interaction
 function contactHandler() {
+  const marqueeGroup1 = document.querySelector('.contact__marquee-group:first-child');
+  const marqueeGroup2 = document.querySelector('.contact__marquee-group[aria-hidden="true"]');
+  if (marqueeGroup1 && marqueeGroup2) {
+    marqueeGroup2.innerHTML = marqueeGroup1.innerHTML;
+  }
+
   const btnCopy = document.querySelector('#btn-copy-email');
   if (!btnCopy) return;
 

@@ -599,6 +599,30 @@ main section:nth-child(odd) {
   margin: 0 -0.8ch;
 }
 
+.about .about__row .row__exp .about__actions,
+.about .row .row__box .about__actions {
+  flex: 1 1 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+.about .about__row .row__exp .about__actions .about__btn,
+.about .row .row__box .about__actions .about__btn {
+  flex: 1 1 18rem;
+  min-width: 0;
+  margin: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.4rem 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
 .about .about__row .row__content {
   flex: 1 1 40rem;
 }
@@ -726,6 +750,48 @@ main section:nth-child(odd) {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(32rem, 2fr));
   gap: 2rem;
+}
+
+/* Resumen semántico inicial para rastreadores y accesibilidad sin JS */
+.project__summary-seo,
+.blog__summary-seo {
+  background: var(--color-bg-dark);
+  border: var(--border-dark);
+  border-radius: 0.5rem;
+  padding: 2.2rem 2rem;
+  box-shadow: var(--box-shadow-card);
+  text-align: left;
+}
+
+.project__summary-seo h3,
+.blog__summary-seo h3 {
+  font-size: 1.8rem;
+  color: var(--color-text-main-darktheme);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.project__summary-seo p,
+.blog__summary-seo p {
+  font-size: 1.45rem;
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+body.active .project__summary-seo,
+body.active .blog__summary-seo {
+  background: var(--color-bg-light);
+  border: var(--border-light);
+}
+
+body.active .project__summary-seo h3,
+body.active .blog__summary-seo h3 {
+  color: var(--color-text-main-lighttheme);
+}
+
+body.active .project__summary-seo p,
+body.active .blog__summary-seo p {
+  color: var(--color-text-light);
 }
 
 .projects .projects__container .project__box {
@@ -969,6 +1035,16 @@ main section:nth-child(odd) {
   margin: 0 auto;
 }
 
+.contact__direct-info {
+  font-size: clamp(1.3rem, 1.6vw, 1.45rem);
+  line-height: 1.6;
+  color: var(--color-primary);
+  max-width: 64rem;
+  margin: 0.5rem auto 0;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+}
+
 /* Services Section */
 .contact__services {
   width: 100%;
@@ -1004,6 +1080,9 @@ main section:nth-child(odd) {
 .contact__marquee-track {
   display: flex;
   width: max-content;
+  gap: 0;
+  transition: none !important;
+  will-change: transform;
   animation: contactMarquee 32s linear infinite;
 }
 
@@ -1014,16 +1093,19 @@ main section:nth-child(odd) {
 .contact__marquee-group {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   gap: 1.4rem;
   padding-right: 1.4rem;
+  margin: 0;
 }
 
 .contact__service-item {
+  flex-shrink: 0;
+  white-space: nowrap;
   border-radius: 0.5rem;
   padding: 0.9rem 1.8rem;
   font-size: 1.4rem;
   font-weight: 500;
-  white-space: nowrap;
   background-color: var(--color-bg-dark);
   color: var(--color-text-main-darktheme);
   border: var(--border-dark);
@@ -1211,6 +1293,10 @@ body.active .contact__title {
 
 body.active .contact__lead {
   color: var(--color-text-light);
+}
+
+body.active .contact__direct-info {
+  color: var(--color-primary-dark);
 }
 
 body.active .contact__services-title {
@@ -1915,6 +2001,13 @@ body.active .loader__container .loader span {
   .projects .projects__filter .btn-primary {
     padding: 0.9rem 0.4rem;
     font-size: 1.25rem;
+  }
+  .about .about__row .row__exp .about__actions {
+    gap: 1.2rem;
+  }
+  .about .about__row .row__exp .about__actions .about__btn {
+    width: 100%;
+    flex: 1 1 100%;
   }
 }
 
