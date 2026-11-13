@@ -66,7 +66,7 @@ function createProjectImage(project) {
   image.src = project.imageSmall || project.image;
   image.alt = project.title;
   image.width = 600;
-  image.height = 375;
+  image.height = 338;
   image.loading = 'lazy';
 
   projectImage.appendChild(image);
@@ -181,7 +181,7 @@ function showProjectModal(project) {
         </button>
       </div>
       <div class="project-modal-body">
-        <img src="${project.image}" alt="${project.title}" width="800" height="500" loading="lazy">
+        <img src="${project.image}" alt="${project.title}" width="800" height="450" loading="lazy">
         <div class="project-modal-tags">${tagsHTML}</div>
         <div class="project-modal-description">${project.description}</div>
         <div class="project-modal-buttons">${buttonsHTML}</div>

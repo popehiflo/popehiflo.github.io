@@ -1,10 +1,13 @@
 /**
- * Guía de Imágenes y Assets para Proyectos y Blogs:
- * - Card de Proyecto (`imageSmall`): 600 x 375 px (Relación 16:10) | Formato: .webp | Peso ideal: 15-35 KB | Nombre: [categoria]_[slug]-small.webp
- * - Cabecera de Modal (`image`): 800 x 500 px (Relación 16:10) | Formato: .webp | Peso ideal: 35-70 KB | Nombre: [categoria]_[slug].webp
- * - Captura Secundaria en Modal (`<figure class="project-modal-secondary-img">`): 800 x 500 px (ancho 800px, alto adaptable) | Formato: .webp | Peso ideal: 35-80 KB | Nombre: [slug]-ficha.webp
- * - Card/Modal de Blog (`image`): 600 x 375 px (Relación 16:10) | Formato: .webp | Peso ideal: 10-30 KB | Nombre: blog_[slug].webp
+ * Guía de Imágenes y Assets para Proyectos y Blogs (Medidas exactas reales 16:9):
+ * - Card de Proyecto (`imageSmall`): 600 x 338 px (Relación 16:9) | Formato: .webp | Peso ideal: 10-25 KB | Nombre: [categoria]_[slug]-small.webp
+ * - Cabecera de Modal (`image`): 1280 x 720 px (Relación 16:9, renderizado máx 800 x 450 px) | Formato: .webp | Peso ideal: 25-60 KB | Nombre: [categoria]_[slug].webp
+ * - Captura Secundaria en Modal (`<figure class="project-modal-secondary-img">`): 1280 x 720 px (Relación 16:9, renderizado 800 x 450 px) | Formato: .webp | Peso ideal: 25-70 KB | Nombre: [slug]-ficha.webp
+ * - Card/Modal de Blog (`image`): 1280 x 720 px (Relación 16:9, renderizado card 600 x 338 px, modal 800 x 450 px) | Formato: .webp | Peso ideal: 10-30 KB | Nombre: blog_[slug].webp
  * - Open Graph Social (`og-image.jpg`): 1200 x 630 px (Relación 1.91:1) | Formato: .jpg | Peso ideal: < 100 KB
+ *
+ * NOTA DE DISEÑO: Todas las tarjetas y modales de proyectos y blogs utilizan relación de aspecto 16:9.
+ * Medida recomendada para producción: Cards = 600x338 px (.webp) | Modales = 1280x720 px (.webp).
  */
 
 /* PROJECTS */
@@ -27,7 +30,7 @@ const allProjects = [
         <li><strong>Catálogo Interno y Control de Usuarios:</strong> Panel administrativo para publicar/editar repuestos con carga segura de imágenes a Cloudinary, protegido con políticas RLS y control de accesos por rol.</li>
       </ul>
       <figure class="project-modal-secondary-img">
-        <img src="./public/assets/imgs/projects/repuestos-rojas-ficha.webp" alt="Ficha técnica y panel del sistema Repuestos Rojas" width="800" height="500" loading="lazy">
+        <img src="./public/assets/imgs/projects/repuestos-rojas-ficha.webp" alt="Ficha técnica y panel del sistema Repuestos Rojas" width="800" height="450" loading="lazy">
       </figure>
     `,
     tags: {
@@ -64,7 +67,7 @@ const allProjects = [
         <li><strong>Optimización de Rendimiento:</strong> Carga no bloqueante de iconografía, activos gráficos en formato WebP de doble resolución y lazy loading estratégico.</li>
       </ul>
       <figure class="project-modal-secondary-img">
-        <img src="./public/assets/imgs/projects/img-frontend-0.webp" alt="Vista adicional de arquitectura responsiva y componentes del portafolio" width="800" height="500" loading="lazy">
+        <img src="./public/assets/imgs/projects/img-frontend-0.webp" alt="Vista adicional de arquitectura responsiva y componentes del portafolio" width="800" height="450" loading="lazy">
       </figure>
     `,
     tags: {
@@ -102,7 +105,7 @@ const allProjects = [
         <li><strong>Seguridad por Roles:</strong> Control de acceso diferenciado para administradores y personal de biblioteca con trazabilidad de movimientos.</li>
       </ul>
       <figure class="project-modal-secondary-img">
-        <img src="./public/assets/imgs/projects/img-frontend-1.webp" alt="Vista adicional de préstamos y catálogo del sistema bibliográfico" width="800" height="500" loading="lazy">
+        <img src="./public/assets/imgs/projects/img-frontend-1.webp" alt="Vista adicional de préstamos y catálogo del sistema bibliográfico" width="800" height="450" loading="lazy">
       </figure>
     `,
     tags: {
@@ -138,7 +141,7 @@ const allProjects = [
         <li><strong>Facturación Integrada y Pagos Parciales (Señas):</strong> Generación de facturas directamente desde la cita o examen de laboratorio, control de estados (Borrador, Abierto, Pagado), registro de adelantos/señas con cálculo automático de saldo pendiente y facturas rectificativas.</li>
       </ul>
       <figure class="project-modal-secondary-img">
-        <img src="./public/assets/imgs/projects/backend_swagger.webp" alt="Vista adicional del módulo clínico en Odoo" width="800" height="500" loading="lazy">
+        <img src="./public/assets/imgs/projects/backend_swagger.webp" alt="Vista adicional del módulo clínico en Odoo" width="800" height="450" loading="lazy">
       </figure>
     `,
     tags: {
@@ -175,7 +178,7 @@ const allProjects = [
         <li><strong>Arquitectura Modular Java EE:</strong> Persistencia transaccional con JPA y generación de reportes operativos exportables.</li>
       </ul>
       <figure class="project-modal-secondary-img">
-        <img src="./public/assets/imgs/projects/img-frontend-0.webp" alt="Vista adicional del cotizador y reservas del ERP turístico" width="800" height="500" loading="lazy">
+        <img src="./public/assets/imgs/projects/img-frontend-0.webp" alt="Vista adicional del cotizador y reservas del ERP turístico" width="800" height="450" loading="lazy">
       </figure>
     `,
     tags: {
@@ -210,7 +213,7 @@ const allProjects = [
         <li><strong>Validación e Integridad Transaccional:</strong> Reglas de negocio estrictas para impedir devoluciones inconsistentes o saldos negativos en almacén.</li>
       </ul>
       <figure class="project-modal-secondary-img">
-        <img src="./public/assets/imgs/projects/img-backend-1.webp" alt="Vista adicional de trazabilidad e inventario de la API de almacén" width="800" height="500" loading="lazy">
+        <img src="./public/assets/imgs/projects/img-backend-1.webp" alt="Vista adicional de trazabilidad e inventario de la API de almacén" width="800" height="450" loading="lazy">
       </figure>
     `,
     tags: {
@@ -245,7 +248,7 @@ const allProjects = [
         <li><strong>Tipado Estricto con TypeScript:</strong> Modelos de datos seguros y componentes reutilizables orientados a mantenibilidad.</li>
       </ul>
       <figure class="project-modal-secondary-img">
-        <img src="./public/assets/imgs/projects/img-frontend-1.webp" alt="Vista adicional de reportes y métricas del dashboard comercial" width="800" height="500" loading="lazy">
+        <img src="./public/assets/imgs/projects/img-frontend-1.webp" alt="Vista adicional de reportes y métricas del dashboard comercial" width="800" height="450" loading="lazy">
       </figure>
     `,
     tags: {
@@ -279,7 +282,7 @@ const allProjects = [
         <li><strong>Contenerización con Docker:</strong> Configuración reproducible mediante Dockerfile y variables de entorno para despliegues ágiles.</li>
       </ul>
       <figure class="project-modal-secondary-img">
-        <img src="./public/assets/imgs/projects/backend_swagger.webp" alt="Vista adicional de endpoints y monitoreo del servicio de facturación" width="800" height="500" loading="lazy">
+        <img src="./public/assets/imgs/projects/backend_swagger.webp" alt="Vista adicional de endpoints y monitoreo del servicio de facturación" width="800" height="450" loading="lazy">
       </figure>
     `,
     tags: {

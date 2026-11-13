@@ -519,10 +519,8 @@ main section:nth-child(odd) {
 }
 
 .projects .projects__container .project__box .project__box-image img {
-  width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 16 / 10;
   object-fit: cover;
   align-self: center;
 }
@@ -749,10 +747,8 @@ main section:nth-child(odd) {
 }
 
 .blogs .blogs__container .blog__box .box-image img {
-  width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 16 / 10;
   object-fit: cover;
 }
 

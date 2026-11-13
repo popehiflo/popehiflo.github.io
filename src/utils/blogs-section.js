@@ -16,7 +16,7 @@ function createBlogElement(blog) {
 
   blogBox.innerHTML = `
     <div class="box-image">
-      <img src="${blog.image}" alt="${blog.title}" width="600" height="375" loading="lazy">
+      <img src="${blog.image}" alt="${blog.title}" width="600" height="338" loading="lazy">
     </div>
     <div class="box-content">
       <div class="content-icons">
@@ -47,7 +47,7 @@ function showBlogModal(blog) {
           <i class="fas fa-times" aria-hidden="true"></i>
         </button>
       </div>
-      <img src="${blog.image}" alt="${blog.title}" class="blog-modal-image" width="800" height="500" loading="lazy">
+      <img src="${blog.image}" alt="${blog.title}" class="blog-modal-image" width="800" height="450" loading="lazy">
       <div class="blog-modal-body">
         <div class="blog-modal-meta">
           <span><i class="fas fa-calendar"></i> ${blog.date}</span>
