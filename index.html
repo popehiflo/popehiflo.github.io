@@ -33,15 +33,10 @@
   <link rel="icon" href="./logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./logo.svg">
   <link rel="manifest" href="./site.webmanifest">
-  <!-- Font Awesome cdn link  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" media="print" onload="this.media='all'">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Black+Han+Sans|Roboto+Mono&display=swap" as="style" fetchpriority="high">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Black+Han+Sans|Roboto+Mono&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Black+Han+Sans|Roboto+Mono&display=swap"></noscript>
+  <!-- Preload de fuentes críticas para el Hero (LCP) y texto base -->
+  <link rel="preload" href="./public/assets/fonts/black-han-sans-v24-latin-400.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+  <link rel="preload" href="./public/assets/fonts/poppins-v24-latin-400.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+  <link rel="preload" href="./public/assets/fonts/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./src/styles/index.css">
   <title>Pool Hijuela (popehiflo) – Desarrollador web en Cusco</title>
@@ -64,12 +59,6 @@
   </script>
   <!-- MAIN SCRIPT JS -->
   <script type="module" src="./src/index.js" defer></script>
-  <!-- Module Preloads para aplanar cascada de dependencias ES6 -->
-  <link rel="modulepreload" href="./src/data/MOCKDATA.js">
-  <link rel="modulepreload" href="./src/utils/projects-section.js">
-  <link rel="modulepreload" href="./src/utils/blogs-section.js">
-  <link rel="modulepreload" href="./src/utils/about-section.js">
-  <link rel="modulepreload" href="./src/utils/theme-handler.js">
   <!-- Preload de imagen para el background del alias -->
   <link
     rel="preload"

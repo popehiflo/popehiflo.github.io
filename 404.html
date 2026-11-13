@@ -7,10 +7,11 @@
   <meta name="robots" content="noindex, follow">
   <title>404 - Página no encontrada | popehiflo</title>
   <link rel="icon" href="./logo.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Black+Han+Sans&display=swap" rel="stylesheet">
+  <!-- Preload de fuentes críticas para el 404 (Black Han Sans) y tipografía base (Poppins) -->
+  <link rel="preload" href="./public/assets/fonts/black-han-sans-v24-latin-400.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+  <link rel="preload" href="./public/assets/fonts/poppins-v24-latin-400.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+  <link rel="preload" href="./public/assets/fonts/poppins-v24-latin-700.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">
+  <!-- Custom CSS (contiene @font-face locales e iconos) -->
   <link rel="stylesheet" href="./src/styles/index.css">
   <style>
     body.error-page {

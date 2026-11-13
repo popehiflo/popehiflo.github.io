@@ -1,3 +1,204 @@
+/* ===================================================================
+   SELF-HOSTED FONTS & ICONS (ZERO EXTERNAL BLOCKING REQUESTS)
+   =================================================================== */
+
+/* 1. Black Han Sans (LCP Font - popehiflo) */
+@font-face {
+  font-family: 'Black Han Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../public/assets/fonts/black-han-sans-v24-latin-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* 2. Poppins (Base Typography) */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../public/assets/fonts/poppins-v24-latin-ext-400.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../public/assets/fonts/poppins-v24-latin-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../public/assets/fonts/poppins-v24-latin-ext-500.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../../public/assets/fonts/poppins-v24-latin-500.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../public/assets/fonts/poppins-v24-latin-ext-700.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../public/assets/fonts/poppins-v24-latin-700.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* 3. Roboto Mono (Clock / Numbers) */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../public/assets/fonts/roboto-mono-v31-latin-ext-400.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../public/assets/fonts/roboto-mono-v31-latin-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* 4. Devicon Subset (20 Tech Stack Glyphs) */
+@font-face {
+  font-family: "devicon";
+  src: url("../../public/assets/fonts/devicon-subset.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+[class^="devicon-"], [class*=" devicon-"] {
+  font-family: 'devicon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.devicon-html5-plain:before { content: "\ea67"; }
+.devicon-css3-plain:before { content: "\e9a1"; }
+.devicon-tailwindcss-plain:before { content: "\ec39"; }
+.devicon-javascript-plain:before { content: "\ea81"; }
+.devicon-typescript-plain:before { content: "\ec63"; }
+.devicon-react-original:before { content: "\ebbc"; }
+.devicon-nextjs-plain:before { content: "\eb13"; }
+.devicon-angularjs-plain:before { content: "\ed53"; }
+.devicon-figma-plain:before { content: "\e9f9"; }
+.devicon-git-plain:before { content: "\ea2d"; }
+.devicon-python-plain:before { content: "\eb9c"; }
+.devicon-java-plain:before { content: "\ea7f"; }
+.devicon-spring-plain:before { content: "\ec16"; }
+.devicon-nodejs-plain:before { content: "\ed9d"; }
+.devicon-express-original:before { content: "\e9ec"; }
+.devicon-docker-plain:before { content: "\e9c3"; }
+.devicon-postgresql-plain:before { content: "\eb79"; }
+.devicon-supabase-plain:before { content: "\ec2e"; }
+.devicon-mysql-plain:before { content: "\eafd"; }
+.devicon-mongodb-plain:before { content: "\eaf5"; }
+
+/* 5. Font Awesome Subset (Solid, Regular, Brands) */
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../../public/assets/fonts/fa-solid-subset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../public/assets/fonts/fa-regular-subset.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../public/assets/fonts/fa-brands-subset.woff2") format("woff2");
+}
+
+.fa, .fas, .fa-solid, .far, .fa-regular, .fab, .fa-brands {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: inherit;
+  text-rendering: auto;
+}
+
+.fas, .fa-solid {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+
+.far, .fa-regular {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 400;
+}
+
+.fab, .fa-brands {
+  font-family: 'Font Awesome 6 Brands';
+  font-weight: 400;
+}
+
+/* Enlace seguro en caso de fallback */
+a.fa-link, .fa-link {
+  font-family: 'Font Awesome 6 Free' !important;
+  font-weight: 900 !important;
+}
+
+/* Font Awesome Glyphs */
+.fa-bars:before { content: "\f0c9"; }
+.fa-times:before, .fa-xmark:before { content: "\f00d"; }
+.fa-sun:before { content: "\f185"; }
+.fa-moon:before { content: "\f186"; }
+.fa-calendar:before { content: "\f133"; }
+.fa-user:before { content: "\f007"; }
+.fa-link:before { content: "\f0c1"; }
+.fa-briefcase:before { content: "\f0b1"; }
+.fa-paper-plane:before { content: "\f1d8"; }
+.fa-envelope:before { content: "\f0e0"; }
+
+.fa-github:before { content: "\f09b"; }
+.fa-linkedin:before, .fa-linkedin-in:before { content: "\f08c"; }
+.fa-youtube:before { content: "\f167"; }
+.fa-twitter:before { content: "\f099"; }
+.fa-google:before { content: "\f1a0"; }
+.fa-telegram:before { content: "\f2c6"; }
+
 /* --- CSS VARIABLES --- */
 :root {
   /* CSS variables for colors */
