@@ -44,6 +44,57 @@ function sidebarHandler() {
 };
 
 
+// Contact section - Copy email interaction
+function contactHandler() {
+  const btnCopy = document.querySelector('#btn-copy-email');
+  if (!btnCopy) return;
+
+  const email = btnCopy.getAttribute('data-email') || 'popehiflo@gmail.com';
+  const icon = btnCopy.querySelector('i');
+  const feedback = btnCopy.querySelector('.copy-feedback');
+  let resetTimeout;
+
+  btnCopy.addEventListener('click', async () => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+
+      btnCopy.classList.add('copied');
+      if (icon) {
+        icon.classList.remove('fa-copy');
+        icon.classList.add('fa-check');
+      }
+      if (feedback) {
+        feedback.textContent = '¡Copiado!';
+      }
+
+      clearTimeout(resetTimeout);
+      resetTimeout = setTimeout(() => {
+        btnCopy.classList.remove('copied');
+        if (icon) {
+          icon.classList.remove('fa-check');
+          icon.classList.add('fa-copy');
+        }
+        if (feedback) {
+          feedback.textContent = 'Copiar';
+        }
+      }, 2000);
+    } catch (err) {
+      console.error('Error al copiar correo:', err);
+    }
+  });
+}
+
 // Footer
 function footerHandler() {
   let currentYear = new Date().getFullYear();
@@ -58,4 +109,5 @@ greetingHandler();
 clockHandler();
 projectsHandler();
 blogsHandler();
+contactHandler();
 footerHandler();

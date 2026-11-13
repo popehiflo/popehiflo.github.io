@@ -130,7 +130,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("../../public/assets/fonts/fa-solid-subset.woff2") format("woff2");
+  src: url("../../public/assets/fonts/fa-solid-subset.woff2?v=2") format("woff2");
 }
 
 @font-face {
@@ -138,7 +138,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../../public/assets/fonts/fa-regular-subset.woff2") format("woff2");
+  src: url("../../public/assets/fonts/fa-regular-subset.woff2?v=2") format("woff2");
 }
 
 @font-face {
@@ -146,7 +146,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../../public/assets/fonts/fa-brands-subset.woff2") format("woff2");
+  src: url("../../public/assets/fonts/fa-brands-subset.woff2?v=2") format("woff2");
 }
 
 .fa, .fas, .fa-solid, .far, .fa-regular, .fab, .fa-brands {
@@ -191,6 +191,10 @@ a.fa-link, .fa-link {
 .fa-briefcase:before { content: "\f0b1"; }
 .fa-paper-plane:before { content: "\f1d8"; }
 .fa-envelope:before { content: "\f0e0"; }
+.fa-copy:before { content: "\f0c5"; }
+.fa-check:before { content: "\f00c"; }
+.fa-code:before { content: "\f121"; }
+.fa-laptop-code:before { content: "\f5fc"; }
 
 .fa-github:before { content: "\f09b"; }
 .fa-linkedin:before, .fa-linkedin-in:before { content: "\f08c"; }
@@ -198,6 +202,8 @@ a.fa-link, .fa-link {
 .fa-twitter:before { content: "\f099"; }
 .fa-google:before { content: "\f1a0"; }
 .fa-telegram:before { content: "\f2c6"; }
+.fa-telegram-plane:before { content: "\f3fe"; }
+.fa-whatsapp:before { content: "\f232"; }
 
 /* --- CSS VARIABLES --- */
 :root {
@@ -903,25 +909,421 @@ main section:nth-child(odd) {
   overflow-wrap: break-word;
 }
 
-/* CONTACT ME*/
+/* CONTACT ME */
 .contact {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
+  padding: 3rem 2rem;
 }
 
-.contact p {
-  font-size: 2.5rem;
+.contact__box {
+  width: 100%;
+  max-width: 84rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.contact__title {
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.35;
   color: var(--color-text-main-darktheme);
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+.contact__lead {
+  font-size: clamp(1.4rem, 1.8vw, 1.6rem);
+  line-height: 1.7;
+  color: var(--color-text-dark);
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+/* Services Section */
+.contact__services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.contact__services-title {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: 600;
+  color: var(--color-text-main-darktheme);
+  opacity: 0.9;
+}
+
+/* Services Marquee (Infinite continuous carousel) */
+.contact__marquee {
+  width: 100%;
+  max-width: 76rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 1.2rem 0;
+  border-radius: 0.5rem;
+  mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%);
+}
+
+.contact__marquee-track {
+  display: flex;
+  width: max-content;
+  animation: contactMarquee 32s linear infinite;
+}
+
+.contact__marquee:hover .contact__marquee-track {
+  animation-play-state: paused;
+}
+
+.contact__marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding-right: 1.4rem;
+}
+
+.contact__service-item {
+  border-radius: 0.5rem;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  white-space: nowrap;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-main-darktheme);
+  border: var(--border-dark);
+  box-shadow: var(--box-shadow-card);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.contact__service-item:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--color-primary);
+  border: var(--border-none);
+}
+
+@keyframes contactMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* Messaging Actions */
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  width: 100%;
+  max-width: 58rem;
+}
+
+.contact__btn {
+  margin: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  min-width: 22rem;
+  height: 5.4rem;
+  padding: 0 2.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background: var(--color-bg-dark);
+  color: var(--color-text-main-darktheme);
+  border: var(--border-dark);
+  box-shadow: var(--box-shadow-card);
+  transition: all 0.2s ease;
+}
+
+.contact__btn i {
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--color-text-main-darktheme);
+  transition: color 0.2s ease;
+}
+
+.contact__btn span {
+  color: var(--color-text-main-darktheme);
+  transition: color 0.2s ease;
+}
+
+.contact__btn:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--color-primary);
+  border: var(--border-none);
+}
+
+.contact__btn:hover i,
+.contact__btn:hover span {
+  color: var(--color-primary);
+}
+
+/* Email Capsule */
+.contact__email {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.contact__email-box {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: var(--color-bg-dark);
+  border: var(--border-dark);
+  box-shadow: var(--box-shadow-card);
+  overflow: hidden;
+  max-width: 100%;
+  transition: all 0.2s ease;
+}
+
+.contact__email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-text-main-darktheme);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.contact__email-link i {
+  font-size: 1.8rem;
+  color: var(--color-text-main-darktheme);
+  transition: color 0.2s ease;
+}
+
+.contact__email-link:hover,
+.contact__email-link:hover i {
+  color: var(--color-primary);
+}
+
+.contact__email-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.2rem 1.8rem;
+  background: rgba(0, 0, 0, 0.15);
+  border-left: var(--border-dark-light);
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: var(--color-text-main-darktheme);
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.contact__email-copy i {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-text-main-darktheme);
+  transition: color 0.2s ease;
+}
+
+.contact__email-copy:hover {
+  background: rgba(var(--color-primary-dark-rgb), 0.2);
+  color: var(--color-primary);
+}
+
+.contact__email-copy:hover i {
+  color: var(--color-primary);
+}
+
+.contact__email-copy.copied {
+  background: rgba(37, 211, 102, 0.2);
+  color: #25D366;
+}
+
+.contact__email-copy.copied i {
+  color: #25D366;
+}
+
+/* Social media */
+.contact__social-label {
+  font-size: 1.5rem;
+  color: var(--color-text-dark);
+  margin-top: 0.5rem;
 }
 
 .contact .contact__social-media {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Light Theme Support (body.active) */
+body.active .contact__title {
+  color: var(--color-text-main-lighttheme);
+}
+
+body.active .contact__lead {
+  color: var(--color-text-light);
+}
+
+body.active .contact__services-title {
+  color: var(--color-primary-dark);
+  opacity: 1;
+}
+
+body.active .contact__service-item {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-main-lighttheme);
+  border: var(--border-light);
+  box-shadow: var(--box-shadow-card);
+}
+
+body.active .contact__service-item:hover {
+  box-shadow: var(--box-shadow-inset);
+  color: var(--color-primary-dark);
+  border: var(--border-none);
+}
+
+body.active .contact__btn {
+  background: var(--color-bg-light);
+  border: var(--border-light);
+  color: var(--color-text-main-lighttheme);
+}
+
+body.active .contact__btn i,
+body.active .contact__btn span {
+  color: var(--color-text-main-lighttheme);
+}
+
+body.active .contact__btn:hover {
+  color: var(--color-primary-dark);
+  border: var(--border-none);
+}
+
+body.active .contact__btn:hover i,
+body.active .contact__btn:hover span {
+  color: var(--color-primary-dark);
+}
+
+body.active .contact__email-box {
+  background: var(--color-bg-light);
+  border: var(--border-light);
+}
+
+body.active .contact__email-link {
+  color: var(--color-text-main-lighttheme);
+}
+
+body.active .contact__email-link i {
+  color: var(--color-text-main-lighttheme);
+}
+
+body.active .contact__email-link:hover,
+body.active .contact__email-link:hover i {
+  color: var(--color-primary-dark);
+}
+
+body.active .contact__email-copy {
+  background: rgba(0, 0, 0, 0.05);
+  border-left: var(--border-light-light);
+  color: var(--color-text-main-lighttheme);
+}
+
+body.active .contact__email-copy i {
+  color: var(--color-text-main-lighttheme);
+}
+
+body.active .contact__email-copy:hover {
+  background: rgba(var(--color-primary-dark-rgb), 0.15);
+  color: var(--color-primary-dark);
+}
+
+body.active .contact__email-copy:hover i {
+  color: var(--color-primary-dark);
+}
+
+body.active .contact__email-copy.copied {
+  background: rgba(37, 211, 102, 0.15);
+  color: #128C7E;
+}
+
+body.active .contact__email-copy.copied i {
+  color: #128C7E;
+}
+
+body.active .contact__social-label {
+  color: var(--color-text-light);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 520px) {
+  .contact__actions {
+    flex-direction: column;
+    max-width: 32rem;
+  }
+  .contact__btn {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact {
+    padding: 2.5rem 1rem;
+  }
+  .contact__email-box {
+    width: 100%;
+    max-width: 33rem;
+  }
+  .contact__email-link {
+    padding: 1.1rem 1.2rem;
+    font-size: 1.35rem;
+    gap: 0.6rem;
+  }
+  .contact__email-link i {
+    font-size: 1.5rem;
+  }
+  .contact__email-copy {
+    padding: 1.1rem 1.2rem;
+    font-size: 1.3rem;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .contact__email-link {
+    font-size: 1.25rem;
+    padding: 1rem 0.8rem;
+  }
+  .contact__email-copy {
+    font-size: 1.2rem;
+    padding: 1rem 0.8rem;
+  }
 }
 
 /* #BLOG */
