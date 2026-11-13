@@ -443,8 +443,17 @@ main section:nth-child(odd) {
   display: none;
 }
 
+#btn-menu i {
+  display: inline-block;
+  transition: transform 0.4s ease !important;
+}
+
 #btn-menu i.fa-times {
   transform: rotate(360deg);
+}
+
+#btn-menu i.fa-times:before {
+  content: "\f00d";
 }
 
 #btn-theme-toggler {
@@ -455,8 +464,21 @@ main section:nth-child(odd) {
   border-radius: 50%;
 }
 
+#btn-theme-toggler i {
+  display: inline-block;
+  transition: transform 0.4s ease !important;
+}
+
 #btn-theme-toggler i.fa-moon {
   transform: rotate(360deg);
+}
+
+#btn-theme-toggler i.fa-sun:before {
+  content: "\f185";
+}
+
+#btn-theme-toggler i.fa-moon:before {
+  content: "\f186";
 }
 
 /* --- HOME --- */
