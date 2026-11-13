@@ -85,7 +85,7 @@
 /* 4. Devicon Subset (20 Tech Stack Glyphs) */
 @font-face {
   font-family: "devicon";
-  src: url("../../public/assets/fonts/devicon-subset.woff2") format("woff2");
+  src: url("../../public/assets/fonts/devicon-subset.woff2?v=2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -109,14 +109,14 @@
 .devicon-javascript-plain:before { content: "\ea81"; }
 .devicon-typescript-plain:before { content: "\ec63"; }
 .devicon-react-original:before { content: "\ebbc"; }
-.devicon-nextjs-plain:before { content: "\eb13"; }
-.devicon-angularjs-plain:before { content: "\ed53"; }
+.devicon-nextjs-plain:before { content: "\eb14"; }
+.devicon-angularjs-plain:before { content: "\ed54"; }
 .devicon-figma-plain:before { content: "\e9f9"; }
 .devicon-git-plain:before { content: "\ea2d"; }
 .devicon-python-plain:before { content: "\eb9c"; }
 .devicon-java-plain:before { content: "\ea7f"; }
 .devicon-spring-plain:before { content: "\ec16"; }
-.devicon-nodejs-plain:before { content: "\ed9d"; }
+.devicon-nodejs-plain:before { content: "\ed9e"; }
 .devicon-express-original:before { content: "\e9ec"; }
 .devicon-docker-plain:before { content: "\e9c3"; }
 .devicon-postgresql-plain:before { content: "\eb79"; }
